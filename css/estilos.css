@@ -4,6 +4,9 @@ body {
     font-family: Arial, sans-serif;
 }
 
+.logo img {
+    height: 50px;
+}
 /* HEADER */
 header {
     background: #0a2540;
