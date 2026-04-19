@@ -27,7 +27,10 @@ nav a {
     position: relative;
     color: white;
 }
-
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
 .overlay {
     background: rgba(0,0,0,0.6);
     height: 100%;
