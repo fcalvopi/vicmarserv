@@ -54,6 +54,28 @@ nav a {
 }
 
 /* HERO */
+.hero-premium {
+    background: url('../img/hero.jpg') center/cover no-repeat;
+    height: 90vh;
+    position: relative;
+    color: white;
+}
+
+.overlay {
+    background: rgba(0,0,0,0.6);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-sec {
+    border: 2px solid white;
+    padding: 12px 20px;
+    color: white;
+    margin-left: 10px;
+}
 .hero {
     background: linear-gradient(#0a2540, #1d4ed8);
     color: white;
