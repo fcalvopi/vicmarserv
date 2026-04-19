@@ -20,13 +20,16 @@
 <section class="contacto">
     <h1>Contáctanos</h1>
 
-    <form action="https://formspree.io/f/yourcode" method="POST">
-        <input type="text" name="nombre" placeholder="Nombre" required>
-        <input type="email" name="email" placeholder="Correo" required>
-        <textarea name="mensaje" placeholder="Describe tu necesidad"></textarea>
+    <!-- ✅ FORMULARIO CORRECTO -->
+    <form id="formulario">
+        <input type="text" id="nombre" placeholder="Nombre" required>
+        <input type="email" id="email" placeholder="Correo" required>
+        <textarea id="mensaje" placeholder="Describe tu necesidad"></textarea>
 
         <button type="submit">📩 Enviar solicitud</button>
     </form>
+
+    <p id="respuesta"></p>
 
     <a href="https://wa.me/593969054410" class="btn whatsapp">
         📲 Hablar por WhatsApp
@@ -36,6 +39,9 @@
 <footer>
     <p>WhatsApp: 0969054410</p>
 </footer>
+
+<!-- 🔥 CONEXIÓN CON JS -->
+<script src="js/main.js"></script>
 
 </body>
 </html>
