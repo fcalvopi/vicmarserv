@@ -2,21 +2,46 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Contacto | Vicmar</title>
 <link rel="stylesheet" href="css/estilos.css">
 </head>
 
 <body>
 
-<h1>Contáctanos</h1>
+<header>
+    <div class="logo">VICMAR SERVICES</div>
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="contacto.html">Contacto</a>
+    </nav>
+</header>
 
-<form id="formulario" style="max-width:400px; margin:auto;">
-    <input type="text" id="nombre" placeholder="Nombre" required><br><br>
-    <input type="email" id="email" placeholder="Correo" required><br><br>
-    <textarea id="mensaje" placeholder="Mensaje"></textarea><br><br>
+<section class="contacto">
+    <h1>Solicita tu cotización GRATIS</h1>
+    <p>Respuesta rápida en minutos por WhatsApp</p>
 
-    <button type="submit">Enviar</button>
-</form>
+    <form id="formulario">
+        <input type="text" id="nombre" placeholder="Nombre" required>
+        <input type="email" id="email" placeholder="Correo" required>
+        <textarea id="mensaje" placeholder="Describe tu necesidad"></textarea>
+
+        <button type="submit">📩 Solicitar cotización</button>
+    </form>
+
+    <!-- ✅ MENSAJE DE RESPUESTA -->
+    <p id="respuesta"></p>
+
+    <a href="https://wa.me/593969054410" class="btn">
+        📲 Ir directo a WhatsApp
+    </a>
+</section>
+
+<footer>
+    <p>© 2026 Vicmar Services</p>
+    <p>WhatsApp: 0969054410 | info@vicmarserv.com</p>
+</footer>
 
 <script src="js/main.js"></script>
 
