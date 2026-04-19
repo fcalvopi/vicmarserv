@@ -21,7 +21,7 @@ form.addEventListener("submit", async (e) => {
     if (res.ok) {
 
       // 📲 MENSAJE AUTOMÁTICO WHATSAPP
-      const texto = `Hola, soy ${nombre}. Necesito información sobre: ${mensaje}`;
+      const texto = `Hola, soy ${nombre}. Necesito información sobre sus servicios. Este es mi requerimiento: ${mensaje}`;
       const url = `https://wa.me/593969054410?text=${encodeURIComponent(texto)}`;
 
       window.open(url, "_blank");
