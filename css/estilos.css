@@ -13,6 +13,11 @@ header {
     justify-content: space-between;
     align-items: center;
 }
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
 
 nav a {
     color: white;
@@ -63,6 +68,13 @@ nav a {
     text-decoration: none;
     border-radius: 5px;
     margin-top: 20px;
+}
+.btn:hover,
+.btn-sec:hover,
+.btn-header:hover {
+    opacity: 0.8;
+    transform: scale(1.05);
+    transition: 0.3s;
 }
 
 .btn-sec {
