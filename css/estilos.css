@@ -36,6 +36,13 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
 }
+.card {
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
 
 /* HEADER */
 header {
@@ -111,6 +118,22 @@ nav a {
     padding: 25px;
     border-radius: 10px;
 }
+.trabajos {
+    padding: 50px;
+    text-align: center;
+}
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.galeria img {
+    width: 100%;
+    border-radius: 10px;
+}
 
 /* CTA */
 .cta {
@@ -119,6 +142,7 @@ nav a {
     text-align: center;
     padding: 50px;
 }
+
 
 /* CONTACTO */
 .contacto {
