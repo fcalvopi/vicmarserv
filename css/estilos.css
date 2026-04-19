@@ -43,6 +43,12 @@ body {
 .card:hover {
     transform: translateY(-5px);
 }
+.botones {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 
 /* HEADER */
 header {
