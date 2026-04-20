@@ -145,6 +145,22 @@ document.getElementById("formulario").addEventListener("submit", async function(
     }
 });
 </script>
+    <script>
+document.getElementById("formulario").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const nombre = this.nombre.value;
+  const telefono = this.telefono.value;
+  const email = this.email.value;
+  const mensaje = this.mensaje.value;
+
+  const texto = `Hola, soy ${nombre}%0A📞 Tel: ${telefono}%0A📧 Email: ${email}%0A🛠️ Problema: ${mensaje}`;
+
+  const url = `https://wa.me/593969054410?text=${texto}`;
+
+  window.open(url, "_blank");
+});
+</script>
 
 </body>
 </html>
