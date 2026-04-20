@@ -6,32 +6,41 @@
 
 <title>Servicios de mantenimiento en Quito | Vicmar Services</title>
 
-<meta name="description" content="Servicios profesionales de electricidad, plomería, pintura, aluminio e impermeabilización en Quito. Atención rápida, garantizada y con técnicos expertos.">
-<meta name="keywords" content="electricista Quito, plomería Quito, pintura Quito, aluminio vidrio Quito, impermeabilización Quito">
-<meta name="author" content="Vicmar Services">
-<meta name="robots" content="index, follow">
-
-<!-- OPEN GRAPH (REDES SOCIALES) -->
-<meta property="og:title" content="Vicmar Services | Servicios en Quito">
-<meta property="og:description" content="Electricidad, plomería, pintura y más. Atención rápida en Quito.">
-<meta property="og:image" content="img/rotulo1.png">
-<meta property="og:type" content="website">
-
-<!-- FAVICON -->
-<link rel="icon" href="favicon2.ico">
-<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="description" content="Servicios profesionales en Quito: electricidad, plomería, pintura, aluminio e impermeabilización. Atención inmediata.">
 
 <link rel="stylesheet" href="css/estilos.css">
+<link rel="icon" href="favicon2.ico">
+
+<style>
+.formulario {
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.formulario input,
+.formulario textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.formulario button {
+    background: #25D366;
+    color: white;
+    padding: 12px;
+    border: none;
+    cursor: pointer;
+}
+</style>
 </head>
 
 <body>
 
-<!-- HEADER -->
 <header>
     <div class="logo">
         <a href="index.html">
-            <img src="img/rotulo1.png" alt="Vicmar Services en Quito" loading="lazy">
+            <img src="img/rotulo1.png" alt="Vicmar Services Quito">
         </a>
     </div>
 
@@ -41,70 +50,68 @@
         <a href="proyectos.html">Proyectos</a>
         <a href="nosotros.html">Nosotros</a>
         <a href="contacto.html">Contacto</a>
-        <a href="https://wa.me/593969054410" class="btn-header" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">WhatsApp</a>
     </nav>
 </header>
 
-<!-- SERVICIOS -->
 <main>
+
 <section class="servicios">
     <h1>Servicios de mantenimiento en Quito</h1>
-    <p>Soluciones rápidas, profesionales y garantizadas para hogares y empresas.</p>
-
-    <div class="grid">
-
-        <article class="card">
-            <h3>⚡ Electricidad</h3>
-            <p>Instalaciones eléctricas, tableros, mantenimiento preventivo y correctivo.</p>
-        </article>
-
-        <article class="card">
-            <h3>🚿 Plomería</h3>
-            <p>Instalación de grifería, tuberías, detección de fugas y mantenimiento.</p>
-        </article>
-
-        <article class="card">
-            <h3>🎨 Pintura</h3>
-            <p>Estucado profesional, pintura interior y exterior con acabados de alta calidad.</p>
-        </article>
-
-        <article class="card">
-            <h3>🪟 Aluminio y vidrio</h3>
-            <p>Fabricación e instalación de puertas, ventanas y estructuras de aluminio.</p>
-        </article>
-
-        <article class="card">
-            <h3>💧 Impermeabilización</h3>
-            <p>Protección contra humedad y filtraciones en techos, paredes y terrazas.</p>
-        </article>
-
-    </div>
+    <p><strong>Atención inmediata - solución garantizada</strong></p>
 </section>
 
-<!-- CONFIANZA -->
-<section class="confianza">
-    <h2>¿Por qué elegir Vicmar Services?</h2>
-    <ul>
-        <li>✔ Atención rápida en Quito</li>
-        <li>✔ Trabajos garantizados</li>
-        <li>✔ Técnicos profesionales</li>
-        <li>✔ Experiencia comprobada</li>
-    </ul>
-</section>
-
-<!-- CTA -->
+<!-- FORMULARIO -->
 <section class="cta">
-    <h2>¿Necesitas un servicio técnico?</h2>
-    <p>Contáctanos ahora y recibe atención inmediata.</p>
-    <a href="https://wa.me/593969054410" class="btn" target="_blank" rel="noopener">📲 Solicitar cotización</a>
+    <h2>Solicita tu cotización</h2>
+    <p>🚨 Respuesta rápida - te contactamos en minutos</p>
+
+    <form id="formulario" class="formulario">
+        <input type="text" name="nombre" placeholder="Tu nombre" required>
+        <input type="tel" name="telefono" placeholder="Tu teléfono" required>
+        <input type="email" name="email" placeholder="Tu correo">
+        <textarea name="mensaje" placeholder="Describe tu problema" required></textarea>
+
+        <button type="submit">📲 Enviar solicitud</button>
+    </form>
+
+    <p id="respuesta"></p>
 </section>
+
 </main>
 
-<!-- FOOTER -->
 <footer>
-    <p>© 2026 Vicmar Services - Quito, Ecuador</p>
-    <p>WhatsApp: 0969054410 | info@vicmarserv.com</p>
+    <p>© 2026 Vicmar Services</p>
 </footer>
+
+<!-- SCRIPT PARA ENVIAR -->
+<script>
+document.getElementById("formulario").addEventListener("submit", async function(e){
+    e.preventDefault();
+
+    const data = {
+        nombre: this.nombre.value,
+        telefono: this.telefono.value,
+        email: this.email.value,
+        mensaje: this.mensaje.value
+    };
+
+    try {
+        const res = await fetch("https://vicmar-pro-3.onrender.com/api/contacto", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(data)
+        });
+
+        document.getElementById("respuesta").innerText = "✅ Mensaje enviado correctamente";
+        this.reset();
+
+    } catch (error) {
+        document.getElementById("respuesta").innerText = "❌ Error al enviar, intenta por WhatsApp";
+    }
+});
+</script>
 
 </body>
 </html>
