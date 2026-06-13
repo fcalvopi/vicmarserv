@@ -1,248 +1,374 @@
-/* RESET */
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
+/* =========================
+RESET GENERAL
+========================= */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
-.logo img {
-    height: 50px;
-}
-/* HEADER */
-header {
-    background: #0a2540;
-    color: white;
-    padding: 15px 30px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-header {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+body{
+font-family:Arial, sans-serif;
+line-height:1.6;
+color:#333;
+background:#fff;
 }
 
-nav a {
-    color: white;
-    margin-left: 15px;
-    text-decoration: none;
+/* =========================
+HEADER
+========================= */
+
+header{
+background:#0a2540;
+color:#fff;
+padding:15px 30px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+position:sticky;
+top:0;
+z-index:1000;
+box-shadow:0 2px 10px rgba(0,0,0,.15);
 }
 
-/* HERO PREMIUM */
-.hero-premium {
-    background: url('../img/hero.jpg') center/cover no-repeat;
-    height: 90vh;
-    position: relative;
-    color: white;
-}
-.hero-premium h1 {
-    font-size: 40px;
-    margin-bottom: 10px;
+.logo img{
+height:60px;
 }
 
-.hero-premium p {
-    font-size: 18px;
-}
-.container {
-    max-width: 1200px;
-    margin: auto;
-}
-.overlay {
-    background: rgba(0,0,0,0.6);
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+nav{
+display:flex;
+flex-wrap:wrap;
+align-items:center;
 }
 
-.botones {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-    justify-content: center;
+nav a{
+color:#fff;
+text-decoration:none;
+margin-left:20px;
+font-weight:600;
+transition:.3s;
 }
 
-.btn {
-    background: #25D366;
-    color: white;
-    padding: 12px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-top: 20px;
+nav a:hover
+
+/* =========================
+HERO
+========================= */
+
+.hero-premium{
+background:url('../img/hero.jpg') center center/cover no-repeat;
+min-height:90vh;
+position:relative;
 }
+
+.overlay{
+background:rgba(0,0,0,.65);
+min-height:90vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+color:white;
+padding:20px;
+}
+
+.hero-premium h1{
+font-size:3rem;
+max-width:900px;
+margin-bottom:20px;
+}
+
+.hero-premium p{
+font-size:1.2rem;
+max-width:800px;
+}
+
+.botones{
+margin-top:25px;
+display:flex;
+gap:15px;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.btn,
+.btn-sec{
+padding:14px 25px;
+border-radius:8px;
+text-decoration:none;
+font-weight:bold;
+transition:.3s;
+}
+
+.btn{
+background:#25D366;
+color:white;
+}
+
+.btn-sec{
+border:2px solid white;
+color:white;
+}
+
 .btn:hover,
-.btn-sec:hover,
-.btn-header:hover {
-    opacity: 0.8;
-    transform: scale(1.05);
-    transition: 0.3s;
+.btn-sec:hover{
+transform:translateY(-3px);
 }
 
-.btn-sec {
-    border: 2px solid white;
-    padding: 12px 20px;
-    color: white;
-    text-decoration: none;
-}
-.btn-header {
-    background: #25D366;
-    padding: 8px 15px;
-    border-radius: 5px;
-    color: white;
-    margin-left: 10px;
+/* =========================
+SECCIONES
+========================= */
+
+section{
+padding:70px 20px;
 }
 
-.confianza ul {
-    list-style: none;
-    padding: 0;
+section h2{
+text-align:center;
+margin-bottom:30px;
+color:#0a2540;
 }
 
-.confianza li {
-    margin: 10px 0;
-    font-size: 18px;
+/* =========================
+CONFIANZA
+========================= */
+
+.confianza{
+background:#f8fafc;
 }
 
-.testimonios {
-    padding: 50px;
-    text-align: center;
-    background: #f5f5f5;
-}
-/* SERVICIOS */
-.servicios {
-    padding: 60px 20px;
-    text-align: center;
+.confianza ul{
+list-style:none;
+max-width:700px;
+margin:auto;
 }
 
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
-    margin-top: 30px;
+.confianza li{
+padding:12px;
+font-size:18px;
 }
 
-.card {
-    background: white;
-    padding: 25px;
-    border-radius: 10px;
-    transition: 0.3s;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-}
-.card h3 {
-    margin-bottom: 10px;
+/* =========================
+GRID
+========================= */
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+max-width:1200px;
+margin:auto;
 }
 
-.card p {
-    color: #555;
-}
-.card:hover {
-    transform: translateY(-5px);
-}
-
-/* TRABAJOS */
-.trabajos {
-    padding: 60px 20px;
-    text-align: center;
-    background: #f9f9f9;
+.card{
+background:white;
+padding:25px;
+border-radius:12px;
+box-shadow:0 5px 15px rgba(0,0,0,.08);
+transition:.3s;
 }
 
-.galeria {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 15px;
-    margin-top: 20px;
+.card:hover{
+transform:translateY(-8px);
 }
 
-.galeria img {
-    width: 100%;
-    border-radius: 10px;
-    transition: 0.3s;
+.card h3{
+color:#0a2540;
+margin-bottom:10px;
 }
 
-.galeria img:hover {
-    transform: scale(1.05);
-}
-section {
-    padding-top: 60px;
-    padding-bottom: 60px;
+.card p{
+color:#555;
 }
 
-/* CTA */
-.cta {
-    background: #1d4ed8;
-    color: white;
-    text-align: center;
-    padding: 60px 20px;
+/* =========================
+TRABAJOS
+========================= */
+
+.trabajos{
+background:#f9fafb;
 }
 
-/* FORMULARIO */
-form {
-    background: white;
-    padding: 25px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    max-width: 400px;
-    margin: auto;
+.trabajos img{
+width:100%;
+border-radius:10px;
+height:220px;
+object-fit:cover;
 }
 
-input, textarea {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+/* =========================
+TESTIMONIOS
+========================= */
+
+.testimonios{
+background:#f5f5f5;
 }
 
-/* BOTÓN */
-button {
-    background: #1d4ed8;
-    color: white;
-    padding: 12px;
-    border: none;
-    width: 100%;
-    border-radius: 5px;
-    font-size: 16px;
+.testimonios .card{
+font-style:italic;
 }
 
-/* WHATSAPP */
-.whatsapp-float {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: #25D366;
-    color: white;
-    padding: 15px;
-    border-radius: 50%;
-    font-size: 22px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-}
-.whatsapp-float {
-    animation: pulse 1.5s infinite;
+/* =========================
+CLIENTES
+========================= */
+
+.clientes{
+background:#ffffff;
+text-align:center;
 }
 
-@keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.1); }
-    100% { transform: scale(1); }
+.clientes p{
+max-width:800px;
+margin:0 auto 20px auto;
 }
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-    }
 
-    nav {
-        margin-top: 10px;
-    }
-
-    .hero-premium h1 {
-        font-size: 28px;
-    }
+.clientes ul{
+list-style:none;
+max-width:600px;
+margin:auto;
 }
-/* FOOTER */
-footer {
-    background: #0a2540;
-    color: white;
-    text-align: center;
-    padding: 20px;
+
+.clientes li{
+padding:8px;
+}
+
+/* =========================
+CTA
+========================= */
+
+.cta{
+background:#1d4ed8;
+color:white;
+text-align:center;
+}
+
+.cta h2{
+color:white;
+}
+
+.cta p{
+margin-bottom:20px;
+}
+
+/* =========================
+FORMULARIO
+========================= */
+
+form{
+background:white;
+max-width:600px;
+margin:auto;
+padding:30px;
+border-radius:12px;
+box-shadow:0 5px 20px rgba(0,0,0,.1);
+}
+
+input,
+textarea{
+width:100%;
+padding:14px;
+margin-bottom:15px;
+border:1px solid #ddd;
+border-radius:6px;
+}
+
+textarea{
+min-height:150px;
+}
+
+button{
+width:100%;
+padding:15px;
+border:none;
+border-radius:6px;
+background:#1d4ed8;
+color:white;
+font-size:16px;
+cursor:pointer;
+}
+
+/* =========================
+WHATSAPP
+========================= */
+
+.whatsapp-float{
+position:fixed;
+bottom:20px;
+right:20px;
+width:65px;
+height:65px;
+border-radius:50%;
+background:#25D366;
+color:white;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:30px;
+text-decoration:none;
+z-index:999;
+box-shadow:0 5px 15px rgba(0,0,0,.3);
+animation:pulse 1.5s infinite;
+}
+
+@keyframes pulse{
+0%{transform:scale(1);}
+50%{transform:scale(1.1);}
+100%{transform:scale(1);}
+}
+
+/* =========================
+FOOTER
+========================= */
+
+footer{
+background:#0a2540;
+color:white;
+text-align:center;
+padding:25px;
+}
+
+/* =========================
+RESPONSIVE
+========================= */
+
+@media(max-width:768px){
+
+```
+header{
+    flex-direction:column;
+    text-align:center;
+}
+
+nav{
+    margin-top:15px;
+    justify-content:center;
+}
+
+nav a{
+    margin:8px;
+}
+
+.hero-premium h1{
+    font-size:2rem;
+}
+
+.hero-premium p{
+    font-size:1rem;
+}
+
+.botones{
+    flex-direction:column;
+    width:100%;
+}
+
+.btn,
+.btn-sec{
+    width:100%;
+    max-width:320px;
+    margin:auto;
+}
+```
+
 }
