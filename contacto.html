@@ -1,38 +1,88 @@
 <!DOCTYPE html>
+
 <html lang="es">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Servicios de mantenimiento en Quito | Vicmar Services</title>
+<title>Contacto | Vicmar Services Quito</title>
 
-<meta name="description" content="Servicios profesionales en Quito: electricidad, plomería, pintura, aluminio e impermeabilización. Atención inmediata.">
+<meta name="description" content="Solicita una cotización con Vicmar Services. Servicios de electricidad, plomería, impermeabilización, mantenimiento preventivo y correctivo en Quito.">
+
+<meta name="keywords" content="contacto Vicmar Services, cotización Quito, electricista Quito, plomería Quito, mantenimiento Quito">
+
+<meta name="author" content="Vicmar Services">
+<meta name="robots" content="index, follow">
+
+<!-- OPEN GRAPH -->
+
+<meta property="og:title" content="Contacto | Vicmar Services">
+<meta property="og:description" content="Solicita una cotización rápida y recibe atención profesional en Quito.">
+<meta property="og:image" content="img/rotulo1.png">
+<meta property="og:type" content="website">
+
+<!-- FAVICON -->
+
+<link rel="icon" href="favicon2.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
 
 <link rel="stylesheet" href="css/estilos.css">
-<link rel="icon" href="favicon2.ico">
 
 <style>
-.formulario {
-    max-width: 500px;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+
+.formulario{
+    max-width:600px;
+    margin:auto;
+    display:flex;
+    flex-direction:column;
+    gap:12px;
 }
+
 .formulario input,
-.formulario textarea {
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+.formulario textarea{
+    padding:14px;
+    border:1px solid #ccc;
+    border-radius:6px;
+    font-size:16px;
 }
-.formulario button {
-    background: #25D366;
-    color: white;
-    padding: 12px;
-    border: none;
-    cursor: pointer;
+
+.formulario textarea{
+    min-height:140px;
 }
+
+.formulario button{
+    background:#25D366;
+    color:white;
+    padding:14px;
+    border:none;
+    border-radius:6px;
+    cursor:pointer;
+    font-size:16px;
+    font-weight:bold;
+}
+
+.formulario button:hover{
+    opacity:.9;
+}
+
+.info-contacto{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.info-contacto p{
+    margin:10px 0;
+}
+
+#respuesta{
+    text-align:center;
+    margin-top:15px;
+    font-weight:bold;
+}
+
 </style>
+
 </head>
 
 <body>
@@ -44,63 +94,143 @@
         </a>
     </div>
 
-    <nav>
-        <a href="index.html">Inicio</a>
-        <a href="servicios.html">Servicios</a>
-        <a href="proyectos.html">Proyectos</a>
-        <a href="nosotros.html">Nosotros</a>
-        <a href="contacto.html">Contacto</a>
-    </nav>
+```
+<nav>
+    <a href="index.html">Inicio</a>
+    <a href="servicios.html">Servicios</a>
+    <a href="proyectos.html">Proyectos</a>
+    <a href="nosotros.html">Nosotros</a>
+    <a href="contacto.html">Contacto</a>
+</nav>
+```
+
 </header>
 
 <main>
 
 <section class="servicios">
-    <h1>Servicios de mantenimiento en Quito</h1>
-    <p><strong>Atención inmediata - solución garantizada</strong></p>
+
+```
+<h1>Contáctanos</h1>
+
+<p>
+    Solicita una cotización o agenda una visita técnica.
+</p>
+```
+
 </section>
 
-<!-- FORMULARIO -->
+<section>
+
+```
+<div class="info-contacto">
+
+    <h2>Información de Contacto</h2>
+
+    <p>📞 WhatsApp: 0969054410</p>
+
+    <p>📧 Correo: info@vicmarserv.com</p>
+
+    <p>📍 Quito - Ecuador</p>
+
+</div>
+
+<form id="formulario" class="formulario">
+
+    <input type="text"
+           name="nombre"
+           placeholder="Nombre completo"
+           required>
+
+    <input type="tel"
+           name="telefono"
+           placeholder="Número de teléfono"
+           required>
+
+    <input type="email"
+           name="email"
+           placeholder="Correo electrónico">
+
+    <textarea
+        name="mensaje"
+        placeholder="Describe el trabajo o problema que necesitas resolver"
+        required></textarea>
+
+    <button type="submit">
+        📲 Solicitar Cotización
+    </button>
+
+</form>
+
+<p id="respuesta"></p>
+```
+
+</section>
+
 <section class="cta">
-    <h2>Solicita tu cotización</h2>
-    <p>🚨 Respuesta rápida - te contactamos en minutos</p>
 
-    <form id="formulario" class="formulario">
-        <input type="text" name="nombre" placeholder="Tu nombre" required>
-        <input type="tel" name="telefono" placeholder="Tu teléfono" required>
-        <input type="email" name="email" placeholder="Tu correo">
-        <textarea name="mensaje" placeholder="Describe tu problema" required></textarea>
-        <button type="submit">📲 Enviar solicitud</button>
-    </form>
+```
+<h2>Atención Rápida y Profesional</h2>
 
-    <p id="respuesta"></p>
+<p>
+    Nuestro equipo responderá tu solicitud a la brevedad posible.
+</p>
+```
+
 </section>
-<script>
-document.getElementById("formulario").addEventListener("submit", function(e) {
-  e.preventDefault();
 
-  const nombre = this.nombre.value.trim();
-  const telefono = this.telefono.value.trim();
-  const email = this.email.value.trim();
-  const mensaje = this.mensaje.value.trim();
-
-  const texto = `Hola, soy ${nombre}%0A📞 Tel: ${telefono}%0A📧 Email: ${email}%0A🛠️ Problema: ${mensaje}`;
-
-  const url = `https://wa.me/593969054410?text=${texto}`;
-
-  window.open(url, "_blank");
-
-  // mensaje en pantalla
-  document.getElementById("respuesta").innerText = "✅ Redirigiendo a WhatsApp...";
-
-  this.reset();
-});
-</script>
 </main>
 
 <footer>
-    <p>© 2026 Vicmar Services</p>
+
+```
+<p>© 2026 Vicmar Services - Quito, Ecuador</p>
+
+<p>
+    WhatsApp: 0969054410 |
+    info@vicmarserv.com
+</p>
+```
+
 </footer>
+
+<a href="https://wa.me/593969054410"
+class="whatsapp-float"
+target="_blank"
+aria-label="WhatsApp">
+💬 </a>
+
+<script>
+
+document.getElementById("formulario").addEventListener("submit", function(e){
+
+    e.preventDefault();
+
+    const nombre = this.nombre.value.trim();
+    const telefono = this.telefono.value.trim();
+    const email = this.email.value.trim();
+    const mensaje = this.mensaje.value.trim();
+
+    const texto =
+`Hola, soy ${nombre}
+📞 Teléfono: ${telefono}
+📧 Correo: ${email}
+🛠️ Solicitud: ${mensaje}`;
+
+    const url =
+`https://wa.me/593969054410?text=${encodeURIComponent(texto)}`;
+
+    window.open(url, "_blank");
+
+    document.getElementById("respuesta").innerText =
+    "✅ Redirigiendo a WhatsApp...";
+
+    this.reset();
+
+});
+
+</script>
 
 </body>
 </html>
+
