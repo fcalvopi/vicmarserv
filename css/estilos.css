@@ -37,23 +37,15 @@ display:flex;
 flex-wrap:wrap;
 align-items:center;
 }
-
 nav a{
 color:#fff;
 text-decoration:none;
 margin-left:20px;
 font-weight:600;
 transition:.3s;
-}
-
-nav a:hover{
-color:#60a5fa;
-}
-nav a{
 padding:8px 12px;
 border-radius:6px;
 }
-
 nav a:hover{
 background:rgba(255,255,255,.1);
 color:#60a5fa;
@@ -67,6 +59,8 @@ HERO
 background:url('../img/hero.jpg') center center/cover no-repeat;
 min-height:90vh;
 position:relative;
+display:flex;
+align-items:center;
 }
 
 .overlay{
@@ -122,6 +116,7 @@ color:white;
 .btn:hover,
 .btn-sec:hover{
 transform:translateY(-3px);
+opacity:.9;
 }
 
 /* =========================
@@ -296,6 +291,13 @@ color:white;
 font-size:16px;
 cursor:pointer;
 }
+input:focus,
+textarea:focus{
+outline:none;
+border-color:#1d4ed8;
+box-shadow:0 0 5px rgba(29,78,216,.3);
+}
+
 
 /* =========================
 WHATSAPP
@@ -376,6 +378,7 @@ width:100%;
 width:100%;
 max-width:320px;
 margin:auto;
+}
 }
 
 /* =========================
