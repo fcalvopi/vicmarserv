@@ -32,12 +32,6 @@ z-index:1000;
 box-shadow:0 2px 10px rgba(0,0,0,.15);
 }
 
-.logo img{
-max-height:70px;
-width:auto;
-display:block;
-}
-
 nav{
 display:flex;
 flex-wrap:wrap;
@@ -53,6 +47,15 @@ transition:.3s;
 }
 
 nav a:hover{
+color:#60a5fa;
+}
+nav a{
+padding:8px 12px;
+border-radius:6px;
+}
+
+nav a:hover{
+background:rgba(255,255,255,.1);
 color:#60a5fa;
 }
 
@@ -176,6 +179,7 @@ transition:.3s;
 
 .card:hover{
 transform:translateY(-8px);
+box-shadow:0 10px 25px rgba(0,0,0,.15);
 }
 
 .card h3{
@@ -301,8 +305,8 @@ WHATSAPP
 position:fixed;
 bottom:20px;
 right:20px;
-width:65px;
-height:65px;
+width:70px;
+height:70px;
 border-radius:50%;
 background:#25D366;
 color:white;
@@ -331,6 +335,7 @@ background:#0a2540;
 color:white;
 text-align:center;
 padding:25px;
+margin-top:50px;
 }
 
 /* =========================
@@ -371,8 +376,6 @@ width:100%;
 width:100%;
 max-width:320px;
 margin:auto;
-}
-
 }
 
 /* =========================
@@ -461,13 +464,6 @@ margin:auto;
 padding:8px;
 }
 
-/* =========================
-FOOTER LINKS
-========================= */
-
-footer a:hover{
-text-decoration:underline;
-}
 /* =========================
 LOGO
 ========================= */
