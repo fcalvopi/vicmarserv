@@ -337,9 +337,6 @@ padding:25px;
 RESPONSIVE
 ========================= */
 
-@media(max-width:768px){
-
-```
 header{
     flex-direction:column;
     text-align:center;
@@ -373,7 +370,6 @@ nav a{
     max-width:320px;
     margin:auto;
 }
-```
 
 }
 /* =========================
@@ -474,3 +470,60 @@ text-decoration:none;
 footer a:hover{
 text-decoration:underline;
 }
+/* =========================
+LOGO
+========================= */
+
+.logo{
+display:flex;
+align-items:center;
+}
+
+.logo img{
+max-width:100%;
+height:auto;
+}
+
+/* =========================
+ENLACES FOOTER
+========================= */
+
+footer a{
+color:white;
+text-decoration:none;
+}
+
+footer a:hover{
+text-decoration:underline;
+}
+
+/* =========================
+FAQ ANIMADA
+========================= */
+
+.faq details{
+transition:.3s;
+}
+
+.faq details[open]{
+background:#f8fafc;
+}
+
+/* =========================
+TABLAS (FUTURO)
+========================= */
+
+table{
+width:100%;
+border-collapse:collapse;
+}
+
+td,
+th{
+padding:12px;
+border:1px solid #ddd;
+}
+:::
+
+---
+
