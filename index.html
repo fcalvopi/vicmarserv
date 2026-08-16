@@ -1,8 +1,8 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
  
-<meta charset="UTF-8>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Electricidad, Plomería y Mantenimiento en Quito | Vicmar Services</title>
@@ -22,13 +22,16 @@
 <link rel="shortcut icon" href="img/icono2.png">
 <link rel="apple-touch-icon" href="img/icono2.png">
 
+<!-- Cargamos FontAwesome para añadir iconos modernos a los botones de servicios -->
+<link rel="stylesheet" href="https://cloudflare.com">
+
 <!-- Open Graph -->
 <meta property="og:title" content="Vicmar Services Quito">
 <meta property="og:description" content="Servicios técnicos rápidos y garantizados en Quito">
 <meta property="og:image" content="https://vicmarserv.com/img/icono2.png">
 <meta property="og:url" content="https://vicmarserv.com">
 <meta property="og:type" content="website">
-<meta property="og:locale" content="es_EC>
+<meta property="og:locale" content="es_EC">
  
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
@@ -56,6 +59,86 @@
 }
 </script>
 
+<style>
+    /* Estilos inyectados para el control dinámico de servicios */
+    .selector-servicios {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin: 30px auto;
+        max-width: 1100px;
+        padding: 0 15px;
+    }
+
+    .btn-servicio {
+        background-color: #f0f4f8;
+        border: 2px solid #d0dbe5;
+        color: #1a252f;
+        padding: 12px 20px;
+        font-size: 15px;
+        font-weight: bold;
+        border-radius: 30px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        transition: all 0.3s ease;
+    }
+
+    .btn-servicio i {
+        font-size: 18px;
+        color: #0d47a1;
+    }
+
+    .btn-servicio:hover, .btn-servicio.active {
+        background-color: #0d47a1;
+        border-color: #0d47a1;
+        color: #ffffff;
+    }
+
+    .btn-servicio:hover i, .btn-servicio.active i {
+        color: #ffffff;
+    }
+
+    /* Contenedor de bloque de servicio */
+    .bloque-servicio {
+        display: none; /* Oculta todas las pestañas por defecto */
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 30px;
+        background: #ffffff;
+        border-radius: 12px;
+        box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+        border-left: 5px solid #0d47a1;
+        animation: fadeInTab 0.4s ease forwards;
+    }
+
+    .bloque-servicio.active {
+        display: block; /* Muestra solo la seleccionada */
+    }
+
+    .bloque-servicio h3 {
+        margin-top: 0;
+        color: #0d47a1;
+        font-size: 24px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .bloque-servicio p {
+        font-size: 16px;
+        line-height: 1.6;
+        color: #4a5568;
+    }
+
+    @keyframes fadeInTab {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+</style>
+
 </head>
 
 <body>
@@ -63,11 +146,7 @@
 <header>
     <div class="logo">
         <a href="index.html">
-            <img
-src="img/rotulo1.png"
-alt="Vicmar Services - Electricidad, Plomería y Mantenimiento en Quito"
-width="350"
-height="120">
+            <img src="img/rotulo1.png" alt="Vicmar Services - Electricidad, Plomería y Mantenimiento en Quito" width="350" height="120">
         </a>
     </div>
 
@@ -84,35 +163,27 @@ height="120">
 
 <section class="hero-premium">
     <div class="overlay">
-
         <h1>Soluciones Técnicas Profesionales para Hogares y Empresas en Quito</h1>
-
         <p>
             <strong>
                 Electricidad, plomería, impermeabilización,
                 aluminio y vidrio, mantenimiento preventivo y correctivo.
             </strong>
         </p>
-
         <div class="botones">
             <a href="https://wa.me/593992705273" class="btn" target="_blank" rel="noopener">
                 📲 Cotizar por WhatsApp
             </a>
-
-            <a href="servicios.html" class="btn-sec">
+            <a href="#seccion-interactiva" class="btn-sec">
                 Ver servicios
             </a>
         </div>
-
         <p><strong>🚨 Atención rápida en Quito y Valles</strong></p>
-
     </div>
 </section>
 
 <section class="confianza">
-
     <h2>¿Por qué elegir Vicmar Services?</h2>
-
     <ul>
         <li>✔ Atención inmediata en Quito</li>
         <li>✔ Trabajos garantizados</li>
@@ -120,214 +191,59 @@ height="120">
         <li>✔ Experiencia en proyectos residenciales y corporativos</li>
         <li>✔ Soluciones integrales para hogares y empresas</li>
     </ul>
-
 </section>
 
-<section class="servicios">
-
+<!-- SECCIÓN MEJORADA DE SERVICIOS INTERACTIVOS -->
+<section class="servicios" id="seccion-interactiva">
     <h2>Servicios Profesionales</h2>
+    <p style="text-align: center; color: #666; margin-bottom: 10px;">Haz clic en cada ícono para desplegar la información del servicio:</p>
 
-    <div class="grid">
+    <!-- Barra de menú con iconos -->
+    <div class="selector-servicios">
+        <button class="btn-servicio active" onclick="filtrarServicio('elec', this)"><i class="fa-solid fa-bolt"></i> Electricidad</button>
+        <button class="btn-servicio" onclick="filtrarServicio('plom', this)"><i class="fa-solid fa-faucet"></i> Plomería</button>
+        <button class="btn-servicio" onclick="filtrarServicio('pint', this)"><i class="fa-solid fa-palette"></i> Pintura</button>
+        <button class="btn-servicio" onclick="filtrarServicio('alum', this)"><i class="fa-solid fa-window-maximize"></i> Aluminio y Vidrio</button>
+        <button class="btn-servicio" onclick="filtrarServicio('mante', this)"><i class="fa-solid fa-building-gear"></i> Mantenimiento</button>
+        <button class="btn-servicio" onclick="filtrarServicio('imper', this)"><i class="fa-solid fa-droplet-slash"></i> Impermeabilización</button>
+        <button class="btn-servicio" onclick="filtrarServicio('grif', this)"><i class="fa-solid fa-faucet-drip"></i> Grifería</button>
+        <button class="btn-servicio" onclick="filtrarServicio('redes', this)"><i class="fa-solid fa-network-wired"></i> Redes y Datos</button>
+    </div>
 
-        <article class="card">
+    <!-- Bloques de Contenido segmentados (solo uno se muestra a la vez) -->
+    <div class="contenedor-bloques">
+        
+        <article id="elec" class="bloque-servicio active">
             <h3>⚡ Electricidad</h3>
-            <p>Instalaciones eléctricas, mantenimiento, tableros y reparaciones.</p>
+            <p>Instalaciones eléctricas residenciales y comerciales, diagnóstico y reparación de cortocircuitos, organización de tableros eléctricos principales y tareas de mantenimiento eléctrico general en Quito.</p>
+            <a href="https://wa.me/593992705273" class="btn" target="_blank" rel="noopener">💬 Solicitar Electricista</a>
         </article>
 
-        <article class="card">
+        <article id="plom" class="bloque-servicio">
             <h3>🚿 Plomería</h3>
-            <p>Reparación de fugas, instalaciones sanitarias y mantenimiento.</p>
+            <p>Atención técnica especializada en reparación de fugas de agua internas, montajes de sistemas sanitarios limpios, destape de cañerías obstruidas y mantenimiento general de tuberías de agua potable.</p>
+            <a href="https://wa.me/593992705273" class="btn" target="_blank" rel="noopener">💬 Solicitar Plomero</a>
         </article>
 
-        <article class="card">
+        <article id="pint" class="bloque-servicio">
             <h3>🎨 Pintura</h3>
-            <p>Trabajos residenciales y corporativos con acabados profesionales.</p>
+            <p>Trabajos estéticos de pintura de alta gama tanto para inmuebles residenciales como oficinas corporativas. Aplicación técnica con acabados uniformes y profesionales de larga duración.</p>
         </article>
 
-        <article class="card">
+        <article id="alum" class="bloque-servicio">
             <h3>🪟 Aluminio y Vidrio</h3>
-            <p>Fabricación e instalación de puertas, ventanas y divisiones.</p>
+            <p>Diseño, fabricación a medida e instalación estructural de puertas corredizas, ventanas panorámicas de aluminio y divisiones modulares elegantes para oficinas o mamparas de baño.</p>
         </article>
 
-        <article class="card">
+        <article id="mante" class="bloque-servicio">
             <h3>🏢 Mantenimiento Preventivo y Correctivo</h3>
-            <p>Servicios técnicos para oficinas, edificios y viviendas.</p>
+            <p>Planes integrales de asistencia técnica periódica y reparaciones directas orientados a la conservación de infraestructuras en oficinas, edificios de departamentos y viviendas particulares.</p>
         </article>
 
-        <article class="card">
+        <article id="imper" class="bloque-servicio">
             <h3>💧 Impermeabilización</h3>
-            <p>Protección de terrazas, cubiertas, losas y fachadas.</p>
+            <p>Sistemas avanzados de protección contra humedad y filtraciones críticas en cubiertas expuestas, terrazas, losas de hormigón y fachadas exteriores estructurales.</p>
         </article>
 
-        <article class="card">
+        <article id="grif" class="bloque-servicio">
             <h3>🚰 Instalación de Grifería</h3>
-            <p>Montaje y reemplazo profesional de griferías y accesorios.</p>
-        </article>
-
-        <article class="card">
-            <h3>🔌 Redes y Datos Cat6</h3>
-            <p>Instalación de cableado estructurado y puntos de red.</p>
-        </article>
-
-    </div>
-
-</section>
-
-<section class="trabajos">
-
-    <h2>Trabajos Reales Realizados en Quito</h2>
-
-    <div class="grid">
-
-        <article class="card">
-            <img src="img/trabajo1.jpg" alt="Instalación eléctrica en Quito Norte" loading="lazy">
-            <p><strong>Instalación eléctrica en Quito Norte</strong></p>
-        </article>
-
-        <article class="card">
-            <img src="img/trabajo2.jpg" alt="Reparación de fuga de agua en Quito" loading="lazy">
-            <p><strong>Servicio urgente de plomería</strong></p>
-        </article>
-
-    </div>
-
-</section>
-
-<section class="testimonios">
-
-    <h2>Clientes Satisfechos</h2>
-
-    <div class="grid">
-
-        <article class="card">
-            <p>"Excelente servicio, llegaron rápido y solucionaron el problema el mismo día."</p>
-        </article>
-
-        <article class="card">
-            <p>"Profesionales, responsables y con precios justos. Muy recomendados."</p>
-        </article>
-
-    </div>
-
-</section>
-
-<section class="clientes">
-
-    <h2>Atendemos Empresas y Edificios</h2>
-
-    <p>
-        Brindamos servicios técnicos especializados para oficinas,
-        edificios corporativos, conjuntos residenciales e industrias.
-    </p>
-
-    <ul>
-        <li>✔ Mantenimiento eléctrico</li>
-        <li>✔ Sistemas hidrosanitarios</li>
-        <li>✔ Redes de datos</li>
-        <li>✔ Impermeabilización</li>
-        <li>✔ Visitas técnicas</li>
-        <li>✔ Mantenimiento preventivo y correctivo</li>
-    </ul>
-
-</section>
- <section class="cobertura">
-
-<h2>Zonas de Atención</h2>
-
-<p>
-Atendemos servicios en:
-</p>
-
-<ul>
-<li>Quito Norte</li>
-<li>Quito Centro</li>
-<li>Quito Sur</li>
-<li>Calderón</li>
-<li>Carcelén</li>
-<li>Cumbayá</li>
-<li>Tumbaco</li>
-<li>Pomasqui</li>
-<li>Mitad del Mundo</li>
-</ul>
-
-</section>
-
-<section class="cta">
-
-    <h2>¿Necesitas ayuda urgente?</h2>
-
-    <p>
-        Contáctanos ahora y recibe atención rápida y profesional en Quito.
-    </p>
-
-    <a href="https://wa.me/593992705273" class="btn" target="_blank" rel="noopener">
-        📲 Solicitar Servicio
-    </a>
-
-</section>
-<section class="faq">
-
-<h2>Preguntas Frecuentes</h2>
-
-<details>
-<summary>¿Atienden emergencias?</summary>
-<p>Sí, según disponibilidad.</p>
-</details>
-
-<details>
-<summary>¿Realizan visitas técnicas?</summary>
-<p>Sí, realizamos visitas técnicas para evaluar cada proyecto.</p>
-</details>
-
-<details>
-<summary>¿Trabajan fines de semana?</summary>
-<p>Sí, previa coordinación.</p>
-</details>
-
-<details>
-<summary>¿Atienden empresas?</summary>
-<p>Sí, trabajamos con oficinas, edificios, industrias y conjuntos residenciales.</p>
-</details>
-
-<details>
-<summary>¿Ofrecen garantía?</summary>
-<p>Sí, nuestros trabajos cuentan con garantía según el servicio realizado.</p>
-</details>
-
-</section>
-
-</section>
- 
-
-</main>
-
-<footer>
-
-    <p>© 2025 Vicmar Services - Quito, Ecuador</p>
-
-    <p>
-    WhatsApp:
-    <a href="tel:+593992705273">0992705273</a>
-    |
-    <a href="mailto:info@vicmarserv.com">
-        info@vicmarserv.com
-    </a>
-</p>
-
-</footer>
-
-<a href="https://wa.me/593992705273"
-class="whatsapp-float"
-target="_blank"
-aria-label="WhatsApp">
-
-💬
-
-</a>
-
-
-
-</a>
-
-</body>
-</html>
