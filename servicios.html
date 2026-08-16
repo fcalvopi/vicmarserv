@@ -1,285 +1,1180 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
- 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Nuestros Servicios Técnicos | Vicmar Services Quito</title>
- 
-<meta name="description" content="Explora nuestro catálogo completo de servicios: electricidad, plomería, pintura, impermeabilización y mantenimiento integral en Quito.">
-<meta name="keywords" content="servicios electricista quito, plomero quito, mantenimiento de edificios quito, impermeabilizacion quito">
-<meta name="author" content="Vicmar Services">
-<meta name="robots" content="index, follow">
-<meta name="theme-color" content="#0d47a1"> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- Favicon -->
-<link rel="canonical" href="https://vicmarserv.com">
- 
-<link rel="stylesheet" href="css/estilos.css">
- 
-<link rel="icon" type="image/png" href="img/icono2.png">
-<link rel="shortcut icon" href="img/icono2.png">
-<link rel="apple-touch-icon" href="img/icono2.png">
+    <title>Servicios de Mantenimiento en Quito | Vicmar Services</title>
 
-<!-- Cargamos FontAwesome para añadir iconos modernos -->
-<link rel="stylesheet" href="https://cloudflare.com">
+    <meta name="description"
+        content="Servicios profesionales de mantenimiento en Quito: electricidad, plomería, pintura, aluminio y vidrio, impermeabilización, gypsum y mantenimiento preventivo y correctivo.">
 
-<!-- Open Graph -->
-<meta property="og:title" content="Catálogo de Servicios Técnicos | Vicmar Services">
-<meta property="og:description" content="Soluciones integrales de mantenimiento residencial y comercial con técnicos calificados en Quito.">
-<meta property="og:image" content="https://vicmarserv.com">
-<meta property="og:url" content="https://vicmarserv.com">
-<meta property="og:type" content="website">
-<meta property="og:locale" content="es_EC">
+    <meta name="keywords"
+        content="mantenimiento Quito, electricidad Quito, plomería Quito, pintura Quito, impermeabilización Quito, aluminio y vidrio Quito, gypsum Quito, mantenimiento preventivo Quito">
 
-<style>
-    /* COMPONENTES DE DISEÑO UNIFICADO */
-    .encabezado-pagina {
-        text-align: center;
-        padding: 40px 20px 20px;
-        max-width: 800px;
-        margin: 0 auto;
-    }
+    <meta name="author" content="Vicmar Services">
 
-    .encabezado-pagina h1 {
-        color: #0d47a1;
-        font-size: 32px;
-        margin-bottom: 10px;
-    }
+    <meta name="robots" content="index, follow">
 
-    /* BARRA DE BÚSQUEDA Y FILTROS */
-    .buscador-contenedor {
-        max-width: 500px;
-        margin: 0 auto 25px;
-        padding: 0 15px;
-        position: relative;
-    }
+    <meta name="theme-color" content="#0d47a1">
 
-    .input-busqueda {
-        width: 100%;
-        padding: 14px 20px 14px 45px;
-        font-size: 16px;
-        border: 2px solid #cbd5e1;
-        border-radius: 30px;
-        outline: none;
-        box-shadow: 0 4px 6px rgba(0,0,0,0.02);
-        transition: all 0.3s ease;
-    }
+    <link rel="canonical" href="https://vicmarserv.com/servicios.html">
 
-    .input-busqueda:focus {
-        border-color: #0d47a1;
-        box-shadow: 0 4px 12px rgba(13, 71, 161, 0.15);
-    }
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="img/icono2.png">
+    <link rel="shortcut icon" href="img/icono2.png">
+    <link rel="apple-touch-icon" href="img/icono2.png">
 
-    .buscador-contenedor i {
-        position: absolute;
-        left: 32px;
-        top: 50%;
-        transform: translateY(-50%);
-        color: #94a3b8;
-        font-size: 18px;
-    }
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer">
 
-    .filtros-servicios {
-        display: flex;
-        justify-content: center;
-        gap: 10px;
-        margin-bottom: 35px;
-        flex-wrap: wrap;
-    }
+    <!-- CSS PRINCIPAL -->
+    <link rel="stylesheet" href="css/estilos.css">
 
-    .btn-filtro {
-        background-color: #f1f5f9;
-        border: 1px solid #cbd5e1;
-        padding: 8px 18px;
-        border-radius: 20px;
-        font-size: 14px;
-        font-weight: 600;
-        cursor: pointer;
-        color: #475569;
-        transition: all 0.25s ease;
-    }
-
-    .btn-filtro.active, .btn-filtro:hover {
-        background-color: #0d47a1;
-        color: #ffffff;
-        border-color: #0d47a1;
-    }
-
-    /* REJILLA DE TARJETAS MEJORADAS */
-    .grid-servicios-extendido {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-        gap: 25px;
-        max-width: 1100px;
-        margin: 0 auto;
-        padding: 0 20px 50px;
-    }
-
-    .tarjeta-servicio {
-        background: #ffffff;
-        border-radius: 16px;
-        border: 1px solid #e2e8f0;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.03);
-        padding: 30px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        transition: all 0.3s ease;
-    }
-
-    .tarjeta-servicio:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 25px rgba(13, 71, 161, 0.08);
-        border-color: #cbd5e1;
-    }
-
-    .tarjeta-header {
-        display: flex;
-        align-items: center;
-        gap: 15px;
-        margin-bottom: 15px;
-    }
-
-    .tarjeta-icon {
-        width: 50px;
-        height: 50px;
-        background-color: #eff6ff;
-        border-radius: 12px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: #0d47a1;
-        font-size: 22px;
-    }
-
-    .tarjeta-header h3 {
-        margin: 0;
-        font-size: 20px;
-        color: #1e293b;
-    }
-
-    .tarjeta-servicio p {
-        font-size: 15px;
-        line-height: 1.6;
-        color: #64748b;
-        margin: 0 0 20px 0;
-    }
-
-    .btn-tarjeta-cta {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 8px;
-        background-color: #f8fafc;
-        border: 1px solid #e2e8f0;
-        color: #0d47a1;
-        padding: 10px 0;
-        border-radius: 8px;
-        text-decoration: none;
-        font-weight: bold;
-        font-size: 14px;
-        transition: all 0.2s ease;
-    }
-
-    .tarjeta-servicio:hover .btn-tarjeta-cta {
-        background-color: #0d47a1;
-        color: #ffffff;
-        border-color: #0d47a1;
-    }
-
-    .no-resultados {
-        text-align: center;
-        grid-column: 1 / -1;
-        color: #64748b;
-        padding: 40px;
-        font-size: 16px;
-        display: none;
-    }
-</style>
+    <!-- Open Graph -->
+    <meta property="og:title" content="Servicios de Mantenimiento | Vicmar Services Quito">
+    <meta property="og:description"
+        content="Soluciones profesionales de mantenimiento para casas, edificios y negocios en Quito.">
+    <meta property="og:image" content="https://vicmarserv.com/img/rotulo1.png">
+    <meta property="og:url" content="https://vicmarserv.com/servicios.html">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_EC">
 
 </head>
 
 <body>
 
-<header>
-    <div class="logo">
-        <a href="index.html">
-            <img src="img/rotulo1.png" alt="Vicmar Services - Servicios Técnicos en Quito" width="350" height="120">
-        </a>
-    </div>
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
 
-    <nav aria-label="Menú principal">
-        <a href="index.html">Inicio</a>
-        <a href="servicios.html" class="active">Servicios</a>
-        <a href="proyectos.html">Proyectos</a>
-        <a href="nosotros.html">Nosotros</a>
-        <a href="contacto.html">Contacto</a>
-    </nav>
-</header>
+    <header class="site-header">
 
-<main>
+        <div class="header-container">
 
-    <div class="encabezado-pagina">
-        <h1>Catálogo de Servicios Profesionales</h1>
-        <p>Soluciones técnicas garantizadas con cobertura completa en Quito y Valles para residencias y comercios.</p>
-    </div>
+            <div class="logo">
 
-    <!-- Buscador Integrado -->
-    <div class="buscador-contenedor">
-        <i class="fa-solid fa-magnifying-glass"></i>
-        <input type="text" id="inputBuscar" class="input-busqueda" placeholder="¿Qué servicio estás buscando? (ej. Fuga, cableado...)" onkeyup="filtrarPorTexto()">
-    </div>
+                <a href="index.html" aria-label="Vicmar Services - Inicio">
 
-    <!-- Botones de Filtro Rápido -->
-    <div class="filtros-servicios">
-        <button class="btn-filtro active" onclick="filtrarCategoria('todos', this)">Todos</button>
-        <button class="btn-filtro" onclick="filtrarCategoria('tecnico', this)">Técnicos</button>
-        <button class="btn-filtro" onclick="filtrarCategoria('estructural', this)">Estructura y Acabados</button>
-    </div>
+                    <img src="img/rotulo1.png"
+                        alt="Vicmar Services - Mantenimiento Integral en Quito"
+                        width="300"
+                        height="100">
 
-    <!-- Rejilla de Tarjetas -->
-    <section class="grid-servicios-extendido" id="contenedorServicios">
-        
-        <div class="tarjeta-servicio" data-categoria="tecnico" data-palabras="electricidad electricista cables tableros corto circuito luz luminarias">
-            <div class="tarjeta-content">
-                <div class="tarjeta-header">
-                    <div class="tarjeta-icon"><i class="fa-solid fa-bolt"></i></div>
-                    <h3>⚡ Electricidad</h3>
-                </div>
-                <p>Instalaciones eléctricas residenciales y comerciales, balanceo de cargas, tableros principales y reparación urgente de cortocircuitos.</p>
+                </a>
+
             </div>
-            <a href="https://wa.me" class="btn-tarjeta-cta" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> Cotizar Servicio</a>
+
+            <button class="menu-toggle"
+                aria-label="Abrir menú"
+                aria-expanded="false">
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
+            <nav class="main-nav" aria-label="Menú principal">
+
+                <a href="index.html">
+                    Inicio
+                </a>
+                <a href="nosotros.html">
+                    Nosotros
+                </a>
+                <a href="servicios.html" class="active">
+                    Servicios
+                </a>
+                <a href="proyectos.html">
+                    Proyectos
+                </a>
+
+                <a href="contacto.html">
+                    Contacto
+                </a>
+
+            </nav>
+
         </div>
 
-        <div class="tarjeta-servicio" data-categoria="tecnico" data-palabras="plomeria plomero agua tuberias fugas desague cisterna sanitario">
-            <div class="tarjeta-content">
-                <div class="tarjeta-header">
-                    <div class="tarjeta-icon"><i class="fa-solid fa-faucet"></i></div>
-                    <h3>🚿 Plomería</h3>
+    </header>
+
+
+    <!-- =====================================================
+         HERO SERVICIOS
+    ====================================================== -->
+
+    <main>
+
+        <section class="servicios-hero">
+
+            <div class="servicios-hero-content">
+
+                <span class="section-kicker">
+                    VICMAR SERVICES
+                </span>
+
+                <h1>
+                    Servicios de mantenimiento
+                    <strong>profesional en Quito</strong>
+                </h1>
+
+                <p>
+                    Soluciones técnicas para casas, edificios y negocios,
+                    ejecutadas con planificación, experiencia y estándares
+                    profesionales.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="contacto.html" class="btn btn-primary">
+                        <i class="fa-solid fa-file-signature"></i>
+                        Solicitar cotización
+                    </a>
+
+                    <a href="#catalogo" class="btn btn-outline">
+                        <i class="fa-solid fa-arrow-down"></i>
+                        Ver servicios
+                    </a>
+
                 </div>
-                <p>Detección experta de fugas internas, instalación y reparación de tuberías de agua potable, destape de cañerías y redes sanitarias.</p>
+
             </div>
-            <a href="https://wa.me" class="btn-tarjeta-cta" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> Cotizar Servicio</a>
+
+        </section>
+
+
+        <!-- =====================================================
+             INTRODUCCIÓN
+        ====================================================== -->
+
+        <section class="servicios-intro">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span class="section-kicker">
+                        NUESTRO CATÁLOGO
+                    </span>
+
+                    <h2>
+                        Soluciones integrales para su propiedad
+                    </h2>
+
+                    <p>
+                        En Vicmar Services integramos diferentes especialidades
+                        de mantenimiento para resolver trabajos puntuales,
+                        proyectos de adecuación y programas de mantenimiento
+                        preventivo y correctivo.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             BUSCADOR
+        ====================================================== -->
+
+        <section class="catalogo-section" id="catalogo">
+
+            <div class="container">
+
+                <div class="servicios-tools">
+
+                    <div class="servicios-search">
+
+                        <i class="fa-solid fa-magnifying-glass"></i>
+
+                        <input
+                            type="search"
+                            id="inputBuscar"
+                            placeholder="Buscar un servicio..."
+                            aria-label="Buscar servicio">
+
+                    </div>
+
+
+                    <div class="servicios-filtros">
+
+                        <button
+                            class="btn-filtro active"
+                            data-filter="todos">
+
+                            Todos
+
+                        </button>
+
+                        <button
+                            class="btn-filtro"
+                            data-filter="tecnico">
+
+                            Técnicos
+
+                        </button>
+
+                        <button
+                            class="btn-filtro"
+                            data-filter="acabados">
+
+                            Acabados
+
+                        </button>
+
+                        <button
+                            class="btn-filtro"
+                            data-filter="mantenimiento">
+
+                            Mantenimiento
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     GRID SERVICIOS
+                ================================================== -->
+
+                <div class="servicios-grid" id="contenedorServicios">
+
+
+                    <!-- ELECTRICIDAD -->
+
+                    <article
+                        class="servicio-card"
+                        data-categoria="tecnico"
+                        data-search="electricidad electricista instalaciones eléctricas tableros luminarias cableado cortocircuitos">
+
+                        <div class="servicio-icon">
+
+                            <i class="fa-solid fa-bolt"></i>
+
+                        </div>
+
+                        <div class="servicio-body">
+
+                            <span class="servicio-numero">
+                                01
+                            </span>
+
+                            <h3>
+                                Electricidad
+                            </h3>
+
+                            <p>
+                                Instalaciones, mantenimiento y reparación
+                                de sistemas eléctricos residenciales,
+                                comerciales y empresariales.
+                            </p>
+
+                            <ul>
+
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    Instalaciones eléctricas
+                                </li>
+
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    Tableros eléctricos
+                                </li>
+
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    Iluminación LED
+                                </li>
+
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    Diagnóstico de fallas
+                                </li>
+
+                            </ul>
+
+                        </div>
+
+                        <a href="contacto.html?servicio=electricidad"
+                            class="servicio-link">
+
+                            Solicitar servicio
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </a>
+
+                    </article>
+
+
+                    <!-- PLOMERÍA -->
+
+                    <article
+                        class="servicio-card"
+                        data-categoria="tecnico"
+                        data-search="plomería plomero agua tuberías fugas sanitarios desagües cisternas">
+
+                        <div class="servicio-icon">
+
+                            <i class="fa-solid fa-faucet-drip"></i>
+
+                        </div>
+
+                        <div class="servicio-body">
+
+                            <span class="servicio-numero">
+                                02
+                            </span>
+
+                            <h3>
+                                Plomería
+                            </h3>
+
+                            <p>
+                                Instalación, reparación y mantenimiento
+                                de redes hidráulicas y sanitarias.
+                            </p>
+
+                            <ul>
+
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    Detección de fugas
+                                </li>
+
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    Redes de agua
+                                </li>
+
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    Redes sanitarias
+                                </li>
+
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    Destapes técnicos
+                                </li>
+
+                            </ul>
+
+                        </div>
+
+                        <a href="contacto.html?servicio=plomeria"
+                            class="servicio-link">
+
+                            Solicitar servicio
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </a>
+
+                    </article>
+
+
+                    <!-- PINTURA -->
+
+                    <article
+                        class="servicio-card"
+                        data-categoria="acabados"
+                        data-search="pintura pintor paredes interiores exteriores fachadas oficinas edificios acabados">
+
+                        <div class="servicio-icon">
+
+                            <i class="fa-solid fa-paint-roller"></i>
+
+                        </div>
+
+                        <div class="servicio-body">
+
+                            <span class="servicio-numero">
+                                03
+                            </span>
+
+                            <h3>
+                                Pintura
+                            </h3>
+
+                            <p>
+                                Trabajos de pintura y renovación de superficies
+                                para espacios residenciales, comerciales
+                                y corporativos.
+                            </p>
+
+                            <ul>
+
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    Pintura interior
+                                </li>
+
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    Pintura exterior
+                                </li>
+
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    Fachadas
+                                </li>
+
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    Preparación de superficies
+                                </li>
+
+                            </ul>
+
+                        </div>
+
+                        <a href="contacto.html?servicio=pintura"
+                            class="servicio-link">
+
+                            Solicitar servicio
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </a>
+
+                    </article>
+
+
+                    <!-- ALUMINIO Y VIDRIO -->
+
+                    <article
+                        class="servicio-card"
+                        data-categoria="acabados"
+                        data-search="aluminio vidrio ventanas puertas mamparas divisiones vidrio templado">
+
+                        <div class="servicio-icon">
+
+                            <i class="fa-regular fa-window-maximize"></i>
+
+                        </div>
+
+                        <div class="servicio-body">
+
+                            <span class="servicio-numero">
+                                04
+                            </span>
+
+                            <h3>
+                                Aluminio y vidrio
+                            </h3>
+
+                            <p>
+                                Fabricación, reparación e instalación de
+                                soluciones en aluminio y vidrio para
+                                viviendas, oficinas y negocios.
+                            </p>
+
+                            <ul>
+
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    Puertas y ventanas
+                                </li>
+
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    Mamparas
+                                </li>
+
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    Divisiones
+                                </li>
+
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    Vidrio templado
+                                </li>
+
+                            </ul>
+
+                        </div>
+
+                        <a href="contacto.html?servicio=aluminio-y-vidrio"
+                            class="servicio-link">
+
+                            Solicitar servicio
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </a>
+
+                    </article>
+
+
+                    <!-- IMPERMEABILIZACIÓN -->
+
+                    <article
+                        class="servicio-card"
+                        data-categoria="acabados"
+                        data-search="impermeabilización impermeabilizar terrazas cubiertas techos filtraciones humedad">
+
+                        <div class="servicio-icon">
+
+                            <i class="fa-solid fa-droplet"></i>
+
+                        </div>
+
+                        <div class="servicio-body">
+
+                            <span class="servicio-numero">
+                                05
+                            </span>
+
+                            <h3>
+                                Impermeabilización
+                            </h3>
+
+                            <p>
+                                Protección de cubiertas, terrazas y superficies
+                                contra filtraciones, humedad y deterioro
+                                ocasionado por el agua.
+                            </p>
+
+                            <ul>
+
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    Terrazas
+                                </li>
+
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    Cubiertas
+                                </li>
+
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    Sellado de filtraciones
+                                </li>
+
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    Tratamiento de humedad
+                                </li>
+
+                            </ul>
+
+                        </div>
+
+                        <a href="contacto.html?servicio=impermeabilizacion"
+                            class="servicio-link">
+
+                            Solicitar servicio
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </a>
+
+                    </article>
+
+
+                    <!-- GYPSUM -->
+
+                    <article
+                        class="servicio-card"
+                        data-categoria="acabados"
+                        data-search="gypsum drywall cielo falso tumbado paredes divisiones decoración">
+
+                        <div class="servicio-icon">
+
+                            <i class="fa-solid fa-layer-group"></i>
+
+                        </div>
+
+                        <div class="servicio-body">
+
+                            <span class="servicio-numero">
+                                06
+                            </span>
+
+                            <h3>
+                                Gypsum y acabados
+                            </h3>
+
+                            <p>
+                                Construcción y adecuación de espacios mediante
+                                sistemas de gypsum y soluciones para interiores.
+                            </p>
+
+                            <ul>
+
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    Cielos falsos
+                                </li>
+
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    Divisiones
+                                </li>
+
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    Paredes
+                                </li>
+
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    Diseños decorativos
+                                </li>
+
+                            </ul>
+
+                        </div>
+
+                        <a href="contacto.html?servicio=gypsum"
+                            class="servicio-link">
+
+                            Solicitar servicio
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </a>
+
+                    </article>
+
+
+                    <!-- MANTENIMIENTO -->
+
+                    <article
+                        class="servicio-card servicio-card-destacado"
+                        data-categoria="mantenimiento"
+                        data-search="mantenimiento preventivo correctivo edificios casas negocios mantenimiento integral">
+
+                        <div class="servicio-icon">
+
+                            <i class="fa-solid fa-screwdriver-wrench"></i>
+
+                        </div>
+
+                        <div class="servicio-body">
+
+                            <span class="servicio-numero">
+                                07
+                            </span>
+
+                            <h3>
+                                Mantenimiento preventivo y correctivo
+                            </h3>
+
+                            <p>
+                                Gestión integral de mantenimiento para
+                                propiedades residenciales, comerciales,
+                                corporativas y edificios.
+                            </p>
+
+                            <ul>
+
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    Mantenimiento preventivo
+                                </li>
+
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    Mantenimiento correctivo
+                                </li>
+
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    Inspecciones técnicas
+                                </li>
+
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    Planes de mantenimiento
+                                </li>
+
+                            </ul>
+
+                        </div>
+
+                        <a href="contacto.html?servicio=mantenimiento"
+                            class="servicio-link">
+
+                            Solicitar servicio
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </a>
+
+                    </article>
+
+
+                    <!-- SIN RESULTADOS -->
+
+                    <div
+                        id="sinResultados"
+                        class="sin-resultados">
+
+                        <i class="fa-solid fa-magnifying-glass"></i>
+
+                        <h3>
+                            No encontramos ese servicio
+                        </h3>
+
+                        <p>
+                            Intenta con otra palabra o contáctanos
+                            directamente para revisar tu requerimiento.
+                        </p>
+
+                        <a href="contacto.html"
+                            class="btn btn-primary">
+
+                            Contactar a Vicmar
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             BLOQUE CORPORATIVO
+        ====================================================== -->
+
+        <section class="servicios-confianza">
+
+            <div class="container">
+
+                <div class="confianza-grid">
+
+                    <div>
+
+                        <span class="section-kicker">
+                            ¿POR QUÉ VICMAR SERVICES?
+                        </span>
+
+                        <h2>
+                            Un solo proveedor para múltiples necesidades
+                        </h2>
+
+                        <p>
+                            Coordinamos diferentes especialidades para
+                            simplificar la gestión de mantenimiento de
+                            nuestros clientes.
+                        </p>
+
+                    </div>
+
+
+                    <div class="confianza-items">
+
+                        <div class="confianza-item">
+
+                            <i class="fa-solid fa-user-gear"></i>
+
+                            <div>
+
+                                <h3>
+                                    Atención profesional
+                                </h3>
+
+                                <p>
+                                    Evaluamos cada requerimiento antes
+                                    de definir la solución.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="confianza-item">
+
+                            <i class="fa-solid fa-clipboard-check"></i>
+
+                            <div>
+
+                                <h3>
+                                    Trabajo planificado
+                                </h3>
+
+                                <p>
+                                    Organizamos materiales, personal,
+                                    tiempos y actividades.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="confianza-item">
+
+                            <i class="fa-solid fa-building"></i>
+
+                            <div>
+
+                                <h3>
+                                    Residencial y corporativo
+                                </h3>
+
+                                <p>
+                                    Atendemos casas, edificios y negocios.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             CTA FINAL
+        ====================================================== -->
+
+        <section class="servicios-cta">
+
+            <div class="container">
+
+                <div class="cta-content">
+
+                    <span class="section-kicker">
+                        ¿TIENE UN REQUERIMIENTO?
+                    </span>
+
+                    <h2>
+                        Cuéntenos qué necesita
+                    </h2>
+
+                    <p>
+                        Evaluamos su requerimiento y preparamos una
+                        solución acorde a las condiciones de su proyecto.
+                    </p>
+
+                    <div class="hero-buttons">
+
+                        <a href="contacto.html"
+                            class="btn btn-primary">
+
+                            <i class="fa-solid fa-file-signature"></i>
+
+                            Solicitar cotización
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer class="site-footer">
+
+        <div class="container">
+
+            <div class="footer-grid">
+
+                <div class="footer-brand">
+
+                    <img src="img/rotulo1.png"
+                        alt="Vicmar Services"
+                        width="240">
+
+                    <p>
+                        Mantenimiento integral para casas,
+                        edificios y negocios en Quito.
+                    </p>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h3>
+                        Servicios
+                    </h3>
+
+                    <a href="#catalogo">
+                        Electricidad
+                    </a>
+
+                    <a href="#catalogo">
+                        Plomería
+                    </a>
+
+                    <a href="#catalogo">
+                        Pintura
+                    </a>
+
+                    <a href="#catalogo">
+                        Aluminio y vidrio
+                    </a>
+
+                    <a href="#catalogo">
+                        Impermeabilización
+                    </a>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h3>
+                        Empresa
+                    </h3>
+
+                    <a href="nosotros.html">
+                        Nosotros
+                    </a>
+
+                    <a href="proyectos.html">
+                        Proyectos
+                    </a>
+
+                    <a href="contacto.html">
+                        Contacto
+                    </a>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h3>
+                        Contacto
+                    </h3>
+
+                    <p>
+                        Quito, Ecuador
+                    </p>
+
+                    <a href="contacto.html">
+                        Solicitar cotización
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                <p>
+                    © 2026 Vicmar Services. Todos los derechos reservados.
+                </p>
+
+                <p>
+                    Mantenimiento profesional en Quito.
+                </p>
+
+            </div>
+
         </div>
 
-        <div class="tarjeta-servicio" data-categoria="estructural" data-palabras="pintura pintor interiores paredes fachadas acabados decoracion">
-            <div class="tarjeta-content">
-                <div class="tarjeta-header">
-                    <div class="tarjeta-icon"><i class="fa-solid fa-palette"></i></div>
-                    <h3>🎨 Pintura</h3>
-                </div>
-                <p>Aplicación de pintura en interiores y exteriores. Acabados estéticos de alta calidad para salas, oficinas, locales y edificios corporativos.</p>
-            </div>
-            <a href="https://wa.me" class="btn-tarjeta-cta" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> Cotizar Servicio</a>
-        </div>
+    </footer>
 
-        <div class="tarjeta-servicio" data-categoria="estructural" data-palabras="aluminio vidrio ventanas puertas mamparas divisiones oficinas templado">
-            <div class="tarjeta-content">
-                <div class="tarjeta-header">
-                    <div class="tarjeta-icon"><i class="fa-solid fa-window-maximize"></i></div>
-                    <h3>🪟 Aluminio y Vidrio</h3>
-                </div>
-                <p>Diseño y montaje técnico de ventanas panorámicas, puertas de aluminio, mamparas de baño y divisiones modulares modernas para oficinas.</p>
-            </div>
+
+    <!-- =====================================================
+         WHATSAPP
+    ====================================================== -->
+
+    <!--
+        REEMPLAZAR EL NÚMERO POR EL WHATSAPP COMERCIAL
+        DE VICMAR SERVICES.
+    -->
+
+    <a
+        href="https://wa.me/XXXXXXXXXX?text=Hola%20Vicmar%20Services,%20necesito%20información%20sobre%20un%20servicio."
+        class="whatsapp-float"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Contactar por WhatsApp">
+
+        <i class="fa-brands fa-whatsapp"></i>
+
+    </a>
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const inputBuscar =
+                document.getElementById("inputBuscar");
+
+            const botonesFiltro =
+                document.querySelectorAll(".btn-filtro");
+
+            const tarjetas =
+                document.querySelectorAll(".servicio-card");
+
+            const sinResultados =
+                document.getElementById("sinResultados");
+
+            let categoriaActual = "todos";
+
+
+            function filtrarServicios() {
+
+                const texto =
+                    inputBuscar.value
+                    .toLowerCase()
+                    .trim();
+
+                let resultados = 0;
+
+
+                tarjetas.forEach(function (tarjeta) {
+
+                    const categoria =
+                        tarjeta.dataset.categoria || "";
+
+                    const palabras =
+                        tarjeta.dataset.search || "";
+
+                    const contenido =
+                        tarjeta.innerText.toLowerCase();
+
+
+                    const coincideCategoria =
+                        categoriaActual === "todos" ||
+                        categoria === categoriaActual;
+
+
+                    const coincideTexto =
+                        texto === "" ||
+                        palabras.includes(texto) ||
+                        contenido.includes(texto);
+
+
+                    if (
+                        coincideCategoria &&
+                        coincideTexto
+                    ) {
+
+                        tarjeta.style.display = "flex";
+
+                        resultados++;
+
+                    } else {
+
+                        tarjeta.style.display = "none";
+
+                    }
+
+                });
+
+
+                if (resultados === 0) {
+
+                    sinResultados.style.display = "block";
+
+                } else {
+
+                    sinResultados.style.display = "none";
+
+                }
+
+            }
+
+
+            inputBuscar.addEventListener(
+                "input",
+                filtrarServicios
+            );
+
+
+            botonesFiltro.forEach(function (boton) {
+
+                boton.addEventListener(
+                    "click",
+                    function () {
+
+                        botonesFiltro.forEach(function (btn) {
+
+                            btn.classList.remove("active");
+
+                        });
+
+
+                        this.classList.add("active");
+
+                        categoriaActual =
+                            this.dataset.filter;
+
+
+                        filtrarServicios();
+
+                    }
+                );
+
+            });
+
+
+            /* MENÚ MÓVIL */
+
+            const menuToggle =
+                document.querySelector(".menu-toggle");
+
+            const mainNav =
+                document.querySelector(".main-nav");
+
+
+            if (menuToggle && mainNav) {
+
+                menuToggle.addEventListener(
+                    "click",
+                    function () {
+
+                        const abierto =
+                            mainNav.classList.toggle("open");
+
+                        menuToggle.setAttribute(
+                            "aria-expanded",
+                            abierto
+                        );
+
+                    }
+                );
+
+            }
+
+        });
+
+    </script>
+
+</body>
+
+</html>
