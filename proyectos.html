@@ -1,159 +1,191 @@
 <!DOCTYPE html>
-
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyectos y Trabajos Realizados | Vicmar Services Quito</title>
+    <meta name="description" content="Galería de proyectos técnicos reales ejecutados en Quito. Evidencia en electricidad, plomería, impermeabilización y acabados corporativos.">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="icon" type="image/png" href="img/icono2.png">
+    <link rel="stylesheet" href="https://cloudflare.com">
+    <style>
+        body { background-color: #f4f7fc; color: #2c3e50; }
+        main section { padding: 55px 20px !important; margin: 0 auto !important; max-width: 1100px; }
+        
+        .encabezado-proyectos { text-align: center; padding: 40px 20px 10px; max-width: 800px; margin: 0 auto; }
+        .encabezado-proyectos h1 { color: #0d47a1; font-size: 32px; margin-bottom: 10px; }
 
-<title>Proyectos y Trabajos Realizados en Quito | Vicmar Services</title>
+        .grid-proyectos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            padding: 20px 0 50px;
+        }
 
-<meta name="description" content="Conoce los proyectos realizados por Vicmar Services en Quito: instalaciones eléctricas, plomería, impermeabilización, mantenimiento de cisternas, redes de datos y más.">
+        .tarjeta-proyecto {
+            background: #ffffff;
+            border-radius: 16px;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
 
-<meta name="keywords" content="proyectos Quito, electricidad Quito, plomería Quito, impermeabilización Quito, mantenimiento de cisternas, redes Cat6 Quito">
+        .tarjeta-proyecto:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(13, 71, 161, 0.08);
+        }
 
-<meta name="author" content="Vicmar Services">
-<meta name="robots" content="index, follow">
+        .img-wrapper {
+            width: 100%;
+            height: 220px;
+            overflow: hidden;
+            background-color: #e2e8f0;
+            position: relative;
+        }
 
-<!-- OPEN GRAPH -->
+        .img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
 
-<meta property="og:title" content="Proyectos Vicmar Services Quito">
-<meta property="og:description" content="Trabajos reales ejecutados por Vicmar Services con calidad garantizada.">
-<meta property="og:image" content="img/trabajo1.jpg">
-<meta property="og:type" content="website">
+        .tarjeta-proyecto:hover .img-wrapper img {
+            transform: scale(1.05);
+        }
 
-<!-- FAVICON -->
+        .tag-proyecto {
+            position: absolute;
+            bottom: 15px;
+            left: 15px;
+            background-color: #0d47a1;
+            color: #ffffff;
+            padding: 6px 14px;
+            font-size: 12px;
+            font-weight: 700;
+            border-radius: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+        }
 
-<link rel="icon" href="favicon2.ico">
-<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+        .contenido-proyecto {
+            padding: 25px;
+        }
 
-<link rel="stylesheet" href="css/estilos.css">
+        .contenido-proyecto h3 {
+            margin: 0 0 10px 0;
+            font-size: 20px;
+            color: #1e293b;
+        }
+
+        .contenido-proyecto p {
+            margin: 0 0 15px 0;
+            font-size: 14px;
+            line-height: 1.6;
+            color: #64748b;
+        }
+
+        .meta-proyecto {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 13px;
+            color: #94a3b8;
+            font-weight: 600;
+            border-top: 1px solid #f1f5f9;
+            padding-top: 15px;
+        }
+    </style>
 </head>
-
 <body>
 
 <header>
     <div class="logo">
-        <a href="index.html">
-            <img src="img/rotulo1.png" alt="Vicmar Services Quito" loading="lazy">
-        </a>
+        <a href="index.html"><img src="img/rotulo1.png" alt="Vicmar Services" width="350" height="120"></a>
     </div>
-
-```
-<nav>
-    <a href="index.html">Inicio</a>
-    <a href="servicios.html">Servicios</a>
-    <a href="proyectos.html">Proyectos</a>
-    <a href="nosotros.html">Nosotros</a>
-    <a href="contacto.html">Contacto</a>
-</nav>
-```
-
+    <nav aria-label="Menú principal">
+        <a href="index.html">Inicio</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="proyectos.html" class="active">Proyectos</a>
+        <a href="nosotros.html">Nosotros</a>
+        <a href="contacto.html">Contacto</a>
+    </nav>
 </header>
 
 <main>
+    <div class="encabezado-proyectos">
+        <h1>Casos de Éxito y Trabajos Reales</h1>
+        <p>Garantía de calidad demostrada en cada obra. Así es como solucionamos los requerimientos técnicos de nuestros clientes en Quito.</p>
+    </div>
 
-<section class="trabajos">
+    <section class="proyectos-galeria">
+        <div class="grid-proyectos">
+            
+            <!-- Proyecto 1 -->
+            <article class="tarjeta-proyecto">
+                <div class="img-wrapper">
+                    <img src="img/trabajo1.jpg" alt="Instalación eléctrica en Quito Norte" loading="lazy">
+                    <span class="tag-proyecto">⚡ Electricidad</span>
+                </div>
+                <div class="contenido-proyecto">
+                    <h3>Renovación Eléctrica Integral</h3>
+                    <p>Reestructuración de acometidas principales, balanceo de fases e instalación de tableros térmicos de seguridad en residencia de Quito Norte.</p>
+                    <div class="meta-proyecto">
+                        <span><i class="fa-solid fa-location-dot"></i> Quito Norte</span>
+                        <span><i class="fa-solid fa-circle-check" style="color:#25d366;"></i> Finalizado</span>
+                    </div>
+                </div>
+            </article>
 
-```
-<h1>Proyectos Realizados en Quito</h1>
+            <!-- Proyecto 2 -->
+            <article class="tarjeta-proyecto">
+                <div class="img-wrapper">
+                    <img src="img/trabajo2.jpg" alt="Reparación de fuga de agua en Quito" loading="lazy">
+                    <span class="tag-proyecto">🚿 Plomería</span>
+                </div>
+                <div class="contenido-proyecto">
+                    <h3>Detección y Reparación de Fuga</h3>
+                    <p>Localización técnica de filtración no visible en red interna mediante geófono, reparación de tubería principal y restauración estética.</p>
+                    <div class="meta-proyecto">
+                        <span><i class="fa-solid fa-location-dot"></i> Cumbayá</span>
+                        <span><i class="fa-solid fa-circle-check" style="color:#25d366;"></i> Emergencia</span>
+                    </div>
+                </div>
+            </article>
 
-<p>
-    Conoce algunos de nuestros trabajos ejecutados para hogares,
-    oficinas, edificios y empresas.
-</p>
+            <!-- Proyecto 3 -->
+            <article class="tarjeta-proyecto">
+                <div class="img-wrapper">
+                    <!-- Puedes asociar una imagen por defecto o tus fotos reales de aluminio -->
+                    <img src="img/trabajo1.jpg" alt="Instalación de estructuras en aluminio" loading="lazy">
+                    <span class="tag-proyecto">🪟 Estructuras</span>
+                </div>
+                <div class="contenido-proyecto">
+                    <h3>Divisiones Modulares Corporativas</h3>
+                    <p>Diseño y montaje de mamparas de vidrio templado con perfilaría de aluminio anodizado para optimización de oficinas comerciales.</p>
+                    <div class="meta-proyecto">
+                        <span><i class="fa-solid fa-location-dot"></i> Quito Centro</span>
+                        <span><i class="fa-solid fa-circle-check" style="color:#25d366;"></i> Corporativo</span>
+                    </div>
+                </div>
+            </article>
 
-<div class="grid">
+        </div>
+    </section>
 
-    <article class="card">
-        <img src="img/trabajo1.jpg" alt="Instalación eléctrica en Quito Norte" loading="lazy">
-        <h3>Instalación Eléctrica Completa</h3>
-        <p>Implementación de circuitos eléctricos y tableros con normas de seguridad.</p>
-    </article>
-
-    <article class="card">
-        <img src="img/trabajo2.jpg" alt="Reparación de fuga de agua y cambio de grifería" loading="lazy">
-        <h3>Plomería y Cambio de Grifería</h3>
-        <p>Reparación de fugas, instalación de accesorios y optimización hidráulica.</p>
-    </article>
-
-    <article class="card">
-        <img src="img/trabajo3.jpg" alt="Pintura interior profesional en Quito" loading="lazy">
-        <h3>Pintura Profesional</h3>
-        <p>Trabajos interiores y exteriores con acabados de alta calidad.</p>
-    </article>
-
-    <article class="card">
-        <img src="img/trabajo4.jpg" alt="Impermeabilización de terraza" loading="lazy">
-        <h3>Impermeabilización</h3>
-        <p>Protección de terrazas, cubiertas y fachadas contra filtraciones.</p>
-    </article>
-
-    <article class="card">
-        <img src="img/trabajo5.jpg" alt="Mantenimiento de cisterna" loading="lazy">
-        <h3>Mantenimiento de Cisternas</h3>
-        <p>Instalación de válvulas, bombas y reparación de sistemas hidráulicos.</p>
-    </article>
-
-    <article class="card">
-        <img src="img/trabajo6.jpg" alt="Instalación de red Cat6" loading="lazy">
-        <h3>Redes y Datos Cat6</h3>
-        <p>Instalación de cableado estructurado y puntos de red para oficinas.</p>
-    </article>
-
-</div>
-```
-
-</section>
-
-<section class="confianza">
-
-```
-<h2>¿Por qué nuestros trabajos destacan?</h2>
-
-<ul>
-    <li>✔ Calidad garantizada en cada proyecto</li>
-    <li>✔ Atención rápida en Quito</li>
-    <li>✔ Técnicos profesionales y capacitados</li>
-    <li>✔ Experiencia en proyectos residenciales y corporativos</li>
-    <li>✔ Cumplimiento de plazos y estándares técnicos</li>
-</ul>
-```
-
-</section>
-
-<section class="cta">
-
-```
-<h2>¿Quieres un trabajo así?</h2>
-
-<p>
-    Solicita una visita técnica y recibe una cotización personalizada.
-</p>
-
-<a href="https://wa.me/593992705273"
-   class="btn"
-   target="_blank"
-   rel="noopener">
-   📲 Solicitar Cotización
-</a>
-```
-
-</section>
-
+    <section class="cta">
+        <h2>¿Quieres ver resultados similares en tu propiedad?</h2>
+        <p>Agenda hoy mismo una visita técnica de evaluación y recibe asesoría profesional personalizada.</p>
+        <a href="https://wa.me" class="btn-cta-principal" target="_blank" rel="noopener" style="background-color: #ffb300; color: #1a252f; padding: 15px 30px; font-weight: bold; border-radius: 30px; text-decoration: none; display: inline-block; box-shadow: 0 4px 12px rgba(255,179,0,0.3);">
+            <i class="fa-brands fa-whatsapp"></i> Solicitar Presupuesto del Proyecto
+        </a>
+    </section>
 </main>
 
 <footer>
-    <p>© 2026 Vicmar Services - Quito, Ecuador</p>
-    <p>WhatsApp: 0969054410 | info@vicmarserv.com</p>
+    <p>© 2025 Vicmar Services - Todos los derechos reservados.</p>
 </footer>
 
-<a href="https://wa.me/593992705273"
-class="whatsapp-float"
-target="_blank"
-aria-label="WhatsApp">
-💬 </a>
-
+<a href="https://wa.me" class="whatsapp-float" target="_blank" aria-label="WhatsApp">💬</a>
 </body>
 </html>
-
