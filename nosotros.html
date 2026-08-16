@@ -1,177 +1,261 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+ 
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Sobre Nosotros | Vicmar Services Quito</title>
+ 
+<meta name="description" content="Conoce la misión, visión y valores de Vicmar Services. Ofrecemos soluciones técnicas profesionales y mantenimiento garantizado en Quito.">
+<meta name="keywords" content="mantenimiento Quito, sobre nosotros Vicmar, empresa servicios quito, mision vision vicmar">
+<meta name="author" content="Vicmar Services">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0d47a1"> 
+
+<!-- Favicon -->
+<link rel="canonical" href="https://vicmarserv.com">
+ 
+<link rel="stylesheet" href="css/estilos.css">
+ 
+<link rel="icon" type="image/png" href="img/icono2.png">
+<link rel="shortcut icon" href="img/icono2.png">
+<link rel="apple-touch-icon" href="img/icono2.png">
+
+<!-- Cargamos FontAwesome para añadir iconos modernos al menú corporativo -->
+<link rel="stylesheet" href="https://cloudflare.com">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Sobre Vicmar Services | Quito">
+<meta property="og:description" content="Soluciones técnicas profesionales y mantenimiento garantizado para hogares y empresas.">
+<meta property="og:image" content="https://vicmarserv.com">
+<meta property="og:url" content="https://vicmarserv.com">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_EC">
+
+<style>
+    /* Estilos inyectados para el control dinámico de la sección corporativa */
+    .selector-corporativo {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin: 30px auto;
+        max-width: 1100px;
+        padding: 0 15px;
+    }
+
+    .btn-corp {
+        background-color: #f0f4f8;
+        border: 2px solid #d0dbe5;
+        color: #1a252f;
+        padding: 12px 24px;
+        font-size: 15px;
+        font-weight: bold;
+        border-radius: 30px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        transition: all 0.3s ease;
+    }
+
+    .btn-corp i {
+        font-size: 18px;
+        color: #0d47a1;
+    }
+
+    .btn-corp:hover, .btn-corp.active {
+        background-color: #0d47a1;
+        border-color: #0d47a1;
+        color: #ffffff;
+    }
+
+    .btn-corp:hover i, .btn-corp.active i {
+        color: #ffffff;
+    }
+
+    /* Contenedor de bloques informativos */
+    .bloque-corp {
+        display: none; /* Oculta los bloques por defecto */
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 30px;
+        background: #ffffff;
+        border-radius: 12px;
+        box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+        border-left: 5px solid #0d47a1;
+        animation: fadeInTab 0.4s ease forwards;
+    }
+
+    .bloque-corp.active {
+        display: block; /* Muestra solo el bloque activo */
+    }
+
+    .bloque-corp h2 {
+        margin-top: 0;
+        color: #0d47a1;
+        font-size: 24px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .bloque-corp p, .bloque-corp ul {
+        font-size: 16px;
+        line-height: 1.6;
+        color: #4a5568;
+    }
+
+    @keyframes fadeInTab {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+</style>
+
+</head>
+
 <body>
 
 <header>
+    <div class="logo">
+        <a href="index.html">
+            <img src="img/rotulo1.png" alt="Vicmar Services - Servicios Técnicos en Quito" width="350" height="120">
+        </a>
+    </div>
 
-```
-<div class="logo">
-    <a href="index.html">
-        <img src="img/rotulo1.png"
-             alt="Vicmar Services - Servicios Técnicos en Quito"
-             width="350"
-             height="120">
-    </a>
-</div>
-
-<nav aria-label="Menú principal">
-    <a href="index.html">Inicio</a>
-    <a href="servicios.html">Servicios</a>
-    <a href="proyectos.html">Proyectos</a>
-    <a href="nosotros.html">Nosotros</a>
-    <a href="contacto.html">Contacto</a>
-</nav>
-```
-
+    <nav aria-label="Menú principal">
+        <a href="index.html">Inicio</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="proyectos.html">Proyectos</a>
+        <a href="nosotros.html" class="active">Nosotros</a>
+        <a href="contacto.html">Contacto</a>
+    </nav>
 </header>
 
 <main>
 
 <section class="nosotros">
-
-```
-<h1>Sobre Vicmar Services</h1>
-
-<p>
-    En <strong>Vicmar Services</strong> brindamos soluciones técnicas profesionales para hogares,
-    oficinas, edificios y empresas en Quito y los Valles.
-</p>
-
-<p>
-    Nos especializamos en mantenimiento preventivo y correctivo,
-    instalaciones eléctricas, plomería, impermeabilización,
-    aluminio y vidrio, redes de datos, mantenimiento de cisternas
-    e instalación de grifería.
-</p>
-
-<p>
-    Nuestro objetivo es ofrecer trabajos seguros, eficientes y garantizados,
-    respaldados por personal capacitado y comprometido con la satisfacción
-    de nuestros clientes.
-</p>
-```
-
+    <h1>Sobre Vicmar Services</h1>
+    <p>
+        En <strong>Vicmar Services</strong> brindamos soluciones técnicas profesionales para hogares,
+        oficinas, edificios y empresas en Quito y los Valles.
+    </p>
+    <p>
+        Nos specialize en mantenimiento preventivo y correctivo,
+        instalaciones eléctricas, plomería, impermeabilización,
+        aluminio y vidrio, redes de datos, mantenimiento de cisternas
+        e instalación de grifería.
+    </p>
+    <p>
+        Nuestro objetivo es ofrecer trabajos seguros, eficientes y garantizados,
+        respaldados por personal capacitado y comprometido con la satisfacción
+        de nuestros clientes.
+    </p>
 </section>
 
 <section class="experiencia">
-
-```
-<h2>Experiencia y Compromiso</h2>
-
-<p>
-    Trabajamos con viviendas, oficinas, edificios corporativos,
-    conjuntos residenciales y negocios en Quito, brindando soluciones
-    confiables y adaptadas a cada necesidad.
-</p>
-```
-
+    <h2>Experiencia y Compromiso</h2>
+    <p>
+        Trabajamos con viviendas, oficinas, edificios corporativos,
+        conjuntos residenciales y negocios en Quito, brindando soluciones
+        confiables y adaptadas a cada necesidad.
+    </p>
 </section>
 
-<section class="confianza">
+<!-- SECCIÓN INTERACTIVA CORPORATIVA DE VICMAR -->
+<section class="servicios" id="valores-interactivos">
+    <p style="text-align: center; color: #666; margin-bottom: 10px;">Haz clic en cada pestaña para conocer nuestros pilares corporativos:</p>
 
-```
-<h2>Nuestra Misión</h2>
+    <!-- Barra de menú con botones de navegación interna -->
+    <div class="selector-servicios selector-corporativo">
+        <button class="btn-corp active" onclick="filtrarCorporativo('mision', this)"><i class="fa-solid fa-bullseye"></i> Misión</button>
+        <button class="btn-corp" onclick="filtrarCorporativo('vision', this)"><i class="fa-solid fa-eye"></i> Visión</button>
+        <button class="btn-corp" onclick="filtrarCorporativo('valores', this)"><i class="fa-solid fa-handshake"></i> Valores</button>
+        <button class="btn-corp" onclick="filtrarCorporativo('elegirnos', this)"><i class="fa-solid fa-award"></i> ¿Por qué elegirnos?</button>
+    </div>
 
-<p class="texto-centro">
-    Proporcionar soluciones técnicas confiables y de alta calidad,
-    contribuyendo al mantenimiento y mejoramiento de hogares,
-    edificios y empresas mediante un servicio profesional y oportuno.
-</p>
-```
+    <!-- Bloques de Contenido Organizado -->
+    <div class="contenedor-bloques">
+        
+        <article id="mision" class="bloque-corp active">
+            <h2><i class="fa-solid fa-bullseye"></i> Nuestra Misión</h2>
+            <p>Proporcionar soluciones técnicas confiables y de alta calidad, contribuyendo al mantenimiento y mejoramiento de hogares, edificios y empresas mediante un servicio profesional y oportuno.</p>
+        </article>
 
-</section>
+        <article id="vision" class="bloque-corp">
+            <h2><i class="fa-solid fa-eye"></i> Nuestra Visión</h2>
+            <p>Consolidarnos como una empresa referente en servicios de mantenimiento y soluciones técnicas en Quito, reconocida por la calidad, responsabilidad y confianza de nuestros clientes.</p>
+        </article>
 
-<section class="confianza">
+        <article id="valores" class="bloque-corp">
+            <h2><i class="fa-solid fa-handshake"></i> Nuestros Valores</h2>
+            <ul style="list-style: none; padding-left: 0;">
+                <li>✔ Responsabilidad y puntualidad</li>
+                <li>✔ Honestidad y transparencia</li>
+                <li>✔ Compromiso con el cliente</li>
+                <li>✔ Calidad en cada trabajo</li>
+                <li>✔ Seguridad y profesionalismo</li>
+            </ul>
+        </article>
 
-```
-<h2>Nuestra Visión</h2>
+        <article id="elegirnos" class="bloque-corp">
+            <h2><i class="fa-solid fa-award"></i> ¿Por qué elegirnos?</h2>
+            <ul style="list-style: none; padding-left: 0;">
+                <li>✔ Técnicos capacitados y con experiencia</li>
+                <li>✔ Atención para hogares y empresas</li>
+                <li>✔ Soluciones rápidas y efectivas</li>
+                <li>✔ Mantenimiento preventivo y correctivo</li>
+                <li>✔ Trabajos garantizados</li>
+                <li>✔ Precios competitivos y transparentes</li>
+            </ul>
+        </article>
 
-<p class="texto-centro">
-    Consolidarnos como una empresa referente en servicios de mantenimiento
-    y soluciones técnicas en Quito, reconocida por la calidad,
-    responsabilidad y confianza de nuestros clientes.
-</p>
-```
-
-</section>
-
-<section class="confianza">
-
-```
-<h2>Nuestros Valores</h2>
-
-<ul>
-    <li>✔ Responsabilidad y puntualidad</li>
-    <li>✔ Honestidad y transparencia</li>
-    <li>✔ Compromiso con el cliente</li>
-    <li>✔ Calidad en cada trabajo</li>
-    <li>✔ Seguridad y profesionalismo</li>
-</ul>
-```
-
-</section>
-
-<section class="confianza">
-
-```
-<h2>¿Por qué elegirnos?</h2>
-
-<ul>
-    <li>✔ Técnicos capacitados y con experiencia</li>
-    <li>✔ Atención para hogares y empresas</li>
-    <li>✔ Soluciones rápidas y efectivas</li>
-    <li>✔ Mantenimiento preventivo y correctivo</li>
-    <li>✔ Trabajos garantizados</li>
-    <li>✔ Precios competitivos y transparentes</li>
-</ul>
-```
-
+    </div>
 </section>
 
 <section class="cta">
-
-```
-<h2>¿Necesitas un servicio técnico?</h2>
-
-<p>
-    Contáctanos ahora y recibe atención rápida y profesional en Quito.
-</p>
-
-<a href="https://wa.me/593992705273"
-   class="btn"
-   target="_blank"
-   rel="noopener">
-   📲 Escribir por WhatsApp
-</a>
-```
-
+    <h2>¿Necesitas un servicio técnico?</h2>
+    <p>Contáctanos ahora y recibe atención rápida y profesional en Quito.</p>
+    <a href="https://wa.me/593992705273" class="btn" target="_blank" rel="noopener">
+        📲 Escribir por WhatsApp
+    </a>
 </section>
 
 </main>
 
 <footer>
-
-```
-<p>© 2025 Vicmar Services - Quito, Ecuador</p>
-
-<p>
-    WhatsApp:
-    <a href="tel:+593992705273">0992705273</a>
-    |
-    <a href="mailto:info@vicmarserv.com">
-        info@vicmarserv.com
-    </a>
-</p>
-```
-
+    <p>© 2025 Vicmar Services - Quito, Ecuador</p>
+    <p>
+        WhatsApp:
+        <a href="tel:+593992705273">0992705273</a>
+        |
+        <a href="mailto:info@vicmarserv.com">info@vicmarserv.com</a>
+    </p>
 </footer>
 
-<a href="https://wa.me/593992705273"
-class="whatsapp-float"
-target="_blank"
-aria-label="WhatsApp">
-💬 </a>
+<!-- Botón Flotante de WhatsApp -->
+<a href="https://wa.me/593992705273" class="whatsapp-float" target="_blank" aria-label="WhatsApp">💬</a>
+
+<!-- Script de Navegación por pestañas -->
+<script>
+    function filtrarCorporativo(idBloque, botonPresionado) {
+        // 1. Ocultar todos los bloques informativos corporativos
+        const bloques = document.querySelectorAll('.bloque-corp');
+        bloques.forEach(bloque => bloque.classList.remove('active'));
+
+        // 2. Apagar el estado azul activo de todos los botones de la sección
+        const botones = document.querySelectorAll('.btn-corp');
+        botones.forEach(btn => btn.classList.remove('active'));
+
+        // 3. Mostrar únicamente el bloque correspondiente al ID cliqueado
+        document.getElementById(idBloque).classList.add('active');
+
+        // 4. Encender el color azul en el botón seleccionado
+        botonPresionado.classList.add('active');
+    }
+</script>
 
 </body>
-
 </html>
-
 
