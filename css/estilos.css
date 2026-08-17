@@ -1,50 +1,66 @@
-/* =====================================================
+/* =========================================================
    VICMAR SERVICES
-   STYLE.CSS
-   ===================================================== */
+   STYLE.CSS — VERSIÓN COMPLETA
+   Diseño corporativo, moderno y responsive
+   ========================================================= */
 
 
-/* ================= VARIABLES ================= */
+/* =========================================================
+   01. VARIABLES
+   ========================================================= */
 
 :root {
 
     --blue: #1268b3;
     --blue-dark: #084b82;
     --blue-light: #eaf4fc;
+    --blue-hover: #0d5a9d;
 
     --dark: #101820;
     --dark-2: #1b2733;
+    --dark-3: #263542;
 
     --text: #56616c;
+    --text-light: #7b8792;
+
     --light: #f5f7f9;
+    --light-2: #eef2f5;
+
     --white: #ffffff;
 
-    --border: #e5e9ed;
+    --border: #e2e7eb;
+
+    --success: #16884a;
+    --danger: #c0392b;
 
     --radius: 14px;
+    --radius-small: 8px;
 
     --shadow:
-        0 15px 40px rgba(16, 24, 32, .08);
+        0 15px 40px rgba(16, 24, 32, 0.08);
+
+    --shadow-hover:
+        0 22px 50px rgba(16, 24, 32, 0.13);
+
+    --transition:
+        all 0.3s ease;
 
 }
 
 
-/* ================= RESET ================= */
+/* =========================================================
+   02. RESET
+   ========================================================= */
 
 * {
-
     margin: 0;
     padding: 0;
-
     box-sizing: border-box;
-
 }
 
 
 html {
-
     scroll-behavior: smooth;
-
 }
 
 
@@ -57,29 +73,33 @@ body {
 
     color: var(--dark);
 
-    background:
-        var(--white);
+    background: var(--white);
 
     line-height: 1.6;
 
+    overflow-x: hidden;
+
+}
+
+
+body,
+button,
+input,
+textarea,
+select {
+    -webkit-font-smoothing: antialiased;
 }
 
 
 img {
-
     max-width: 100%;
-
     display: block;
-
 }
 
 
 a {
-
     color: inherit;
-
     text-decoration: none;
-
 }
 
 
@@ -87,27 +107,42 @@ button,
 input,
 textarea,
 select {
-
     font: inherit;
-
 }
 
 
-/* ================= CONTAINER ================= */
+button {
+    cursor: pointer;
+}
+
+
+ul,
+ol {
+    list-style: none;
+}
+
+
+/* =========================================================
+   03. CONTENEDOR
+   ========================================================= */
 
 .container {
 
-    width: min(
-        1180px,
-        calc(100% - 40px)
-    );
+    width:
+        min(
+            1180px,
+            calc(100% - 40px)
+        );
 
-    margin-inline: auto;
+    margin-left: auto;
+    margin-right: auto;
 
 }
 
 
-/* ================= HEADER ================= */
+/* =========================================================
+   04. HEADER
+   ========================================================= */
 
 .header {
 
@@ -115,16 +150,23 @@ select {
 
     top: 0;
 
+    left: 0;
+
+    width: 100%;
+
     z-index: 1000;
 
     background:
-        rgba(255,255,255,.97);
+        rgba(255, 255, 255, 0.97);
 
     border-bottom:
         1px solid var(--border);
 
     backdrop-filter:
-        blur(10px);
+        blur(12px);
+
+    -webkit-backdrop-filter:
+        blur(12px);
 
 }
 
@@ -142,11 +184,17 @@ select {
 }
 
 
+/* =========================================================
+   05. LOGO
+   ========================================================= */
+
 .logo {
 
     display: flex;
 
     align-items: center;
+
+    flex-shrink: 0;
 
 }
 
@@ -157,10 +205,14 @@ select {
 
     height: auto;
 
+    object-fit: contain;
+
 }
 
 
-/* ================= NAVIGATION ================= */
+/* =========================================================
+   06. MENÚ PRINCIPAL
+   ========================================================= */
 
 .nav-menu {
 
@@ -179,15 +231,41 @@ select {
 
 .nav-menu a {
 
+    position: relative;
+
+    color: #29333d;
+
     font-size: 14px;
 
     font-weight: 700;
 
-    color:
-        #29333d;
+    white-space: nowrap;
 
     transition:
-        color .25s ease;
+        color 0.25s ease;
+
+}
+
+
+.nav-menu a::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: -8px;
+
+    width: 0;
+
+    height: 2px;
+
+    background:
+        var(--blue);
+
+    transition:
+        width 0.25s ease;
 
 }
 
@@ -201,27 +279,48 @@ select {
 }
 
 
-.nav-whatsapp {
+.nav-menu a:hover::after,
+.nav-menu a.active::after {
 
-    background:
-        var(--blue);
-
-    color:
-        white !important;
-
-    padding:
-        11px 18px;
-
-    border-radius:
-        7px;
-
-    transition:
-        .25s ease;
+    width: 100%;
 
 }
 
 
-.nav-whatsapp:hover {
+/* =========================================================
+   07. BOTÓN WHATSAPP DEL MENÚ
+   ========================================================= */
+
+.nav-menu .nav-whatsapp {
+
+    color: var(--white) !important;
+
+    background:
+        var(--blue);
+
+    padding:
+        11px 19px;
+
+    border-radius:
+        8px;
+
+    transition:
+        var(--transition);
+
+}
+
+
+.nav-menu .nav-whatsapp::after {
+
+    display: none;
+
+}
+
+
+.nav-menu .nav-whatsapp:hover {
+
+    color:
+        var(--white) !important;
 
     background:
         var(--blue-dark);
@@ -229,48 +328,74 @@ select {
     transform:
         translateY(-2px);
 
+    box-shadow:
+        0 8px 20px rgba(18, 104, 179, 0.22);
+
 }
 
+
+/* =========================================================
+   08. BOTÓN MENÚ MÓVIL
+   ========================================================= */
 
 .menu-toggle {
 
     display: none;
 
-    border: 0;
+    width: 44px;
+
+    height: 44px;
+
+    border: none;
+
+    border-radius: 8px;
 
     background:
         transparent;
 
-    font-size: 28px;
-
-    cursor: pointer;
-
     color:
         var(--dark);
+
+    font-size: 28px;
+
+    line-height: 1;
+
+    transition:
+        var(--transition);
 
 }
 
 
-/* ================= HERO ================= */
+.menu-toggle:hover {
+
+    background:
+        var(--blue-light);
+
+    color:
+        var(--blue);
+
+}
+
+
+/* =========================================================
+   09. HERO PRINCIPAL
+   ========================================================= */
 
 .hero {
 
-    min-height:
-        650px;
+    position: relative;
 
-    position:
-        relative;
+    min-height: 650px;
 
-    display:
-        flex;
+    display: flex;
 
-    align-items:
-        center;
+    align-items: center;
 
     background:
 
         url("../img/hero.jpg")
-        center / cover
+        center center /
+        cover
         no-repeat;
 
 }
@@ -278,8 +403,7 @@ select {
 
 .hero-overlay {
 
-    position:
-        absolute;
+    position: absolute;
 
     inset: 0;
 
@@ -287,9 +411,9 @@ select {
 
         linear-gradient(
             90deg,
-            rgba(7,20,32,.88),
-            rgba(7,20,32,.55),
-            rgba(7,20,32,.18)
+            rgba(7, 20, 32, 0.90) 0%,
+            rgba(7, 20, 32, 0.72) 42%,
+            rgba(7, 20, 32, 0.28) 100%
         );
 
 }
@@ -297,130 +421,115 @@ select {
 
 .hero-content {
 
-    position:
-        relative;
+    position: relative;
 
-    z-index:
-        2;
+    z-index: 2;
+
+    max-width: 780px;
 
     color:
-        white;
+        var(--white);
 
-    max-width:
-        760px;
+    padding:
+        80px 0;
 
 }
 
 
 .hero-tag {
 
-    display:
-        inline-block;
+    display: inline-block;
 
-    font-size:
-        12px;
-
-    font-weight:
-        800;
-
-    letter-spacing:
-        2px;
+    margin-bottom: 18px;
 
     color:
-        #75baf0;
+        #79bdf0;
 
-    margin-bottom:
-        18px;
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
 
 }
 
 
 .hero h1 {
 
+    margin-bottom: 24px;
+
+    color:
+        var(--white);
+
     font-size:
         clamp(42px, 6vw, 72px);
 
-    line-height:
-        1.04;
+    font-weight: 800;
 
-    letter-spacing:
-        -2px;
+    line-height: 1.04;
 
-    margin-bottom:
-        24px;
+    letter-spacing: -2px;
 
 }
 
 
 .hero h1 span {
 
-    display:
-        block;
+    display: block;
 
     color:
-        #74b9ed;
+        #75baf0;
 
 }
 
 
 .hero p {
 
-    font-size:
-        20px;
+    max-width: 600px;
 
-    max-width:
-        580px;
+    margin-bottom: 34px;
 
     color:
-        rgba(255,255,255,.86);
+        rgba(255,255,255,0.88);
 
-    margin-bottom:
-        34px;
+    font-size: 20px;
 
-}
-
-
-.hero-buttons {
-
-    display:
-        flex;
-
-    gap:
-        14px;
-
-    flex-wrap:
-        wrap;
+    line-height: 1.6;
 
 }
 
 
-/* ================= BUTTONS ================= */
+/* =========================================================
+   10. BOTONES
+   ========================================================= */
 
 .btn {
 
-    display:
-        inline-flex;
+    display: inline-flex;
 
-    align-items:
-        center;
+    align-items: center;
 
-    justify-content:
-        center;
+    justify-content: center;
+
+    min-height: 48px;
 
     padding:
-        14px 24px;
+        13px 24px;
 
     border-radius:
         8px;
 
-    font-size:
-        14px;
+    font-size: 14px;
 
-    font-weight:
-        800;
+    font-weight: 800;
+
+    border:
+        1px solid transparent;
 
     transition:
-        .25s ease;
+        var(--transition);
 
 }
 
@@ -431,7 +540,7 @@ select {
         var(--blue);
 
     color:
-        white;
+        var(--white);
 
 }
 
@@ -441,19 +550,28 @@ select {
     background:
         var(--blue-dark);
 
+    color:
+        var(--white);
+
     transform:
         translateY(-2px);
+
+    box-shadow:
+        0 10px 25px rgba(18, 104, 179, 0.25);
 
 }
 
 
 .btn-outline {
 
-    border:
-        1px solid rgba(255,255,255,.6);
-
     color:
-        white;
+        var(--white);
+
+    background:
+        transparent;
+
+    border-color:
+        rgba(255,255,255,0.60);
 
 }
 
@@ -461,10 +579,16 @@ select {
 .btn-outline:hover {
 
     background:
-        white;
+        var(--white);
 
     color:
         var(--dark);
+
+    border-color:
+        var(--white);
+
+    transform:
+        translateY(-2px);
 
 }
 
@@ -472,7 +596,7 @@ select {
 .btn-white {
 
     background:
-        white;
+        var(--white);
 
     color:
         var(--blue);
@@ -482,13 +606,41 @@ select {
 
 .btn-white:hover {
 
+    background:
+        #f1f5f8;
+
+    color:
+        var(--blue-dark);
+
     transform:
         translateY(-2px);
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,0.12);
 
 }
 
 
-/* ================= SECTIONS ================= */
+/* =========================================================
+   11. BOTONES DEL HERO
+   ========================================================= */
+
+.hero-buttons {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    flex-wrap: wrap;
+
+}
+
+
+/* =========================================================
+   12. SECCIONES GENERALES
+   ========================================================= */
 
 .section {
 
@@ -508,37 +660,37 @@ select {
 
 .section-tag {
 
-    display:
-        inline-block;
+    display: inline-block;
+
+    margin-bottom: 12px;
 
     color:
         var(--blue);
 
-    font-size:
-        12px;
+    font-size: 12px;
 
-    font-weight:
-        800;
+    font-weight: 800;
 
-    letter-spacing:
-        2px;
+    letter-spacing: 2px;
 
-    margin-bottom:
-        12px;
+    text-transform: uppercase;
 
 }
 
 
 .section h2 {
 
+    color:
+        var(--dark);
+
     font-size:
         clamp(32px, 4vw, 48px);
 
-    line-height:
-        1.1;
+    font-weight: 800;
 
-    letter-spacing:
-        -1px;
+    line-height: 1.10;
+
+    letter-spacing: -1px;
 
 }
 
@@ -551,93 +703,107 @@ select {
 }
 
 
+/* =========================================================
+   13. ENCABEZADOS DE SECCIÓN
+   ========================================================= */
+
 .section-header {
 
-    display:
-        flex;
+    display: flex;
 
-    justify-content:
-        space-between;
+    align-items: flex-end;
 
-    align-items:
-        flex-end;
+    justify-content: space-between;
 
-    gap:
-        30px;
+    gap: 30px;
 
-    margin-bottom:
-        45px;
+    margin-bottom: 45px;
 
 }
 
 
 .text-link {
 
+    display: inline-block;
+
     color:
         var(--blue);
 
-    font-size:
-        14px;
+    font-size: 14px;
 
-    font-weight:
-        800;
+    font-weight: 800;
+
+    white-space: nowrap;
+
+    transition:
+        var(--transition);
 
 }
 
 
-/* ================= INTRO ================= */
+.text-link:hover {
+
+    color:
+        var(--blue-dark);
+
+    transform:
+        translateX(3px);
+
+}
+
+
+/* =========================================================
+   14. INTRO
+   ========================================================= */
 
 .intro {
 
     background:
-        white;
+        var(--white);
 
 }
 
 
 .intro-grid {
 
-    display:
-        grid;
+    display: grid;
 
     grid-template-columns:
         1fr 1fr;
 
-    gap:
-        80px;
+    align-items: center;
 
-    align-items:
-        center;
+    gap: 80px;
 
 }
 
 
-.intro p {
+.intro-grid p {
+
+    margin-bottom: 20px;
 
     color:
         var(--text);
 
-    font-size:
-        18px;
+    font-size: 18px;
 
-    margin-bottom:
-        20px;
+    line-height: 1.75;
 
 }
 
 
-/* ================= SERVICES ================= */
+/* =========================================================
+   15. TARJETAS DE SERVICIOS
+   ========================================================= */
 
 .services-grid {
 
-    display:
-        grid;
+    display: grid;
 
     grid-template-columns:
         repeat(4, 1fr);
 
-    gap:
-        22px;
+    gap: 22px;
 
 }
 
@@ -652,8 +818,10 @@ select {
 
 .service-card {
 
+    overflow: hidden;
+
     background:
-        white;
+        var(--white);
 
     border:
         1px solid var(--border);
@@ -661,11 +829,10 @@ select {
     border-radius:
         var(--radius);
 
-    overflow:
-        hidden;
-
     transition:
-        .3s ease;
+        opacity 0.6s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
 
 }
 
@@ -676,35 +843,39 @@ select {
         translateY(-7px);
 
     box-shadow:
-        var(--shadow);
+        var(--shadow-hover);
 
 }
 
 
+/* =========================================================
+   16. IMAGEN SERVICIO
+   ========================================================= */
+
 .service-image {
 
-    height:
-        210px;
+    width: 100%;
 
-    overflow:
-        hidden;
+    height: 210px;
+
+    overflow: hidden;
+
+    background:
+        var(--light-2);
 
 }
 
 
 .service-image img {
 
-    width:
-        100%;
+    width: 100%;
 
-    height:
-        100%;
+    height: 100%;
 
-    object-fit:
-        cover;
+    object-fit: cover;
 
     transition:
-        transform .5s ease;
+        transform 0.5s ease;
 
 }
 
@@ -713,10 +884,14 @@ select {
 .service-image img {
 
     transform:
-        scale(1.05);
+        scale(1.06);
 
 }
 
+
+/* =========================================================
+   17. CUERPO SERVICIO
+   ========================================================= */
 
 .service-body {
 
@@ -728,39 +903,44 @@ select {
 
 .service-number {
 
-    font-size:
-        12px;
-
-    font-weight:
-        800;
-
     color:
         var(--blue);
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
 
 }
 
 
 .service-body h3 {
 
-    font-size:
-        23px;
-
     margin:
         8px 0 10px;
+
+    color:
+        var(--dark);
+
+    font-size: 22px;
+
+    line-height: 1.25;
 
 }
 
 
 .service-body p {
 
+    margin-bottom:
+        20px;
+
     color:
         var(--text);
 
-    font-size:
-        14px;
+    font-size: 14px;
 
-    margin-bottom:
-        20px;
+    line-height: 1.65;
 
 }
 
@@ -770,30 +950,46 @@ select {
     color:
         var(--blue);
 
-    font-size:
-        13px;
+    font-size: 13px;
 
-    font-weight:
-        800;
+    font-weight: 800;
+
+    transition:
+        var(--transition);
 
 }
 
 
-/* ================= ADVANTAGES ================= */
+.service-body a:hover {
+
+    color:
+        var(--blue-dark);
+
+}
+
+
+/* =========================================================
+   18. VENTAJAS
+   ========================================================= */
+
+.advantages {
+
+    background:
+        var(--white);
+
+}
+
 
 .advantages-grid {
 
-    display:
-        grid;
+    display: grid;
 
     grid-template-columns:
         repeat(4, 1fr);
 
-    gap:
-        25px;
+    gap: 25px;
 
-    margin-top:
-        45px;
+    margin-top: 45px;
 
 }
 
@@ -806,6 +1002,10 @@ select {
     border-top:
         2px solid var(--dark);
 
+    transition:
+        opacity 0.6s ease,
+        transform 0.3s ease;
+
 }
 
 
@@ -814,22 +1014,24 @@ select {
     color:
         var(--blue);
 
-    font-size:
-        13px;
+    font-size: 13px;
 
-    font-weight:
-        800;
+    font-weight: 800;
 
 }
 
 
 .advantage h3 {
 
-    font-size:
-        20px;
-
     margin:
         14px 0 8px;
+
+    color:
+        var(--dark);
+
+    font-size: 20px;
+
+    line-height: 1.3;
 
 }
 
@@ -839,28 +1041,32 @@ select {
     color:
         var(--text);
 
-    font-size:
-        14px;
+    font-size: 14px;
+
+    line-height: 1.65;
 
 }
 
 
-/* ================= PAGE HERO ================= */
+/* =========================================================
+   19. HERO DE PÁGINAS INTERNAS
+   ========================================================= */
 
 .page-hero {
 
+    padding:
+        100px 0;
+
+    color:
+        var(--white);
+
     background:
+
         linear-gradient(
             135deg,
             #0b1d2d,
             #1268b3
         );
-
-    color:
-        white;
-
-    padding:
-        100px 0;
 
 }
 
@@ -875,14 +1081,23 @@ select {
 
 .page-hero h1 {
 
+    margin-bottom:
+        18px;
+
+    color:
+        var(--white);
+
     font-size:
         clamp(42px, 6vw, 64px);
+
+    font-weight:
+        800;
 
     line-height:
         1.05;
 
-    margin-bottom:
-        18px;
+    letter-spacing:
+        -1.5px;
 
 }
 
@@ -892,41 +1107,55 @@ select {
     max-width:
         650px;
 
+    color:
+        rgba(255,255,255,0.84);
+
     font-size:
         18px;
 
-    color:
-        rgba(255,255,255,.82);
+    line-height:
+        1.65;
 
 }
 
 
-/* ================= ABOUT ================= */
+/* =========================================================
+   20. NOSOTROS
+   ========================================================= */
+
+.about {
+
+    background:
+        var(--white);
+
+}
+
 
 .about-grid {
 
-    display:
-        grid;
+    display: grid;
 
     grid-template-columns:
         1fr 1fr;
 
+    align-items: center;
+
     gap:
         70px;
-
-    align-items:
-        center;
 
 }
 
 
 .about-image {
 
+    overflow:
+        hidden;
+
     border-radius:
         var(--radius);
 
-    overflow:
-        hidden;
+    box-shadow:
+        var(--shadow);
 
 }
 
@@ -947,19 +1176,36 @@ select {
 
 .about-content p {
 
+    margin:
+        20px 0;
+
     color:
         var(--text);
 
-    margin:
-        20px 0;
+    font-size:
+        16px;
+
+    line-height:
+        1.75;
+
+}
+
+
+/* =========================================================
+   21. VALORES
+   ========================================================= */
+
+.values {
+
+    background:
+        var(--light);
 
 }
 
 
 .values-grid {
 
-    display:
-        grid;
+    display: grid;
 
     grid-template-columns:
         repeat(4, 1fr);
@@ -972,17 +1218,33 @@ select {
 
 .value-card {
 
-    background:
-        white;
-
     padding:
         30px;
+
+    background:
+        var(--white);
 
     border:
         1px solid var(--border);
 
     border-radius:
         var(--radius);
+
+    transition:
+        opacity 0.6s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+
+}
+
+
+.value-card:hover {
+
+    transform:
+        translateY(-5px);
+
+    box-shadow:
+        var(--shadow);
 
 }
 
@@ -991,6 +1253,9 @@ select {
 
     color:
         var(--blue);
+
+    font-size:
+        13px;
 
     font-weight:
         800;
@@ -1003,6 +1268,12 @@ select {
     margin:
         15px 0 8px;
 
+    color:
+        var(--dark);
+
+    font-size:
+        20px;
+
 }
 
 
@@ -1014,15 +1285,27 @@ select {
     font-size:
         14px;
 
+    line-height:
+        1.65;
+
 }
 
 
-/* ================= PROJECTS ================= */
+/* =========================================================
+   22. PROYECTOS
+   ========================================================= */
+
+.projects {
+
+    background:
+        var(--white);
+
+}
+
 
 .projects-grid {
 
-    display:
-        grid;
+    display: grid;
 
     grid-template-columns:
         repeat(3, 1fr);
@@ -1035,28 +1318,50 @@ select {
 
 .project-card {
 
-    border-radius:
-        var(--radius);
-
     overflow:
         hidden;
 
     background:
-        white;
+        var(--white);
 
     border:
         1px solid var(--border);
+
+    border-radius:
+        var(--radius);
+
+    transition:
+        opacity 0.6s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+
+}
+
+
+.project-card:hover {
+
+    transform:
+        translateY(-6px);
+
+    box-shadow:
+        var(--shadow-hover);
 
 }
 
 
 .project-image {
 
+    width:
+        100%;
+
     height:
         300px;
 
     overflow:
         hidden;
+
+    background:
+        var(--light-2);
 
 }
 
@@ -1073,7 +1378,7 @@ select {
         cover;
 
     transition:
-        .5s ease;
+        transform 0.5s ease;
 
 }
 
@@ -1097,14 +1402,14 @@ select {
 
 .project-info span {
 
+    color:
+        var(--blue);
+
     font-size:
         11px;
 
     font-weight:
         800;
-
-    color:
-        var(--blue);
 
     letter-spacing:
         1px;
@@ -1114,11 +1419,17 @@ select {
 
 .project-info h3 {
 
+    margin:
+        8px 0;
+
+    color:
+        var(--dark);
+
     font-size:
         22px;
 
-    margin:
-        8px 0;
+    line-height:
+        1.3;
 
 }
 
@@ -1131,21 +1442,26 @@ select {
     font-size:
         14px;
 
+    line-height:
+        1.65;
+
 }
 
 
-/* ================= CTA ================= */
+/* =========================================================
+   23. CTA
+   ========================================================= */
 
 .cta {
 
-    background:
-        var(--blue);
-
-    color:
-        white;
-
     padding:
         70px 0;
+
+    color:
+        var(--white);
+
+    background:
+        var(--blue);
 
 }
 
@@ -1177,14 +1493,20 @@ select {
 
 .cta h2 {
 
+    margin-bottom:
+        10px;
+
+    color:
+        var(--white);
+
     font-size:
         clamp(30px, 4vw, 46px);
 
+    font-weight:
+        800;
+
     line-height:
         1.1;
-
-    margin-bottom:
-        10px;
 
 }
 
@@ -1192,20 +1514,32 @@ select {
 .cta p {
 
     color:
-        rgba(255,255,255,.8);
+        rgba(255,255,255,0.80);
+
+    font-size:
+        16px;
 
 }
 
 
-/* ================= CONTACT ================= */
+/* =========================================================
+   24. CONTACTO
+   ========================================================= */
+
+.contact {
+
+    background:
+        var(--white);
+
+}
+
 
 .contact-grid {
 
-    display:
-        grid;
+    display: grid;
 
     grid-template-columns:
-        .9fr 1.1fr;
+        0.9fr 1.1fr;
 
     gap:
         70px;
@@ -1215,14 +1549,20 @@ select {
 
 .contact-info h2 {
 
+    margin-bottom:
+        20px;
+
+    color:
+        var(--dark);
+
     font-size:
         clamp(34px, 4vw, 52px);
 
+    font-weight:
+        800;
+
     line-height:
         1.05;
-
-    margin-bottom:
-        20px;
 
 }
 
@@ -1237,22 +1577,22 @@ select {
 
 .contact-info > p {
 
+    margin-bottom:
+        35px;
+
     color:
         var(--text);
 
-    margin-bottom:
-        35px;
+    font-size:
+        16px;
+
+    line-height:
+        1.7;
 
 }
 
 
 .contact-item {
-
-    padding:
-        18px 0;
-
-    border-top:
-        1px solid var(--border);
 
     display:
         flex;
@@ -1260,16 +1600,25 @@ select {
     flex-direction:
         column;
 
+    padding:
+        18px 0;
+
+    border-top:
+        1px solid var(--border);
+
 }
 
 
 .contact-item strong {
 
-    font-size:
-        13px;
-
     margin-bottom:
         4px;
+
+    color:
+        var(--dark);
+
+    font-size:
+        13px;
 
 }
 
@@ -1280,16 +1629,34 @@ select {
     color:
         var(--text);
 
+    font-size:
+        15px;
+
 }
 
 
+.contact-item a:hover {
+
+    color:
+        var(--blue);
+
+}
+
+
+/* =========================================================
+   25. FORMULARIO
+   ========================================================= */
+
 .contact-form-wrapper {
+
+    padding:
+        35px;
 
     background:
         var(--light);
 
-    padding:
-        35px;
+    border:
+        1px solid var(--border);
 
     border-radius:
         var(--radius);
@@ -1341,6 +1708,9 @@ select {
 
 .form-group label {
 
+    color:
+        var(--dark);
+
     font-size:
         13px;
 
@@ -1357,14 +1727,17 @@ select {
     width:
         100%;
 
-    border:
-        1px solid var(--border);
-
-    background:
-        white;
-
     padding:
         13px 14px;
+
+    color:
+        var(--dark);
+
+    background:
+        var(--white);
+
+    border:
+        1px solid var(--border);
 
     border-radius:
         7px;
@@ -1372,8 +1745,18 @@ select {
     outline:
         none;
 
+    transition:
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+
+}
+
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+
     color:
-        var(--dark);
+        #9aa4ad;
 
 }
 
@@ -1385,21 +1768,52 @@ select {
     border-color:
         var(--blue);
 
+    box-shadow:
+        0 0 0 3px rgba(18,104,179,0.08);
+
+}
+
+
+.form-group textarea {
+
+    min-height:
+        150px;
+
+    resize:
+        vertical;
+
 }
 
 
 .form-button {
 
+    width:
+        100%;
+
     border:
         none;
 
+}
+
+
+.form-button:disabled {
+
+    opacity:
+        0.65;
+
     cursor:
-        pointer;
+        wait;
 
 }
 
 
 .form-message {
+
+    min-height:
+        20px;
+
+    color:
+        var(--text);
 
     font-size:
         14px;
@@ -1410,23 +1824,22 @@ select {
 }
 
 
-/* ================= FOOTER ================= */
+/* =========================================================
+   26. FOOTER
+   ========================================================= */
 
 .footer {
 
+    color:
+        var(--white);
+
     background:
         var(--dark);
-
-    color:
-        white;
 
 }
 
 
 .footer-grid {
-
-    padding:
-        70px 0;
 
     display:
         grid;
@@ -1437,6 +1850,9 @@ select {
     gap:
         60px;
 
+    padding:
+        70px 0;
+
 }
 
 
@@ -1444,6 +1860,9 @@ select {
 
     width:
         160px;
+
+    height:
+        auto;
 
     margin-bottom:
         20px;
@@ -1453,14 +1872,17 @@ select {
 
 .footer p {
 
+    max-width:
+        350px;
+
     color:
         #aeb7c0;
 
     font-size:
         14px;
 
-    max-width:
-        350px;
+    line-height:
+        1.7;
 
 }
 
@@ -1470,6 +1892,12 @@ select {
     margin-bottom:
         18px;
 
+    color:
+        var(--white);
+
+    font-size:
+        15px;
+
 }
 
 
@@ -1478,14 +1906,17 @@ select {
     display:
         block;
 
+    margin:
+        8px 0;
+
     color:
         #aeb7c0;
 
     font-size:
         14px;
 
-    margin:
-        8px 0;
+    transition:
+        color 0.25s ease;
 
 }
 
@@ -1493,7 +1924,7 @@ select {
 .footer-grid a:hover {
 
     color:
-        white;
+        var(--white);
 
 }
 
@@ -1501,7 +1932,12 @@ select {
 .footer-bottom {
 
     border-top:
-        1px solid rgba(255,255,255,.08);
+        1px solid rgba(255,255,255,0.08);
+
+}
+
+
+.footer-bottom .container {
 
     padding:
         20px 0;
@@ -1511,13 +1947,21 @@ select {
 
 .footer-bottom p {
 
+    max-width:
+        none;
+
+    color:
+        #7f8b95;
+
     font-size:
         12px;
 
 }
 
 
-/* ================= WHATSAPP ================= */
+/* =========================================================
+   27. WHATSAPP FLOTANTE
+   ========================================================= */
 
 .whatsapp-float {
 
@@ -1529,6 +1973,9 @@ select {
 
     bottom:
         22px;
+
+    z-index:
+        999;
 
     width:
         58px;
@@ -1545,47 +1992,208 @@ select {
     justify-content:
         center;
 
+    color:
+        var(--white);
+
     background:
         #1fba68;
-
-    color:
-        white;
 
     border-radius:
         50%;
 
+    box-shadow:
+        0 8px 25px rgba(0,0,0,0.20);
+
     font-size:
         24px;
 
-    box-shadow:
-        0 8px 25px rgba(0,0,0,.2);
-
-    z-index:
-        999;
-
     transition:
-        .25s ease;
+        var(--transition);
 
 }
 
 
 .whatsapp-float:hover {
 
+    color:
+        var(--white);
+
+    background:
+        #159b54;
+
     transform:
         scale(1.08);
+
+    box-shadow:
+        0 12px 30px rgba(0,0,0,0.25);
 
 }
 
 
-/* ================= RESPONSIVE ================= */
+.whatsapp-float::before {
 
-@media (max-width: 1000px) {
+    content:
+        "";
+
+    position:
+        absolute;
+
+    inset:
+        -5px;
+
+    border:
+        2px solid rgba(31,186,104,0.25);
+
+    border-radius:
+        50%;
+
+    animation:
+        whatsappPulse 2s infinite;
+
+}
+
+
+@keyframes whatsappPulse {
+
+    0% {
+        transform: scale(0.95);
+        opacity: 1;
+    }
+
+    70% {
+        transform: scale(1.15);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(0.95);
+        opacity: 0;
+    }
+
+}
+
+
+/* =========================================================
+   28. ANIMACIONES DE ENTRADA
+   ========================================================= */
+
+.service-card,
+.project-card,
+.advantage,
+.value-card {
+
+    opacity:
+        0;
+
+    transform:
+        translateY(20px);
+
+    transition:
+        opacity 0.6s ease,
+        transform 0.6s ease,
+        box-shadow 0.3s ease;
+
+}
+
+
+.service-card.show,
+.project-card.show,
+.advantage.show,
+.value-card.show {
+
+    opacity:
+        1;
+
+    transform:
+        translateY(0);
+
+}
+
+
+/* =========================================================
+   29. EFECTO ESCALONADO
+   ========================================================= */
+
+.services-grid
+.service-card:nth-child(2),
+.projects-grid
+.project-card:nth-child(2),
+.values-grid
+.value-card:nth-child(2),
+.advantages-grid
+.advantage:nth-child(2) {
+
+    transition-delay:
+        0.08s;
+
+}
+
+
+.services-grid
+.service-card:nth-child(3),
+.projects-grid
+.project-card:nth-child(3),
+.values-grid
+.value-card:nth-child(3),
+.advantages-grid
+.advantage:nth-child(3) {
+
+    transition-delay:
+        0.16s;
+
+}
+
+
+.services-grid
+.service-card:nth-child(4),
+.values-grid
+.value-card:nth-child(4),
+.advantages-grid
+.advantage:nth-child(4) {
+
+    transition-delay:
+        0.24s;
+
+}
+
+
+.services-grid
+.service-card:nth-child(5) {
+
+    transition-delay:
+        0.32s;
+
+}
+
+
+.services-grid
+.service-card:nth-child(6) {
+
+    transition-delay:
+        0.40s;
+
+}
+
+
+/* =========================================================
+   30. TABLETS
+   ========================================================= */
+
+@media (max-width: 1100px) {
 
 
     .nav-menu {
 
         gap:
-            17px;
+            20px;
+
+    }
+
+
+    .nav-menu a {
+
+        font-size:
+            13px;
 
     }
 
@@ -1625,7 +2233,41 @@ select {
 }
 
 
-@media (max-width: 800px) {
+/* =========================================================
+   31. TABLET / MENÚ MÓVIL
+   ========================================================= */
+
+@media (max-width: 850px) {
+
+
+    .nav-container {
+
+        min-height:
+            76px;
+
+    }
+
+
+    .logo img {
+
+        width:
+            155px;
+
+    }
+
+
+    .menu-toggle {
+
+        display:
+            flex;
+
+        align-items:
+            center;
+
+        justify-content:
+            center;
+
+    }
 
 
     .nav-menu {
@@ -1634,7 +2276,7 @@ select {
             absolute;
 
         top:
-            82px;
+            76px;
 
         left:
             0;
@@ -1642,8 +2284,11 @@ select {
         width:
             100%;
 
-        background:
-            white;
+        margin:
+            0;
+
+        padding:
+            10px 20px 20px;
 
         display:
             none;
@@ -1654,14 +2299,20 @@ select {
         align-items:
             stretch;
 
+        justify-content:
+            flex-start;
+
         gap:
             0;
 
-        padding:
-            10px 20px 20px;
+        background:
+            var(--white);
+
+        border-top:
+            1px solid var(--border);
 
         box-shadow:
-            0 15px 30px rgba(0,0,0,.08);
+            0 18px 35px rgba(0,0,0,0.08);
 
     }
 
@@ -1676,30 +2327,50 @@ select {
 
     .nav-menu a {
 
+        width:
+            100%;
+
         padding:
-            14px;
+            14px 8px;
 
         border-bottom:
             1px solid var(--border);
 
+        font-size:
+            14px;
+
     }
 
 
-    .nav-whatsapp {
+    .nav-menu a::after {
 
-        text-align:
-            center;
+        display:
+            none;
+
+    }
+
+
+    .nav-menu .nav-whatsapp {
 
         margin-top:
             10px;
 
+        padding:
+            13px;
+
+        text-align:
+            center;
+
+        border:
+            none;
+
     }
 
 
-    .menu-toggle {
+    .hero {
 
-        display:
-            block;
+        min-height:
+            580px;
 
     }
 
@@ -1714,29 +2385,37 @@ select {
     }
 
 
-    .hero {
+    .intro-grid {
 
-        min-height:
-            580px;
+        gap:
+            35px;
 
     }
 
 
-    .hero h1 {
+    .about-grid {
 
-        font-size:
-            46px;
+        gap:
+            40px;
+
+    }
+
+
+    .about-image img {
+
+        min-height:
+            400px;
 
     }
 
 
     .cta-content {
 
-        flex-direction:
-            column;
-
         align-items:
             flex-start;
+
+        flex-direction:
+            column;
 
     }
 
@@ -1751,16 +2430,17 @@ select {
 }
 
 
+/* =========================================================
+   32. MÓVILES
+   ========================================================= */
+
 @media (max-width: 600px) {
 
 
     .container {
 
         width:
-            min(
-                100% - 30px,
-                1180px
-            );
+            calc(100% - 30px);
 
     }
 
@@ -1777,6 +2457,30 @@ select {
 
         min-height:
             540px;
+
+        background-position:
+            center center;
+
+    }
+
+
+    .hero-overlay {
+
+        background:
+
+            linear-gradient(
+                90deg,
+                rgba(7,20,32,0.92),
+                rgba(7,20,32,0.68)
+            );
+
+    }
+
+
+    .hero-content {
+
+        padding:
+            60px 0;
 
     }
 
@@ -1797,10 +2501,16 @@ select {
         font-size:
             17px;
 
+        line-height:
+            1.6;
+
     }
 
 
     .hero-buttons {
+
+        width:
+            100%;
 
         flex-direction:
             column;
@@ -1819,6 +2529,28 @@ select {
     }
 
 
+    .section h2 {
+
+        font-size:
+            34px;
+
+    }
+
+
+    .section-header {
+
+        align-items:
+            flex-start;
+
+        flex-direction:
+            column;
+
+        gap:
+            15px;
+
+    }
+
+
     .services-grid,
     .services-grid.large,
     .advantages-grid,
@@ -1831,43 +2563,18 @@ select {
     }
 
 
-    .section-header {
+    .service-image {
 
-        flex-direction:
-            column;
-
-        align-items:
-            flex-start;
+        height:
+            220px;
 
     }
 
 
-    .form-row {
+    .project-image {
 
-        grid-template-columns:
-            1fr;
-
-    }
-
-
-    .contact-form-wrapper {
-
-        padding:
-            22px;
-
-    }
-
-
-    .footer-grid {
-
-        grid-template-columns:
-            1fr;
-
-        gap:
-            35px;
-
-        padding:
-            50px 0;
+        height:
+            250px;
 
     }
 
@@ -1888,7 +2595,67 @@ select {
     }
 
 
+    .page-hero p {
+
+        font-size:
+            16px;
+
+    }
+
+
+    .about-image img {
+
+        min-height:
+            320px;
+
+    }
+
+
+    .contact-form-wrapper {
+
+        padding:
+            22px;
+
+    }
+
+
+    .form-row {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .footer-grid {
+
+        grid-template-columns:
+            1fr;
+
+        gap:
+            35px;
+
+        padding:
+            50px 0;
+
+    }
+
+
+    .footer-bottom .container {
+
+        padding:
+            18px 0;
+
+    }
+
+
     .whatsapp-float {
+
+        right:
+            16px;
+
+        bottom:
+            16px;
 
         width:
             54px;
@@ -1896,11 +2663,94 @@ select {
         height:
             54px;
 
-        right:
-            16px;
+    }
 
-        bottom:
-            16px;
+}
+
+
+/* =========================================================
+   33. PANTALLAS MUY PEQUEÑAS
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+
+    .logo img {
+
+        width:
+            140px;
+
+    }
+
+
+    .hero h1 {
+
+        font-size:
+            35px;
+
+    }
+
+
+    .page-hero h1 {
+
+        font-size:
+            38px;
+
+    }
+
+
+    .section h2 {
+
+        font-size:
+            30px;
+
+    }
+
+
+    .service-body {
+
+        padding:
+            22px;
+
+    }
+
+
+    .contact-form-wrapper {
+
+        padding:
+            18px;
+
+    }
+
+}
+
+
+/* =========================================================
+   34. REDUCCIÓN DE MOVIMIENTO
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+
+        scroll-behavior:
+            auto;
+
+    }
+
+
+    *,
+    *::before,
+    *::after {
+
+        animation-duration:
+            0.01ms !important;
+
+        animation-iteration-count:
+            1 !important;
+
+        transition-duration:
+            0.01ms !important;
 
     }
 
