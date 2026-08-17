@@ -1,51 +1,63 @@
-/* =====================================================
+/* =========================================================
    VICMAR SERVICES
    MAIN.JS
-   ===================================================== */
+========================================================= */
 
 
-/* ================= MOBILE MENU ================= */
+/* =========================================================
+   MENÚ MÓVIL
+========================================================= */
 
-const menuToggle =
-    document.querySelector(".menu-toggle");
-
-const navMenu =
-    document.querySelector(".nav-menu");
+const menuToggle = document.getElementById("menuToggle");
+const mainNav = document.getElementById("mainNav");
 
 
-if (menuToggle && navMenu) {
+if (menuToggle && mainNav) {
 
-    menuToggle.addEventListener(
-        "click",
-        function () {
+    menuToggle.addEventListener("click", () => {
 
-            navMenu.classList.toggle("active");
+        const isOpen =
+            mainNav.classList.toggle("nav-open");
 
-        }
-    );
+        menuToggle.setAttribute(
+            "aria-expanded",
+            isOpen
+        );
 
+        menuToggle.textContent =
+            isOpen ? "✕" : "☰";
+
+    });
+
+
+    /* Cerrar menú al seleccionar una página */
 
     const navLinks =
-        navMenu.querySelectorAll("a");
+        mainNav.querySelectorAll("a");
 
+    navLinks.forEach(link => {
 
-    navLinks.forEach(function (link) {
+        link.addEventListener("click", () => {
 
-        link.addEventListener(
-            "click",
-            function () {
+            mainNav.classList.remove("nav-open");
 
-                navMenu.classList.remove("active");
+            menuToggle.setAttribute(
+                "aria-expanded",
+                "false"
+            );
 
-            }
-        );
+            menuToggle.textContent = "☰";
+
+        });
 
     });
 
 }
 
 
-/* ================= FORMULARIO ================= */
+/* =========================================================
+   FORMULARIO DE CONTACTO
+========================================================= */
 
 const contactForm =
     document.getElementById("contactForm");
@@ -55,16 +67,18 @@ if (contactForm) {
 
     contactForm.addEventListener(
         "submit",
-        async function (event) {
+        async function(event) {
 
             event.preventDefault();
 
 
-            const message =
+            const formMessage =
                 document.getElementById("formMessage");
 
             const button =
-                contactForm.querySelector("button");
+                contactForm.querySelector(
+                    "button[type='submit']"
+                );
 
 
             button.disabled = true;
@@ -73,32 +87,38 @@ if (contactForm) {
                 "Enviando...";
 
 
-            const formData =
-                new FormData(contactForm);
+            formMessage.textContent = "";
+
+            formMessage.className =
+                "form-message";
 
 
             const data = {
 
                 nombre:
-                    formData.get("nombre"),
+                    document.getElementById(
+                        "nombre"
+                    ).value.trim(),
 
                 telefono:
-                    formData.get("telefono"),
+                    document.getElementById(
+                        "telefono"
+                    ).value.trim(),
 
-                email:
-                    formData.get("email"),
-
-                servicio:
-                    formData.get("servicio"),
+                correo:
+                    document.getElementById(
+                        "correo"
+                    ).value.trim(),
 
                 mensaje:
-                    formData.get("mensaje")
+                    document.getElementById(
+                        "mensaje"
+                    ).value.trim()
 
             };
 
 
             try {
-
 
                 const response =
                     await fetch(
@@ -108,10 +128,8 @@ if (contactForm) {
                             method: "POST",
 
                             headers: {
-
                                 "Content-Type":
                                     "application/json"
-
                             },
 
                             body:
@@ -124,84 +142,46 @@ if (contactForm) {
                 if (!response.ok) {
 
                     throw new Error(
-                        "Error al enviar"
+                        "Error en el servidor"
                     );
 
                 }
 
 
-                message.textContent =
-                    "✓ Solicitud enviada correctamente. Nos pondremos en contacto contigo.";
+                formMessage.textContent =
+                    "Solicitud enviada correctamente. Nos pondremos en contacto contigo.";
 
-                message.style.color =
-                    "#16884a";
-
+                formMessage.classList.add(
+                    "success"
+                );
 
                 contactForm.reset();
 
 
             } catch (error) {
 
-
-                message.textContent =
-                    "No pudimos enviar el formulario. Puedes contactarnos directamente por WhatsApp.";
-
-                message.style.color =
-                    "#c0392b";
+                console.error(
+                    "Error:",
+                    error
+                );
 
 
-            } finally {
+                formMessage.textContent =
+                    "No fue posible enviar la solicitud. Escríbenos directamente por WhatsApp.";
 
-
-                button.disabled =
-                    false;
-
-                button.textContent =
-                    "Enviar solicitud";
+                formMessage.classList.add(
+                    "error"
+                );
 
             }
+
+
+            button.disabled = false;
+
+            button.textContent =
+                "Enviar solicitud";
 
         }
     );
 
 }
-
-
-/* ================= ANIMACIÓN SUAVE ================= */
-
-const observer =
-    new IntersectionObserver(
-        function (entries) {
-
-            entries.forEach(
-                function (entry) {
-
-                    if (entry.isIntersecting) {
-
-                        entry.target.classList.add(
-                            "show"
-                        );
-
-                    }
-
-                }
-            );
-
-        },
-        {
-            threshold: 0.12
-        }
-    );
-
-
-document
-    .querySelectorAll(
-        ".service-card, .project-card, .advantage, .value-card"
-    )
-    .forEach(
-        function (element) {
-
-            observer.observe(element);
-
-        }
-    );
