@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Electricidad, Plomería y Mantenimiento en Quito | Vicmar Services</title>
      
     <meta name="description" content="Servicios de electricidad, plomería, impermeabilización, mantenimiento preventivo y correctivo, aluminio y vidrio en Quito. Atención rápida y garantizada.">
@@ -14,14 +13,12 @@
 
     <!-- Favicon -->
     <link rel="canonical" href="https://vicmarserv.com">
-     
     <link rel="stylesheet" href="css/estilos.css">
-     
     <link rel="icon" type="image/png" href="img/icono2.png">
     <link rel="shortcut icon" href="img/icono2.png">
     <link rel="apple-touch-icon" href="img/icono2.png">
 
-    <!-- Iconos Globales FontAwesome (Estilo Fixit Premium) -->
+    <!-- Iconos Globales FontAwesome -->
     <link rel="stylesheet" href="https://cloudflare.com">
 
     <!-- SEO LOCAL -->
@@ -45,86 +42,83 @@
     </script>
 
     <style>
-        /* ESTILOS INSPIRADOS EN LA PLANTILLA FIXIT HANDYMAN DE TEMPLATEMONSTER */
+        /* REDISEÑO VISUAL MÁS LLAMATIVO Y CÁLIDO */
         :root {
-            --fixit-blue: #0d47a1;
-            --fixit-yellow: #ffb300;
-            --fixit-dark: #1a252f;
-            --fixit-light: #f4f7fc;
-            --fixit-text: #34495e;
+            --primary: #0d47a1;
+            --primary-dark: #0a3680;
+            --accent: #ffb300;
+            --accent-hover: #ffa000;
+            --dark: #1a252f;
+            --light-bg: #f4f7fc;
+            --card-bg: #ffffff;
+            --text-main: #2c3e50;
+            --text-muted: #64748b;
         }
 
         body {
-            background-color: var(--fixit-light);
-            color: var(--fixit-text);
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--light-bg);
+            color: var(--text-main);
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            margin: 0;
         }
 
-        /* 1. BARRA SUPERIOR DE CONTACTO (TOP BAR DE LA DEMO) */
+        /* BARRA SUPERIOR LLAMATIVA */
         .top-bar-fixit {
-            background-color: var(--fixit-dark);
+            background-color: var(--dark);
             color: #ffffff;
             font-size: 13px;
-            padding: 10px 20px;
+            padding: 12px 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
-            border-bottom: 3px solid var(--fixit-yellow);
-        }
-
-        .top-bar-fixit .info-meta {
-            display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
+            border-bottom: 3px solid var(--accent);
         }
 
         .top-bar-fixit a {
             color: #ffffff;
             text-decoration: none;
-            font-weight: 600;
-            transition: color 0.2s;
+            font-weight: bold;
         }
 
         .top-bar-fixit a:hover {
-            color: var(--fixit-yellow);
+            color: var(--accent);
         }
 
-        /* AJUSTES DEL MAIN SECTION */
         main section {
             padding: 60px 20px !important;
             margin: 0 auto !important;
             max-width: 1100px;
         }
 
-        /* 2. HERO CON FILTRO PROFESIONAL Y BOTONES ACENTUADOS */
+        /* PORTADA CON EFECTO PROFESIONAL */
         .hero-premium {
-            background-image: linear-gradient(135deg, rgba(13, 71, 161, 0.88) 10%, rgba(26, 37, 47, 0.8) 100%), 
+            background-image: linear-gradient(135deg, rgba(13, 71, 161, 0.88) 20%, rgba(26, 37, 47, 0.8) 100%), 
                               url('img/portada-vicmar.png');
             background-size: cover;
-            background-position: center center;
+            background-position: center;
             background-repeat: no-repeat;
             padding: 120px 20px !important;
             text-align: center;
             color: #ffffff;
+            border-bottom: 5px solid var(--accent);
         }
 
         .hero-premium h1 {
             font-size: 42px;
             font-weight: 800;
-            text-shadow: 0 3px 6px rgba(0,0,0,0.4);
-            margin-bottom: 20px;
+            text-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            margin-bottom: 15px;
             line-height: 1.25;
         }
 
         .hero-premium p strong {
-            font-size: 19px;
-            color: #ffffff;
-            border-bottom: 2px solid var(--fixit-yellow);
-            padding-bottom: 5px;
+            font-size: 20px;
+            color: #ffe082;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.4);
         }
 
-        /* COMPONENTES DE CONVERSIÓN EXCLUSIVOS */
+        /* BOTONES DE ACCIÓN RÁPIDA */
         .botones {
             margin-top: 35px;
             display: flex;
@@ -134,14 +128,14 @@
         }
 
         .btn-cta-principal {
-            background-color: var(--fixit-yellow) !important; 
-            color: var(--fixit-dark) !important;
+            background-color: var(--accent) !important; 
+            color: var(--dark) !important;
             font-weight: 800 !important;
             padding: 16px 35px !important;
-            border-radius: 4px !important; /* Bordes rectos limpios estilo Fixit Demo */
+            border-radius: 30px !important;
             text-decoration: none;
-            box-shadow: 0 4px 12px rgba(255, 179, 0, 0.3) !important;
-            transition: all 0.3s ease !important;
+            box-shadow: 0 6px 20px rgba(255, 179, 0, 0.4) !important;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
             font-size: 16px;
             display: inline-flex;
             align-items: center;
@@ -149,8 +143,9 @@
         }
 
         .btn-cta-principal:hover {
-            background-color: #ffa000 !important;
-            transform: translateY(-2px);
+            background-color: var(--accent-hover) !important;
+            transform: translateY(-4px);
+            box-shadow: 0 8px 25px rgba(255, 179, 0, 0.5) !important;
         }
 
         .btn-cta-secundario {
@@ -158,8 +153,8 @@
             color: #ffffff !important;
             border: 2px solid #ffffff !important;
             font-weight: 700 !important;
-            padding: 14px 30px !important;
-            border-radius: 4px !important;
+            padding: 14px 32px !important;
+            border-radius: 30px !important;
             text-decoration: none;
             transition: all 0.3s ease !important;
             font-size: 16px;
@@ -167,65 +162,79 @@
 
         .btn-cta-secundario:hover {
             background-color: #ffffff !important;
-            color: var(--fixit-blue) !important;
+            color: var(--primary) !important;
+            transform: translateY(-3px);
         }
 
-        /* 3. BARRA INTERACTIVA DE PESTAÑAS (TABS FIXIT) */
+        /* DISEÑO DE PESTAÑAS TÁCTILES */
         .selector-servicios {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 8px;
+            gap: 10px;
             margin: 35px auto;
         }
 
         .btn-servicio {
-            background-color: #ffffff;
-            border: 1px solid #e2e8f0;
-            color: #475569;
-            padding: 14px 24px;
+            background-color: var(--card-bg);
+            border: 2px solid #e2e8f0;
+            color: var(--text-main);
+            padding: 12px 24px;
             font-size: 14px;
             font-weight: 700;
-            border-radius: 4px;
+            border-radius: 30px;
             cursor: pointer;
             display: flex;
             align-items: center;
-            gap: 10px;
-            transition: all 0.2s ease;
+            gap: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            transition: all 0.25s ease;
         }
 
         .btn-servicio i {
-            color: var(--fixit-blue);
+            color: var(--primary);
         }
 
         .btn-servicio:hover, .btn-servicio.active {
-            background-color: var(--fixit-blue);
-            border-color: var(--fixit-blue);
+            background-color: var(--primary);
+            border-color: var(--primary);
             color: #ffffff;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(13, 71, 161, 0.25);
         }
 
         .btn-servicio:hover i, .btn-servicio.active i {
-            color: var(--fixit-yellow); 
+            color: var(--accent); 
         }
 
-        /* CONTENEDOR CENTRAL DINÁMICO ACABADO PREMIUM */
+        /* CONTENEDOR EN RELIEVE PROFUNDO */
         .contenedor-bloques {
-            background: #ffffff;
-            border-radius: 6px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+            background: var(--card-bg);
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(13, 71, 161, 0.05);
             padding: 45px;
-            margin-top: 20px;
-            border-top: 4px solid var(--fixit-blue);
+            margin-top: 25px;
+            border-top: 5px solid var(--primary);
             border-left: 1px solid #e2e8f0;
             border-right: 1px solid #e2e8f0;
             border-bottom: 1px solid #e2e8f0;
         }
 
+        .bloque-servicio {
+            display: none;
+        }
+
+        .bloque-servicio.active {
+            display: block;
+            animation: slideUp 0.4s ease forwards;
+        }
+
         .bloque-servicio h3 {
             margin-top: 0;
-            font-size: 26px;
-            color: var(--fixit-dark);
-            padding-bottom: 12px;
+            font-size: 28px;
+            color: var(--primary);
+            border-bottom: 2px solid #f4f7fc;
+            padding-bottom: 10px;
         }
 
         .btn-solicitar-bloque {
@@ -234,18 +243,19 @@
             gap: 8px;
             background-color: #25d366;
             color: white;
-            padding: 12px 28px;
-            border-radius: 4px;
+            padding: 14px 30px;
+            border-radius: 8px;
             text-decoration: none;
             font-weight: bold;
-            transition: background-color 0.2s;
+            box-shadow: 0 6px 15px rgba(37, 211, 102, 0.2);
+            transition: all 0.25s ease;
         }
 
         .btn-solicitar-bloque:hover {
-            background-color: #1ebd54;
+            background-color: #20ba59;
+            transform: translateY(-2px);
         }
 
-        /* CUADRÍCULAS ADAPTATIVAS (RESPONSIVE) */
         .grid-clean {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -254,35 +264,36 @@
         }
 
         .grid-clean .card-clean {
-            background: #ffffff;
+            background: var(--card-bg);
             padding: 30px;
-            border-radius: 4px;
+            border-radius: 16px;
             border: 1px solid #e2e8f0;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.01);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.02);
+        }
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(12px); }
+            to { opacity: 1; transform: translateY(0); }
         }
     </style>
 </head>
-
 <body>
 
-<!-- Barra de Información Superior estilo Fixit de TemplateMonster -->
 <div class="top-bar-fixit">
-    <div class="info-meta">
-        <span><i class="fa-solid fa-clock" style="color: var(--fixit-yellow);"></i> Atención: Lunes a Domingo - 24/7</span>
-        <span><i class="fa-solid fa-envelope" style="color: var(--fixit-yellow);"></i> <a href="mailto:info@vicmarserv.com">info@vicmarserv.com</a></span>
+    <div>
+        <span><i class="fa-solid fa-clock" style="color: var(--accent);"></i> Emergencias: Lunes a Domingo - 24/7</span>
     </div>
-    <div class="info-phone">
-        <i class="fa-solid fa-phone" style="color: var(--fixit-yellow);"></i> Emergencias: <a href="tel:+593992705273">099 270 5273</a>
+    <div>
+        <i class="fa-solid fa-phone" style="color: var(--accent);"></i> Llamar Ahora: <a href="tel:+593992705273">099 270 5273</a>
     </div>
 </div>
 
 <header>
     <div class="logo">
         <a href="index.html">
-            <img src="img/rotulo1.png" alt="Vicmar Services - Electricidad, Plomería y Mantenimiento en Quito" width="350" height="120">
+            <img src="img/rotulo1.png" alt="Vicmar Services" width="350" height="120">
         </a>
     </div>
-
     <nav aria-label="Menú principal">
         <a href="index.html" class="active">Inicio</a>
         <a href="servicios.html">Servicios</a>
@@ -293,13 +304,7 @@
 </header>
 
 <main>
-
-    <!-- Hero Section Adaptado -->
     <section class="hero-premium">
         <div class="overlay">
             <h1>Soluciones Técnicas Profesionales para Hogares y Empresas en Quito</h1>
-            <p>
-                <strong>
-                    ⚡ Electricidad • 🚿 Plomería • 💧 Impermeabilización • 🏢 Mantenimiento Integral
-                </strong>
-            </p>
+            <p><strong>⚡ Electricidad • 🚿 Plomería • 💧 Impermeabilización • 🏢 Mantenimiento Integral</strong></p>
