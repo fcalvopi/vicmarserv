@@ -1,294 +1,100 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
- 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Contacto y Cotizaciones | Vicmar Services Quito</title>
- 
-<meta name="description" content="¿Necesitas un electricista, plomero o mantenimiento urgente en Quito? Contáctanos hoy mismo por WhatsApp o correo electrónico. Atención rápida.">
-<meta name="keywords" content="contacto electricista quito, contratar plomero quito, cotizar mantenimiento quito, vicmar telefono">
-<meta name="author" content="Vicmar Services">
-<meta name="robots" content="index, follow">
-<meta name="theme-color" content="#0d47a1"> 
+    <meta charset="UTF-8">
 
-<!-- Favicon -->
-<link rel="canonical" href="https://vicmarserv.com">
- 
-<link rel="stylesheet" href="css/estilos.css">
- 
-<link rel="icon" type="image/png" href="img/icono2.png">
-<link rel="shortcut icon" href="img/icono2.png">
-<link rel="apple-touch-icon" href="img/icono2.png">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
-<!-- Cargamos FontAwesome para añadir iconos modernos -->
-<link rel="stylesheet" href="https://cloudflare.com">
+    <title>
+        Contacto y Cotizaciones | Vicmar Services Quito
+    </title>
 
-<!-- Open Graph -->
-<meta property="og:title" content="Contacto y Presupuestos | Vicmar Services">
-<meta property="og:description" content="Escríbenos para solicitar presupuestos técnicos o atención inmediata para tu hogar o empresa en Quito.">
-<meta property="og:image" content="https://vicmarserv.com">
-<meta property="og:url" content="https://vicmarserv.com">
-<meta property="og:type" content="website">
-<meta property="og:locale" content="es_EC">
+    <meta name="description"
+          content="Solicita una cotización de mantenimiento en Quito. Vicmar Services ofrece electricidad, plomería, pintura, aluminio y vidrio, impermeabilización, gypsum y mantenimiento preventivo y correctivo.">
 
-<style>
-    /* COMPONENTES DE DISEÑO UNIFICADO DE CONTACTO */
-    .encabezado-contacto {
-        text-align: center;
-        padding: 40px 20px 20px;
-        max-width: 800px;
-        margin: 0 auto;
-    }
+    <meta name="keywords"
+          content="cotización mantenimiento Quito, contacto Vicmar Services, electricista Quito, plomero Quito, mantenimiento edificios Quito">
 
-    .encabezado-contacto h1 {
-        color: #0d47a1;
-        font-size: 32px;
-        margin-bottom: 10px;
-    }
+    <meta name="author"
+          content="Vicmar Services">
 
-    /* CONTENEDOR EN DOS COLUMNAS (TARJETAS + FORMULARIO INTEGRADO) */
-    .seccion-contacto-container {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-        gap: 30px;
-        max-width: 1100px;
-        margin: 0 auto;
-        padding: 0 20px 50px;
-    }
+    <meta name="robots"
+          content="index, follow">
 
-    /* COLUMNA DE MEDIOS DIRECTOS */
-    .canales-contacto {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-    }
+    <meta name="theme-color"
+          content="#0d47a1">
 
-    .tarjeta-contacto {
-        background: #ffffff;
-        border-radius: 16px;
-        border: 1px solid #e2e8f0;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.03);
-        padding: 25px;
-        display: flex;
-        align-items: center;
-        gap: 20px;
-        transition: all 0.3s ease;
-        text-decoration: none;
-        color: inherit;
-    }
+    <link rel="canonical"
+          href="https://vicmarserv.com/contacto.html">
 
-    .tarjeta-contacto:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 10px 25px rgba(13, 71, 161, 0.08);
-        border-color: #cbd5e1;
-    }
 
-    .icon-contacto {
-        width: 55px;
-        height: 55px;
-        border-radius: 12px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 24px;
-        flex-shrink: 0;
-    }
+    <!-- =====================================================
+         FAVICON
+    ====================================================== -->
 
-    /* Colores por canal de comunicación */
-    .tarjeta-contacto.ws .icon-contacto { background-color: #e8fbf1; color: #25d366; }
-    .tarjeta-contacto.tel .icon-contacto { background-color: #eff6ff; color: #0d47a1; }
-    .tarjeta-contacto.mail .icon-contacto { background-color: #fff7ed; color: #f97316; }
-    .tarjeta-contacto.clock .icon-contacto { background-color: #f8fafc; color: #64748b; }
+    <link rel="icon"
+          type="image/png"
+          href="img/icono2.png">
 
-    .info-contacto h3 {
-        margin: 0 0 5px 0;
-        font-size: 18px;
-        color: #1e293b;
-    }
+    <link rel="shortcut icon"
+          href="img/icono2.png">
 
-    .info-contacto p {
-        margin: 0;
-        font-size: 15px;
-        color: #64748b;
-        font-weight: 500;
-    }
+    <link rel="apple-touch-icon"
+          href="img/icono2.png">
 
-    /* FORMULARIO ESTILIZADO ACORDE AL SITIO */
-    .formulario-contacto-box {
-        background: #ffffff;
-        border-radius: 16px;
-        box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-        padding: 35px;
-        border-top: 4px solid #0d47a1;
-        border-left: 1px solid #e2e8f0;
-        border-right: 1px solid #e2e8f0;
-        border-bottom: 1px solid #e2e8f0;
-    }
 
-    .formulario-contacto-box h2 {
-        margin-top: 0;
-        margin-bottom: 20px;
-        font-size: 22px;
-        color: #0d47a1;
-    }
+    <!-- =====================================================
+         FONT AWESOME
+    ====================================================== -->
 
-    .form-group {
-        margin-bottom: 18px;
-    }
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer">
 
-    .form-group label {
-        display: block;
-        margin-bottom: 6px;
-        font-size: 14px;
-        font-weight: 600;
-        color: #475569;
-    }
 
-    .form-control {
-        width: 100%;
-        padding: 12px 15px;
-        font-size: 15px;
-        border: 2px solid #cbd5e1;
-        border-radius: 8px;
-        outline: none;
-        box-sizing: border-box;
-        transition: border-color 0.25s ease;
-    }
+    <!-- =====================================================
+         CSS MAESTRO
+    ====================================================== -->
 
-    .form-control:focus {
-        border-color: #0d47a1;
-    }
+    <link rel="stylesheet"
+          href="css/estilos.css">
 
-    textarea.form-control {
-        resize: vertical;
-        min-height: 110px;
-    }
 
-    .btn-enviar-formulario {
-        width: 100%;
-        background-color: #0d47a1;
-        color: #ffffff;
-        border: none;
-        padding: 14px;
-        font-size: 16px;
-        font-weight: bold;
-        border-radius: 8px;
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 8px;
-        box-shadow: 0 4px 6px rgba(13, 71, 161, 0.15);
-        transition: all 0.25s ease;
-    }
+    <!-- =====================================================
+         OPEN GRAPH
+    ====================================================== -->
 
-    .btn-enviar-formulario:hover {
-        background-color: #0a3680;
-        box-shadow: 0 6px 15px rgba(13, 71, 161, 0.25);
-        transform: translateY(-1px);
-    }
-</style>
+    <meta property="og:title"
+          content="Contacto y Cotizaciones | Vicmar Services">
+
+    <meta property="og:description"
+          content="Solicita una cotización para trabajos de mantenimiento profesional en Quito.">
+
+    <meta property="og:image"
+          content="https://vicmarserv.com/img/rotulo1.png">
+
+    <meta property="og:url"
+          content="https://vicmarserv.com/contacto.html">
+
+    <meta property="og:type"
+          content="website">
+
+    <meta property="og:locale"
+          content="es_EC">
+
 
 </head>
 
+
 <body>
 
-<header>
-    <div class="logo">
-        <a href="index.html">
-            <img src="img/rotulo1.png" alt="Vicmar Services - Servicios Técnicos en Quito" width="350" height="120">
-        </a>
-    </div>
 
-    <nav aria-label="Menú principal">
-        <a href="index.html">Inicio</a>
-        <a href="nosotros.html">Nosotros</a>
-        <a href="servicios.html">Servicios</a>
-        <a href="proyectos.html">Proyectos</a>
-        <a href="contacto.html" class="active">Contacto</a>
-    </nav>
-</header>
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
 
-<main>
-
-    <div class="encabezado-contacto">
-        <h1>Ponte en Contacto con Nosotros</h1>
-        <p>¿Tienes una emergencia o deseas cotizar un proyecto técnico? Elige el canal que te sea más cómodo o completa el formulario web.</p>
-    </div>
-
-    <!-- Sección Unificada de Contacto -->
-    <section class="seccion-contacto-container">
-        
-        <!-- Canales Directos Rápidos -->
-        <div class="canales-contacto">
-            
-            <a href="https://wa.me" class="tarjeta-contacto ws" target="_blank" rel="noopener">
-                <div class="icon-contacto"><i class="fa-brands fa-whatsapp"></i></div>
-                <div class="info-contacto">
-                    <h3>WhatsApp Directo</h3>
-                    <p>099 270 5273 (Respuesta Inmediata)</p>
-                </div>
-            </a>
-
-            <a href="tel:+593992705273" class="tarjeta-contacto tel">
-                <div class="icon-contacto"><i class="fa-solid fa-phone"></i></div>
-                <div class="info-contacto">
-                    <h3>Llamadas Técnicas</h3>
-                    <p>099 270 5273</p>
-                </div>
-            </a>
-
-            <a href="mailto:info@vicmarserv.com" class="tarjeta-contacto mail">
-                <div class="icon-contacto"><i class="fa-solid fa-envelope"></i></div>
-                <div class="info-contacto">
-                    <h3>Correo Electrónico</h3>
-                    <p>info@vicmarserv.com</p>
-                </div>
-            </a>
-
-            <div class="tarjeta-contacto clock">
-                <div class="icon-contacto"><i class="fa-solid fa-clock"></i></div>
-                <div class="info-contacto">
-                    <h3>Horarios de Atención</h3>
-                    <p>Lunes a Domingo | Coordinación 24/7</p>
-                </div>
-            </div>
-
-        </div>
-
-        <!-- Formulario Técnico Estilizado -->
-        <div class="formulario-contacto-box">
-            <h2><i class="fa-solid fa-paper-plane" style="font-size: 18px; margin-right: 5px;"></i> Solicitar Presupuesto Web</h2>
-            
-            <!-- Puedes conectar esto a servicios gratuitos como Formspree agregando el action -->
-            <form action="#" method="POST">
-                <div class="form-group">
-                    <label for="nombre">Nombre Completo / Empresa:</label>
-                    <input type="text" id="nombre" name="nombre" class="form-control" placeholder="Ej. Juan Pérez / Edificio Torres" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="telefono">Número de Teléfono / Celular:</label>
-                    <input type="tel" id="telefono" name="telefono" class="form-control" placeholder="Ej. 0992705273" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="servicio">Servicio Requerido:</label>
-                    <select id="servicio" name="servicio" class="form-control" required>
-                        <option value="" disabled selected>Selecciona una opción</option>
-                        <option value="electricidad">⚡ Electricidad</option>
-                        <option value="plomeria">🚿 Plomería</option>
-                        <option value="pintura">🎨 Pintura</option>
-                        <option value="aluminio">🪟 Aluminio y Vidrio</option>
-                        <option value="mantenimiento">🏢 Mantenimiento General</option>
-                        <option value="impermeabilizacion">💧 Impermeabilización</option>
-                        <option value="otro">Otro Requerimiento</option>
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label for="mensaje">Detalles de la Solicitud / Dirección:</label>
-
-
+    <header
