@@ -21,7 +21,7 @@
     <link rel="shortcut icon" href="img/icono2.png">
     <link rel="apple-touch-icon" href="img/icono2.png">
 
-    <!-- Iconos Globales FontAwesome -->
+    <!-- Iconos Globales FontAwesome (Corregido para cargar iconos correctamente) -->
     <link rel="stylesheet" href="https://cloudflare.com">
 
     <!-- Open Graph -->
@@ -180,7 +180,6 @@
             <img src="img/rotulo1.png" alt="Vicmar Services" width="350" height="120">
         </a>
     </div>
-    <!-- MENÚ CORREGIDO A LA DERECHA Y REORGANIZADO -->
     <nav aria-label="Menú principal">
         <a href="index.html">Inicio</a>
         <a href="nosotros.html" class="active">Nosotros</a>
@@ -222,27 +221,40 @@
                 <h2><i class="fa-solid fa-handshake"></i> Nuestros Valores</h2>
                 <ul style="list-style: none; padding-left: 0; margin: 0;">
                     <li style="margin-bottom: 8px;">✔ <strong>Responsabilidad y puntualidad:</strong> Respetamos los tiempos de ejecución de cada proyecto.</li>
-                    <li style="margin-bottom: 8px;">✔ <strong>Honestidad y transparencia:</strong> Presupuestos claros y sin sorpresas ocultas.</li>
-                    <li style="margin-bottom: 8px;">✔ <strong>Calidad garantizada:</strong> Materiales duraderos y mano de obra calificada.</li>
-                    <li>✔ <strong>Seguridad y profesionalismo:</strong> Normativas técnicas aplicadas en cada instalación.</li>
+                    <li style="margin-bottom: 8px;">✔ <strong>Calidad garantizada:</strong> Utilizamos materiales óptimos y mano de obra calificada.</li>
+                    <li style="margin-bottom: 8px;">✔ <strong>Confianza y honestidad:</strong> Ofrecemos presupuestos transparentes sin sorpresas ocultas.</li>
                 </ul>
             </div>
 
             <div id="elegirnos" class="bloque-corp">
                 <h2><i class="fa-solid fa-award"></i> ¿Por qué elegirnos?</h2>
-                <ul style="list-style: none; padding-left: 0; margin: 0;">
-                    <li style="margin-bottom: 8px;">✔ Técnicos capacitados y con amplia experiencia en Quito.</li>
-                    <li style="margin-bottom: 8px;">✔ Soluciones rápidas y efectivas para emergencias hidráulicas y eléctricas.</li>
-                    <li style="margin-bottom: 8px;">✔ Planes de mantenimiento preventivo y correctivo para empresas y edificios.</li>
-                    <li>✔ Precios competitivos respaldados por soporte y garantía real.</li>
-                </ul>
+                <p>Contamos con personal altamente calificado en Quito, atención personalizada e inmediata, y el respaldo de una empresa comprometida con la seguridad y durabilidad de tus instalaciones.</p>
             </div>
 
         </div>
     </section>
+</main>
 
-    <!-- Call to Action Integrado -->
-    <section class="cta" style="text-align: center; margin-top: 40px;">
-        <h2 style="color: var(--dark); font-size: 26px;">¿Necesitas el respaldo de un equipo profesional?</h2>
-        <p style="color: var(--text-muted); margin-bottom: 25px;">Contáctanos de inmediato para coordinar una inspección técnica guiada.</p>
+<!-- SCRIPT DE JAVASCRIPT CORREGIDO PARA ACTIVAR LAS PESTAÑAS -->
+<script>
+    function verCorp(idBloque, botonActual) {
+        // 1. Ocultar todos los bloques de contenido
+        const bloques = document.querySelectorAll('.bloque-corp');
+        bloques.forEach(bloque => {
+            bloque.classList.remove('active');
+        });
 
+        // 2. Quitar el estado activo de todos los botones
+        const botones = document.querySelectorAll('.btn-corp');
+        botones.forEach(btn => {
+            btn.classList.remove('active');
+        });
+
+        // 3. Mostrar el bloque seleccionado y activar su respectivo botón
+        document.getElementById(idBloque).classList.add('active');
+        botonActual.classList.add('active');
+    }
+</script>
+
+</body>
+</html>
