@@ -3,74 +3,246 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre Nosotros | Vicmar Services Quito</title>
-    <link rel="stylesheet" href="css/estilos.css">
-    <link rel="icon" type="image/png" href="img/icono2.png">
-    <link rel="stylesheet" href="https://cloudflare.com">
-    <style>
-        :root { --primary: #0d47a1; --accent: #ffb300; --light: #f4f7fc; }
-        body { background-color: var(--light); color: #2c3e50; font-family: 'Segoe UI', system-ui, sans-serif; margin:0; }
-        main section { padding: 50px 20px !important; margin: 0 auto !important; max-width: 1000px; }
-        
-        .selector-corp { display: flex; justify-content: center; gap: 10px; margin: 30px auto; flex-wrap: wrap; }
-        .btn-corp { background-color: #ffffff; border: 2px solid #cbd5e1; padding: 12px 24px; font-size: 15px; font-weight: bold; border-radius: 30px; cursor: pointer; display: flex; align-items: center; gap: 8px; transition: all 0.3s ease; }
-        .btn-corp.active, .btn-corp:hover { background-color: var(--primary); color: #ffffff; border-color: var(--primary); }
 
-        .bloque-corp { display: none; background: #ffffff; border-radius: 16px; padding: 40px; box-shadow: 0 10px 30px rgba(0,0,0,0.03); border-left: 5px solid var(--primary); animation: slide 0.4s ease forwards; }
-        .bloque-corp.active { display: block; }
-        @keyframes slide { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+    <title>Sobre Nosotros | Vicmar Services Quito</title>
+     
+    <meta name="description" content="Conoce la misión, visión y valores de Vicmar Services. Ofrecemos soluciones técnicas profesionales y mantenimiento garantizado en Quito.">
+    <meta name="keywords" content="mantenimiento Quito, sobre nosotros Vicmar, empresa servicios quito, mision vision vicmar">
+    <meta name="author" content="Vicmar Services">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0d47a1"> 
+
+    <!-- Favicon -->
+    <link rel="canonical" href="https://vicmarserv.com">
+     
+    <link rel="stylesheet" href="css/estilos.css">
+     
+    <link rel="icon" type="image/png" href="img/icono2.png">
+    <link rel="shortcut icon" href="img/icono2.png">
+    <link rel="apple-touch-icon" href="img/icono2.png">
+
+    <!-- Iconos Globales FontAwesome -->
+    <link rel="stylesheet" href="https://cloudflare.com">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Sobre Vicmar Services | Quito">
+    <meta property="og:description" content="Soluciones técnicas profesionales y mantenimiento garantizado para hogares y empresas.">
+    <meta property="og:image" content="https://vicmarserv.com">
+    <meta property="og:url" content="https://vicmarserv.com">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_EC">
+
+    <style>
+        /* ESTILOS DE UNIFICACIÓN PARA EL RE-DISEÑO VISUAL CÁLIDO */
+        :root {
+            --primary: #0d47a1;
+            --accent: #ffb300;
+            --dark: #1a252f;
+            --light-bg: #f4f7fc;
+            --card-bg: #ffffff;
+            --text-main: #2c3e50;
+            --text-muted: #64748b;
+        }
+
+        body {
+            background-color: var(--light-bg);
+            color: var(--text-main);
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            margin: 0;
+        }
+
+        /* HEADER ALINEADO A LA DERECHA */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 40px;
+            background-color: var(--card-bg);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+
+        header nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        header nav a {
+            text-decoration: none;
+            color: var(--text-main);
+            font-weight: 700;
+            font-size: 15px;
+            transition: color 0.25s ease;
+        }
+
+        header nav a:hover, header nav a.active {
+            color: var(--primary);
+        }
+
+        main section {
+            padding: 55px 20px !important;
+            margin: 0 auto !important;
+            max-width: 1000px;
+        }
+
+        .nosotros h1 {
+            color: var(--primary);
+            font-size: 36px;
+            text-align: center;
+            font-weight: 800;
+            margin-bottom: 15px;
+        }
+
+        /* BARRA INTERACTIVA CORPORATIVA DE VALORES */
+        .selector-corp {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin: 35px auto;
+            flex-wrap: wrap;
+            padding: 0 15px;
+        }
+
+        .btn-corp {
+            background-color: var(--card-bg);
+            border: 2px solid #cbd5e1;
+            padding: 12px 26px;
+            font-size: 15px;
+            font-weight: 700;
+            border-radius: 30px;
+            cursor: pointer;
+            color: #475569;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.25s ease;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+        }
+
+        .btn-corp i {
+            color: var(--primary);
+        }
+
+        .btn-corp.active, .btn-corp:hover {
+            background-color: var(--primary);
+            color: #ffffff;
+            border-color: var(--primary);
+            box-shadow: 0 6px 15px rgba(13, 71, 161, 0.2);
+        }
+
+        .btn-corp.active i, .btn-corp:hover i {
+            color: var(--accent);
+        }
+
+        /* CONTENEDOR DE BLOQUES CORPORATIVOS */
+        .bloque-corp {
+            display: none;
+            background: var(--card-bg);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 15px 35px rgba(13, 71, 161, 0.05);
+            border-left: 5px solid var(--primary);
+            border-top: 1px solid #e2e8f0;
+            border-right: 1px solid #e2e8f0;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .bloque-corp.active {
+            display: block;
+            animation: slideUp 0.4s ease forwards;
+        }
+
+        .bloque-corp h2 {
+            margin-top: 0;
+            font-size: 24px;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .bloque-corp p, .bloque-corp ul {
+            font-size: 16px;
+            line-height: 1.7;
+            color: #4a5568;
+        }
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(12px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
     </style>
 </head>
 <body>
 
 <header>
     <div class="logo">
-        <a href="index.html"><img src="img/rotulo1.png" alt="Vicmar Services" width="350" height="120"></a>
+        <a href="index.html">
+            <img src="img/rotulo1.png" alt="Vicmar Services" width="350" height="120">
+        </a>
     </div>
+    <!-- MENÚ CORREGIDO A LA DERECHA Y REORGANIZADO -->
     <nav aria-label="Menú principal">
         <a href="index.html">Inicio</a>
+        <a href="nosotros.html" class="active">Nosotros</a>
         <a href="servicios.html">Servicios</a>
         <a href="proyectos.html">Proyectos</a>
-        <a href="nosotros.html" class="active">Nosotros</a>
         <a href="contacto.html">Contacto</a>
     </nav>
 </header>
 
 <main>
     <section class="nosotros">
-        <h1 style="color: var(--primary); font-size: 34px; text-align: center;">Sobre Vicmar Services</h1>
-        <p style="font-size:16px; line-height:1.7; text-align: center; max-width:800px; margin: 20px auto;">Brindamos soluciones de infraestructura residencial y comercial garantizando puntualidad y honestidad técnica en el distrito metropolitano de Quito.</p>
+        <h1>Sobre Vicmar Services</h1>
+        <p style="font-size: 17px; line-height: 1.8; text-align: center; max-width: 820px; margin: 20px auto; color: var(--text-main);">
+            En <strong>Vicmar Services</strong> brindamos soluciones técnicas profesionales para hogares, oficinas, edificios y empresas en Quito y los Valles. Nos especializamos en un catálogo integral que garantiza obras eficientes y seguras.
+        </p>
 
+        <!-- Selector de pestañas interactivas -->
         <div class="selector-corp">
             <button class="btn-corp active" onclick="verCorp('mision', this)"><i class="fa-solid fa-bullseye"></i> Misión</button>
             <button class="btn-corp" onclick="verCorp('vision', this)"><i class="fa-solid fa-eye"></i> Visión</button>
             <button class="btn-corp" onclick="verCorp('valores', this)"><i class="fa-solid fa-handshake"></i> Valores</button>
+            <button class="btn-corp" onclick="verCorp('elegirnos', this)"><i class="fa-solid fa-award"></i> ¿Por qué elegirnos?</button>
         </div>
 
-        <div id="mision" class="bloque-corp active">
-            <h2>🎯 Nuestra Misión</h2>
-            <p style="font-size:16px; line-height:1.7;">Proporcionar soluciones técnicas confiables y de alta calidad, contribuyendo al mantenimiento y mejoramiento de hogares, edificios y empresas mediante un servicio profesional y oportuno.</p>
-        </div>
-        <div id="vision" class="bloque-corp">
-            <h2>👁️ Nuestra Visión</h2>
-            <p style="font-size:16px; line-height:1.7;">Consolidarnos como una empresa referente en servicios de mantenimiento y soluciones técnicas en Quito, reconocida por la calidad, responsabilidad y confianza de nuestros clientes.</p>
-        </div>
-        <div id="valores" class="bloque-corp">
-            <h2>🤝 Nuestros Valores</h2>
-            <p style="font-size:16px; line-height:1.7;">Responsabilidad, puntualidad, transparencia presupuestaria y un compromiso inquebrantable con la seguridad de la obra ejecutada.</p>
+        <!-- Bloques Organizacionales Dinámicos -->
+        <div class="contenedor-bloques-corp">
+            
+            <div id="mision" class="bloque-corp active">
+                <h2><i class="fa-solid fa-bullseye"></i> Nuestra Misión</h2>
+                <p>Proporcionar soluciones técnicas confiables y de alta calidad, contribuyendo al mantenimiento y mejoramiento de hogares, edificios y empresas mediante un servicio profesional y oportuno.</p>
+            </div>
+
+            <div id="vision" class="bloque-corp">
+                <h2><i class="fa-solid fa-eye"></i> Nuestra Visión</h2>
+                <p>Consolidarnos como una empresa referente en servicios de mantenimiento y soluciones técnicas en Quito, reconocida por la calidad, responsabilidad y la plena confianza de nuestros clientes.</p>
+            </div>
+
+            <div id="valores" class="bloque-corp">
+                <h2><i class="fa-solid fa-handshake"></i> Nuestros Valores</h2>
+                <ul style="list-style: none; padding-left: 0; margin: 0;">
+                    <li style="margin-bottom: 8px;">✔ <strong>Responsabilidad y puntualidad:</strong> Respetamos los tiempos de ejecución de cada proyecto.</li>
+                    <li style="margin-bottom: 8px;">✔ <strong>Honestidad y transparencia:</strong> Presupuestos claros y sin sorpresas ocultas.</li>
+                    <li style="margin-bottom: 8px;">✔ <strong>Calidad garantizada:</strong> Materiales duraderos y mano de obra calificada.</li>
+                    <li>✔ <strong>Seguridad y profesionalismo:</strong> Normativas técnicas aplicadas en cada instalación.</li>
+                </ul>
+            </div>
+
+            <div id="elegirnos" class="bloque-corp">
+                <h2><i class="fa-solid fa-award"></i> ¿Por qué elegirnos?</h2>
+                <ul style="list-style: none; padding-left: 0; margin: 0;">
+                    <li style="margin-bottom: 8px;">✔ Técnicos capacitados y con amplia experiencia en Quito.</li>
+                    <li style="margin-bottom: 8px;">✔ Soluciones rápidas y efectivas para emergencias hidráulicas y eléctricas.</li>
+                    <li style="margin-bottom: 8px;">✔ Planes de mantenimiento preventivo y correctivo para empresas y edificios.</li>
+                    <li>✔ Precios competitivos respaldados por soporte y garantía real.</li>
+                </ul>
+            </div>
+
         </div>
     </section>
-</main>
 
-<footer><p>© 2025 Vicmar Services - Todos los derechos reservados.</p></footer>
+    <!-- Call to Action Integrado -->
+    <section class="cta" style="text-align: center; margin-top: 40px;">
+        <h2 style="color: var(--dark); font-size: 26px;">¿Necesitas el respaldo de un equipo profesional?</h2>
+        <p style="color: var(--text-muted); margin-bottom: 25px;">Contáctanos de inmediato para coordinar una inspección técnica guiada.</p>
 
-<script>
-    function verCorp(id, btn) {
-        document.querySelectorAll('.bloque-corp').forEach(b => b.classList.remove('active'));
-        document.querySelectorAll('.btn-corp').forEach(b => b.classList.remove('active'));
-        document.getElementById(id).classList.add('active');
-        btn.classList.add('active');
-    }
-</script>
-</body>
-</html>
