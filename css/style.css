@@ -1,6 +1,7 @@
 /* =========================================================
    VICMAR SERVICES
    STYLE.CSS
+   VERSIÓN PROFESIONAL
 ========================================================= */
 
 
@@ -11,17 +12,13 @@
 :root {
 
     --primary: #0066cc;
-
     --primary-dark: #0052a3;
-
     --primary-light: #eaf3fb;
 
     --dark: #101820;
-
     --dark-2: #17232d;
 
     --text: #27313a;
-
     --text-light: #66727d;
 
     --white: #ffffff;
@@ -37,7 +34,6 @@
 
     --transition:
         all 0.3s ease;
-
 }
 
 
@@ -46,22 +42,14 @@
 ========================================================= */
 
 * {
-
     margin: 0;
-
     padding: 0;
-
     box-sizing: border-box;
-
 }
-
 
 html {
-
     scroll-behavior: smooth;
-
 }
-
 
 body {
 
@@ -77,32 +65,21 @@ body {
     line-height: 1.6;
 
     overflow-x: hidden;
-
 }
-
 
 img {
-
     display: block;
-
     max-width: 100%;
-
 }
-
 
 a {
-
     color: inherit;
-
 }
-
 
 button,
 input,
 textarea {
-
     font-family: inherit;
-
 }
 
 
@@ -119,7 +96,6 @@ textarea {
         );
 
     margin: 0 auto;
-
 }
 
 
@@ -132,7 +108,6 @@ textarea {
     position: absolute;
 
     top: 0;
-
     left: 0;
 
     width: 100%;
@@ -148,7 +123,6 @@ textarea {
     border-bottom:
         1px solid
         rgba(255,255,255,0.08);
-
 }
 
 
@@ -163,7 +137,6 @@ textarea {
     justify-content: space-between;
 
     gap: 30px;
-
 }
 
 
@@ -188,23 +161,15 @@ textarea {
     letter-spacing: -3px;
 
     flex-shrink: 0;
-
 }
-
 
 .logo-v {
-
     color: #0066cc;
-
 }
-
 
 .logo-m {
-
     color: #8d969e;
-
 }
-
 
 .logo-s {
 
@@ -215,12 +180,11 @@ textarea {
     margin-left: 2px;
 
     letter-spacing: -1px;
-
 }
 
 
 /* =========================================================
-   NAV
+   NAVEGACIÓN
 ========================================================= */
 
 .nav {
@@ -234,9 +198,7 @@ textarea {
     gap: 30px;
 
     margin-left: auto;
-
 }
-
 
 .nav a {
 
@@ -254,9 +216,7 @@ textarea {
 
     transition:
         color 0.3s ease;
-
 }
-
 
 .nav a::after {
 
@@ -277,28 +237,23 @@ textarea {
 
     transition:
         width 0.3s ease;
-
 }
-
 
 .nav a:hover::after,
 .nav a.active::after {
 
     width: 100%;
-
 }
-
 
 .nav a:hover,
 .nav a.active {
 
     color: #ffffff;
-
 }
 
 
 /* =========================================================
-   WHATSAPP
+   BOTÓN WHATSAPP HEADER
 ========================================================= */
 
 .nav-whatsapp {
@@ -328,9 +283,7 @@ textarea {
 
     transition:
         var(--transition);
-
 }
-
 
 .nav-whatsapp:hover {
 
@@ -339,7 +292,6 @@ textarea {
 
     transform:
         translateY(-2px);
-
 }
 
 
@@ -360,7 +312,6 @@ textarea {
     font-size: 28px;
 
     cursor: pointer;
-
 }
 
 
@@ -384,11 +335,12 @@ textarea {
 
     background:
         #101820;
-
 }
 
 
-/* IMAGEN REAL */
+/* =========================================================
+   IMAGEN DE PORTADA
+========================================================= */
 
 .hero-image {
 
@@ -412,7 +364,8 @@ textarea {
 
 
 /* =========================================================
-   PORTADA - IMAGEN MUY CLARA
+   CAPA SOBRE LA IMAGEN
+   MUY CLARA
 ========================================================= */
 
 .hero-overlay {
@@ -428,16 +381,24 @@ textarea {
     z-index: 1;
 
     background:
+
         linear-gradient(
             90deg,
+
             rgba(10, 18, 25, 0.28) 0%,
+
             rgba(10, 18, 25, 0.12) 35%,
+
             rgba(10, 18, 25, 0.03) 65%,
+
             rgba(10, 18, 25, 0) 100%
         );
 }
 
-/* CONTENIDO HERO */
+
+/* =========================================================
+   CONTENIDO HERO
+========================================================= */
 
 .hero-content {
 
@@ -452,12 +413,17 @@ textarea {
     color: #ffffff;
 
     text-shadow:
-        0 2px 8px rgba(0, 0, 0, 0.35);
+        0 2px 8px
+        rgba(0, 0, 0, 0.35);
 
     animation:
         fadeUp 0.8s ease both;
 }
 
+
+/* =========================================================
+   ETIQUETA HERO
+========================================================= */
 
 .hero-tag {
 
@@ -472,16 +438,19 @@ textarea {
         var(--primary);
 
     color:
-        #d9e8f5;
+        #ffffff;
 
     font-size: 12px;
 
     font-weight: 700;
 
     letter-spacing: 2px;
-
 }
 
+
+/* =========================================================
+   TÍTULO HERO
+========================================================= */
 
 .hero h1 {
 
@@ -499,18 +468,19 @@ textarea {
     font-weight: 400;
 
     margin-bottom: 24px;
-
 }
-
 
 .hero h1 strong {
 
     display: block;
 
     font-weight: 800;
-
 }
 
+
+/* =========================================================
+   TEXTO HERO
+========================================================= */
 
 .hero p {
 
@@ -519,17 +489,16 @@ textarea {
     margin-bottom: 35px;
 
     color:
-        #d9e0e6;
+        #ffffff;
 
     font-size: 18px;
 
     line-height: 1.7;
-
 }
 
 
 /* =========================================================
-   BOTONES
+   BOTONES HERO
 ========================================================= */
 
 .hero-buttons {
@@ -541,9 +510,12 @@ textarea {
     gap: 14px;
 
     flex-wrap: wrap;
-
 }
 
+
+/* =========================================================
+   BOTONES GENERALES
+========================================================= */
 
 .btn {
 
@@ -573,9 +545,7 @@ textarea {
 
     transition:
         var(--transition);
-
 }
-
 
 .btn-primary {
 
@@ -584,9 +554,7 @@ textarea {
 
     color:
         #ffffff;
-
 }
-
 
 .btn-primary:hover {
 
@@ -599,23 +567,19 @@ textarea {
     box-shadow:
         0 8px 20px
         rgba(0,102,204,0.25);
-
 }
-
 
 .btn-outline {
 
     border-color:
-        rgba(255,255,255,0.45);
+        rgba(255,255,255,0.70);
 
     color:
         #ffffff;
 
     background:
-        rgba(255,255,255,0.05);
-
+        rgba(255,255,255,0.08);
 }
-
 
 .btn-outline:hover {
 
@@ -624,9 +588,7 @@ textarea {
 
     color:
         var(--dark);
-
 }
-
 
 .btn-white {
 
@@ -635,15 +597,12 @@ textarea {
 
     color:
         var(--dark);
-
 }
-
 
 .btn-white:hover {
 
     transform:
         translateY(-2px);
-
 }
 
 
@@ -655,26 +614,20 @@ textarea {
 
     padding:
         100px 0;
-
 }
-
 
 .section-light {
 
     background:
         var(--light);
-
 }
-
 
 .section-header {
 
     max-width: 720px;
 
     margin-bottom: 55px;
-
 }
-
 
 .section-tag {
 
@@ -690,9 +643,7 @@ textarea {
     font-weight: 800;
 
     letter-spacing: 1.8px;
-
 }
-
 
 .section-header h2,
 .two-columns h2,
@@ -713,9 +664,7 @@ textarea {
     letter-spacing: -1px;
 
     margin-bottom: 18px;
-
 }
-
 
 .section-header p {
 
@@ -723,7 +672,6 @@ textarea {
         var(--text-light);
 
     font-size: 16px;
-
 }
 
 
@@ -739,9 +687,7 @@ textarea {
         repeat(3, 1fr);
 
     gap: 22px;
-
 }
-
 
 .service-card {
 
@@ -763,9 +709,7 @@ textarea {
 
     transition:
         var(--transition);
-
 }
-
 
 .service-card:hover {
 
@@ -777,9 +721,7 @@ textarea {
 
     box-shadow:
         var(--shadow);
-
 }
-
 
 .service-icon {
 
@@ -801,9 +743,7 @@ textarea {
     border-radius: 8px;
 
     font-size: 24px;
-
 }
-
 
 .service-card h3 {
 
@@ -813,9 +753,7 @@ textarea {
         var(--dark);
 
     font-size: 20px;
-
 }
-
 
 .service-card p {
 
@@ -827,9 +765,7 @@ textarea {
     line-height: 1.7;
 
     margin-bottom: 20px;
-
 }
-
 
 .service-card a {
 
@@ -841,7 +777,6 @@ textarea {
     font-size: 13px;
 
     font-weight: 700;
-
 }
 
 
@@ -859,9 +794,7 @@ textarea {
     gap: 80px;
 
     align-items: center;
-
 }
-
 
 .two-columns > div:first-child > p {
 
@@ -873,9 +806,7 @@ textarea {
     line-height: 1.8;
 
     margin-bottom: 25px;
-
 }
-
 
 .text-link {
 
@@ -889,7 +820,6 @@ textarea {
     font-weight: 700;
 
     text-decoration: none;
-
 }
 
 
@@ -904,9 +834,7 @@ textarea {
     flex-direction: column;
 
     gap: 28px;
-
 }
-
 
 .feature {
 
@@ -922,17 +850,13 @@ textarea {
     border-bottom:
         1px solid
         var(--border);
-
 }
-
 
 .feature:last-child {
 
     border-bottom:
         none;
-
 }
-
 
 .feature > span {
 
@@ -942,9 +866,7 @@ textarea {
     font-size: 13px;
 
     font-weight: 800;
-
 }
-
 
 .feature h3 {
 
@@ -954,9 +876,7 @@ textarea {
         var(--dark);
 
     font-size: 18px;
-
 }
-
 
 .feature p {
 
@@ -964,12 +884,11 @@ textarea {
         var(--text-light);
 
     font-size: 14px;
-
 }
 
 
 /* =========================================================
-   CORPORATIVO
+   SECCIÓN CORPORATIVA
 ========================================================= */
 
 .corporate-section {
@@ -983,34 +902,30 @@ textarea {
 
         linear-gradient(
             90deg,
-            rgba(16,24,32,0.95),
-            rgba(16,24,32,0.78)
+            rgba(16,24,32,0.92),
+            rgba(16,24,32,0.70)
         ),
 
         url("../img/corporativo.jpg")
         center /
-        cover no-repeat;
+        cover
+        no-repeat;
 
     color:
         #ffffff;
-
 }
-
 
 .corporate-content {
 
-    max-width: 760px;
-
+    max-width:
+        760px;
 }
-
 
 .corporate-content .section-tag {
 
     color:
         #72b5ed;
-
 }
-
 
 .corporate-content h2 {
 
@@ -1021,26 +936,29 @@ textarea {
             52px
         );
 
-    line-height: 1.12;
+    line-height:
+        1.12;
 
-    margin-bottom: 20px;
-
+    margin-bottom:
+        20px;
 }
-
 
 .corporate-content p {
 
-    max-width: 650px;
+    max-width:
+        650px;
 
     color:
         #d5dde4;
 
-    font-size: 16px;
+    font-size:
+        16px;
 
-    line-height: 1.8;
+    line-height:
+        1.8;
 
-    margin-bottom: 30px;
-
+    margin-bottom:
+        30px;
 }
 
 
@@ -1058,9 +976,7 @@ textarea {
 
     padding:
         55px 0;
-
 }
-
 
 .cta-content {
 
@@ -1071,27 +987,27 @@ textarea {
     justify-content: space-between;
 
     gap: 30px;
-
 }
-
 
 .cta-content > div > span {
 
     display: block;
 
-    margin-bottom: 8px;
+    margin-bottom:
+        8px;
 
-    font-size: 11px;
+    font-size:
+        11px;
 
-    font-weight: 800;
+    font-weight:
+        800;
 
-    letter-spacing: 1.5px;
+    letter-spacing:
+        1.5px;
 
     color:
         #d7eaff;
-
 }
-
 
 .cta h2 {
 
@@ -1102,8 +1018,8 @@ textarea {
             42px
         );
 
-    line-height: 1.1;
-
+    line-height:
+        1.1;
 }
 
 
@@ -1126,21 +1042,18 @@ textarea {
 
     color:
         #ffffff;
-
 }
-
 
 .page-hero .section-tag {
 
     color:
         #71b7f1;
-
 }
-
 
 .page-hero h1 {
 
-    max-width: 850px;
+    max-width:
+        850px;
 
     font-size:
         clamp(
@@ -1149,24 +1062,683 @@ textarea {
             64px
         );
 
-    line-height: 1.1;
+    line-height:
+        1.1;
 
-    letter-spacing: -1.5px;
+    letter-spacing:
+        -1.5px;
 
-    margin-bottom: 18px;
-
+    margin-bottom:
+        18px;
 }
-
 
 .page-hero p {
 
-    max-width: 680px;
+    max-width:
+        680px;
 
     color:
         #cbd4dc;
 
-    font-size: 17px;
+    font-size:
+        17px;
+}
 
+
+/* =========================================================
+   SERVICIOS INTERNOS
+========================================================= */
+
+.services-list {
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+}
+
+.service-large {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        110px 1fr;
+
+    gap:
+        35px;
+
+    padding:
+        45px 0;
+
+    border-bottom:
+        1px solid
+        var(--border);
+}
+
+.service-large:first-child {
+
+    padding-top:
+        0;
+}
+
+.service-large:last-child {
+
+    border-bottom:
+        none;
+}
+
+.service-large-icon {
+
+    width:
+        76px;
+
+    height:
+        76px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    background:
+        var(--primary-light);
+
+    border-radius:
+        10px;
+
+    font-size:
+        32px;
+}
+
+.service-number {
+
+    color:
+        var(--primary);
+
+    font-size:
+        12px;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        1px;
+}
+
+.service-large h2 {
+
+    margin:
+        6px 0 12px;
+
+    color:
+        var(--dark);
+
+    font-size:
+        30px;
+}
+
+.service-large p {
+
+    max-width:
+        760px;
+
+    color:
+        var(--text-light);
+
+    font-size:
+        15px;
+
+    line-height:
+        1.8;
+}
+
+
+/* =========================================================
+   PROYECTOS
+========================================================= */
+
+.projects-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap:
+        25px;
+}
+
+.project-card {
+
+    overflow:
+        hidden;
+
+    background:
+        #ffffff;
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius:
+        var(--radius);
+
+    transition:
+        var(--transition);
+}
+
+.project-card:hover {
+
+    transform:
+        translateY(-6px);
+
+    box-shadow:
+        var(--shadow);
+}
+
+.project-image {
+
+    height:
+        240px;
+
+    overflow:
+        hidden;
+
+    background:
+        #e8edf1;
+}
+
+.project-image img {
+
+    width:
+        100%;
+
+    height:
+        100%;
+
+    object-fit:
+        cover;
+
+    transition:
+        transform 0.5s ease;
+}
+
+.project-card:hover
+.project-image img {
+
+    transform:
+        scale(1.05);
+}
+
+.project-content {
+
+    padding:
+        24px;
+}
+
+.project-content span {
+
+    color:
+        var(--primary);
+
+    font-size:
+        11px;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        1px;
+
+    text-transform:
+        uppercase;
+}
+
+.project-content h3 {
+
+    margin:
+        8px 0;
+
+    color:
+        var(--dark);
+
+    font-size:
+        20px;
+}
+
+.project-content p {
+
+    color:
+        var(--text-light);
+
+    font-size:
+        14px;
+}
+
+
+/* =========================================================
+   NOSOTROS
+========================================================= */
+
+.about-section {
+
+    align-items:
+        start;
+}
+
+.about-section p {
+
+    max-width:
+        650px;
+}
+
+.about-box {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap:
+        1px;
+
+    background:
+        var(--border);
+
+    border:
+        1px solid
+        var(--border);
+}
+
+.about-box div {
+
+    min-height:
+        160px;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    justify-content:
+        center;
+
+    padding:
+        30px;
+
+    background:
+        #ffffff;
+}
+
+.about-box strong {
+
+    margin-bottom:
+        8px;
+
+    color:
+        var(--primary);
+
+    font-size:
+        28px;
+}
+
+.about-box span {
+
+    color:
+        var(--dark);
+
+    font-size:
+        14px;
+
+    font-weight:
+        700;
+}
+
+
+/* =========================================================
+   VALORES
+========================================================= */
+
+.values-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap:
+        25px;
+}
+
+.value-card {
+
+    padding:
+        35px;
+
+    background:
+        #ffffff;
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius:
+        var(--radius);
+}
+
+.value-card > span {
+
+    display:
+        block;
+
+    margin-bottom:
+        35px;
+
+    color:
+        var(--primary);
+
+    font-size:
+        13px;
+
+    font-weight:
+        800;
+}
+
+.value-card h3 {
+
+    margin-bottom:
+        10px;
+
+    color:
+        var(--dark);
+
+    font-size:
+        21px;
+}
+
+.value-card p {
+
+    color:
+        var(--text-light);
+
+    font-size:
+        14px;
+
+    line-height:
+        1.7;
+}
+
+
+/* =========================================================
+   CONTACTO
+========================================================= */
+
+.contact-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        0.85fr 1.15fr;
+
+    gap:
+        80px;
+
+    align-items:
+        start;
+}
+
+.contact-info > p {
+
+    max-width:
+        480px;
+
+    margin-bottom:
+        35px;
+
+    color:
+        var(--text-light);
+}
+
+.contact-item {
+
+    display:
+        flex;
+
+    align-items:
+        flex-start;
+
+    gap:
+        15px;
+
+    margin-bottom:
+        22px;
+}
+
+.contact-item > span {
+
+    width:
+        42px;
+
+    height:
+        42px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    background:
+        var(--primary-light);
+
+    border-radius:
+        7px;
+}
+
+.contact-item strong {
+
+    display:
+        block;
+
+    margin-bottom:
+        3px;
+
+    color:
+        var(--dark);
+
+    font-size:
+        14px;
+}
+
+.contact-item p,
+.contact-item a {
+
+    color:
+        var(--text-light);
+
+    font-size:
+        14px;
+
+    text-decoration:
+        none;
+}
+
+.contact-item a:hover {
+
+    color:
+        var(--primary);
+}
+
+.contact-info .btn {
+
+    margin-top:
+        15px;
+}
+
+
+/* =========================================================
+   FORMULARIO
+========================================================= */
+
+.contact-form-box {
+
+    padding:
+        40px;
+
+    background:
+        #ffffff;
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius:
+        var(--radius);
+
+    box-shadow:
+        0 15px 45px
+        rgba(16,24,32,0.06);
+}
+
+.contact-form {
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    gap:
+        20px;
+}
+
+.form-group {
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    gap:
+        7px;
+}
+
+.form-group label {
+
+    color:
+        var(--dark);
+
+    font-size:
+        13px;
+
+    font-weight:
+        700;
+}
+
+.form-group input,
+.form-group textarea {
+
+    width:
+        100%;
+
+    padding:
+        14px 15px;
+
+    border:
+        1px solid
+        #d8dee4;
+
+    border-radius:
+        6px;
+
+    outline:
+        none;
+
+    color:
+        var(--text);
+
+    background:
+        #ffffff;
+
+    font-size:
+        14px;
+
+    transition:
+        var(--transition);
+}
+
+.form-group textarea {
+
+    resize:
+        vertical;
+
+    min-height:
+        140px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+
+    border-color:
+        var(--primary);
+
+    box-shadow:
+        0 0 0 3px
+        rgba(0,102,204,0.08);
+}
+
+.form-button {
+
+    width:
+        100%;
+
+    border:
+        none;
+}
+
+.form-button:disabled {
+
+    opacity:
+        0.6;
+
+    cursor:
+        not-allowed;
+}
+
+.form-message {
+
+    min-height:
+        20px;
+
+    font-size:
+        13px;
+}
+
+.form-message.success {
+
+    color:
+        #198754;
+}
+
+.form-message.error {
+
+    color:
+        #dc3545;
 }
 
 
@@ -1176,7 +1748,8 @@ textarea {
 
 .footer-bottom {
 
-    width: 100%;
+    width:
+        100%;
 
     background:
         #101820;
@@ -1184,9 +1757,7 @@ textarea {
     border-top:
         1px solid
         rgba(255,255,255,0.08);
-
 }
-
 
 .footer-bottom-container {
 
@@ -1196,33 +1767,38 @@ textarea {
             calc(100% - 60px)
         );
 
-    margin: 0 auto;
+    margin:
+        0 auto;
 
     padding:
         18px 0;
 
-    display: flex;
+    display:
+        flex;
 
-    align-items: center;
+    align-items:
+        center;
 
-    justify-content: center;
+    justify-content:
+        center;
 
-    text-align: center;
-
+    text-align:
+        center;
 }
-
 
 .footer-bottom p {
 
-    margin: 0;
+    margin:
+        0;
 
     color:
         #9ca6af;
 
-    font-size: 12px;
+    font-size:
+        12px;
 
-    line-height: 1.5;
-
+    line-height:
+        1.5;
 }
 
 
@@ -1234,7 +1810,8 @@ textarea {
 
     from {
 
-        opacity: 0;
+        opacity:
+            0;
 
         transform:
             translateY(20px);
@@ -1243,13 +1820,13 @@ textarea {
 
     to {
 
-        opacity: 1;
+        opacity:
+            1;
 
         transform:
             translateY(0);
 
     }
-
 }
 
 
@@ -1264,7 +1841,38 @@ textarea {
 
     color:
         #ffffff;
+}
 
+
+/* =========================================================
+   SCROLLBAR
+========================================================= */
+
+::-webkit-scrollbar {
+
+    width:
+        8px;
+}
+
+::-webkit-scrollbar-track {
+
+    background:
+        #eef1f4;
+}
+
+::-webkit-scrollbar-thumb {
+
+    background:
+        #aab4bd;
+
+    border-radius:
+        10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+
+    background:
+        var(--primary);
 }
 
 
@@ -1281,38 +1889,43 @@ textarea {
                 100% - 40px,
                 900px
             );
-
     }
-
 
     .nav {
 
-        gap: 20px;
-
+        gap:
+            20px;
     }
-
 
     .nav-whatsapp {
 
-        display: none;
-
+        display:
+            none;
     }
-
 
     .services-grid {
 
         grid-template-columns:
             repeat(2, 1fr);
-
     }
 
+    .projects-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
 
     .two-columns {
 
-        gap: 45px;
-
+        gap:
+            45px;
     }
 
+    .contact-grid {
+
+        gap:
+            45px;
+    }
 }
 
 
@@ -1326,7 +1939,6 @@ textarea {
 
         width:
             calc(100% - 40px);
-
     }
 
 
@@ -1334,46 +1946,53 @@ textarea {
 
     .header {
 
-        position: absolute;
-
+        position:
+            absolute;
     }
-
 
     .nav-container {
 
-        min-height: 72px;
-
+        min-height:
+            72px;
     }
-
 
     .menu-toggle {
 
-        display: block;
+        display:
+            block;
 
-        margin-left: auto;
-
+        margin-left:
+            auto;
     }
-
 
     .nav {
 
-        position: absolute;
+        position:
+            absolute;
 
-        top: 72px;
+        top:
+            72px;
 
-        left: 20px;
+        left:
+            20px;
 
-        right: 20px;
+        right:
+            20px;
 
-        display: none;
+        display:
+            none;
 
-        flex-direction: column;
+        flex-direction:
+            column;
 
-        align-items: stretch;
+        align-items:
+            stretch;
 
-        gap: 0;
+        gap:
+            0;
 
-        padding: 12px;
+        padding:
+            12px;
 
         background:
             #101820;
@@ -1382,36 +2001,31 @@ textarea {
             1px solid
             rgba(255,255,255,0.08);
 
-        border-radius: 8px;
+        border-radius:
+            8px;
 
         box-shadow:
             0 15px 35px
             rgba(0,0,0,0.25);
-
     }
-
 
     .nav.nav-open {
 
-        display: flex;
-
+        display:
+            flex;
     }
-
 
     .nav a {
 
         padding:
             13px 12px;
-
     }
-
 
     .nav a::after {
 
-        display: none;
-
+        display:
+            none;
     }
-
 
     .nav a:hover,
     .nav a.active {
@@ -1419,48 +2033,47 @@ textarea {
         background:
             rgba(255,255,255,0.06);
 
-        border-radius: 5px;
-
+        border-radius:
+            5px;
     }
 
 
-    /* HERO */
+    /* =====================================================
+       HERO MÓVIL
+    ===================================================== */
 
     .hero {
 
         min-height:
             680px;
-
     }
-
 
     .hero-image {
 
         object-position:
             center center;
-
     }
 
+    .hero-overlay {
 
-   .hero-overlay {
+        background:
 
-       background:
-           linear-gradient(
-               90deg,
-               rgba(10, 18, 25, 0.35) 0%,
-               rgba(10, 18, 25, 0.12) 55%,
-               rgba(10, 18, 25, 0) 100%
-           );
-   }
+            linear-gradient(
+                90deg,
 
+                rgba(10,18,25,0.35) 0%,
+
+                rgba(10,18,25,0.12) 55%,
+
+                rgba(10,18,25,0) 100%
+            );
+    }
 
     .hero-content {
 
         padding-top:
             70px;
-
     }
-
 
     .hero h1 {
 
@@ -1469,17 +2082,13 @@ textarea {
 
         letter-spacing:
             -1.5px;
-
     }
-
 
     .hero p {
 
         font-size:
             16px;
-
     }
-
 
     .hero-buttons {
 
@@ -1488,47 +2097,46 @@ textarea {
 
         align-items:
             stretch;
-
     }
-
 
     .hero-buttons .btn {
 
         width:
             100%;
-
     }
 
 
-    /* SECCIONES */
+    /* =====================================================
+       SECCIONES
+    ===================================================== */
 
     .section {
 
         padding:
             70px 0;
-
     }
 
 
-    /* SERVICIOS */
+    /* =====================================================
+       SERVICIOS
+    ===================================================== */
 
     .services-grid {
 
         grid-template-columns:
             1fr;
-
     }
-
 
     .service-card {
 
         min-height:
             auto;
-
     }
 
 
-    /* COLUMNAS */
+    /* =====================================================
+       COLUMNAS
+    ===================================================== */
 
     .two-columns {
 
@@ -1537,29 +2145,29 @@ textarea {
 
         gap:
             45px;
-
     }
 
 
-    /* CORPORATIVO */
+    /* =====================================================
+       CORPORATIVO
+    ===================================================== */
 
     .corporate-section {
 
         padding:
             75px 0;
-
     }
 
 
-    /* CTA */
+    /* =====================================================
+       CTA
+    ===================================================== */
 
     .cta {
 
         padding:
             45px 0;
-
     }
-
 
     .cta-content {
 
@@ -1568,29 +2176,100 @@ textarea {
 
         align-items:
             flex-start;
-
     }
 
 
-    /* HERO INTERNO */
+    /* =====================================================
+       HERO INTERNO
+    ===================================================== */
 
     .page-hero {
 
         padding:
             145px 0 70px;
-
     }
-
 
     .page-hero h1 {
 
         font-size:
             42px;
-
     }
 
 
-    /* FOOTER */
+    /* =====================================================
+       SERVICIOS INTERNOS
+    ===================================================== */
+
+    .service-large {
+
+        grid-template-columns:
+            1fr;
+
+        gap:
+            20px;
+
+        padding:
+            35px 0;
+    }
+
+
+    /* =====================================================
+       PROYECTOS
+    ===================================================== */
+
+    .projects-grid {
+
+        grid-template-columns:
+            1fr;
+    }
+
+    .project-image {
+
+        height:
+            230px;
+    }
+
+
+    /* =====================================================
+       NOSOTROS
+    ===================================================== */
+
+    .about-box {
+
+        grid-template-columns:
+            1fr;
+    }
+
+    .values-grid {
+
+        grid-template-columns:
+            1fr;
+    }
+
+
+    /* =====================================================
+       CONTACTO
+    ===================================================== */
+
+    .contact-grid {
+
+        grid-template-columns:
+            1fr;
+
+        gap:
+            50px;
+    }
+
+    .contact-form-box {
+
+        padding:
+            25px;
+    }
+
+
+    /* =====================================================
+       FOOTER
+    ===================================================== */
 
     .footer-bottom-container {
 
@@ -1599,15 +2278,12 @@ textarea {
 
         padding:
             16px 0;
-
     }
-
 
     .footer-bottom p {
 
         font-size:
             11px;
-
     }
 
 }
@@ -1623,41 +2299,31 @@ textarea {
 
         width:
             calc(100% - 30px);
-
     }
-
 
     .logo {
 
         font-size:
             37px;
-
     }
-
 
     .logo-s {
 
         font-size:
             22px;
-
     }
-
 
     .hero h1 {
 
         font-size:
             36px;
-
     }
-
 
     .page-hero h1 {
 
         font-size:
             36px;
-
     }
-
 
     .section-header h2,
     .two-columns h2,
@@ -1665,7 +2331,12 @@ textarea {
 
         font-size:
             32px;
+    }
 
+    .contact-form-box {
+
+        padding:
+            20px;
     }
 
 }
