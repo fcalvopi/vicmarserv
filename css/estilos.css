@@ -1905,29 +1905,3 @@ select {
     }
 
 }
-.service-card,
-.project-card,
-.advantage,
-.value-card {
-
-    opacity: 0;
-    transform: translateY(20px);
-
-    transition:
-        opacity .6s ease,
-        transform .6s ease;
-
-}
-
-
-.service-card.show,
-.project-card.show,
-.advantage.show,
-.value-card.show {
-
-    opacity: 1;
-
-    transform:
-        translateY(0);
-
-}
