@@ -1,44 +1,37 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
 
     <meta charset="UTF-8">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Proyectos | Vicmar Services Quito</title>
 
-    <meta name="description"
-          content="Conoce algunos de los trabajos y proyectos realizados por Vicmar Services en mantenimiento, pintura, electricidad y reparaciones.">
+    <meta
+        name="description"
+        content="Conoce proyectos y trabajos realizados por Vicmar Services en Quito."
+    >
 
-    <link rel="icon"
-          href="img/logo.png">
+    <link rel="icon" href="img/logo.png">
 
-    <link rel="stylesheet"
-          href="css/style.css">
+    <link rel="stylesheet" href="css/style.css">
 
 </head>
 
-
 <body>
 
+<!-- HEADER -->
 
 <header class="header">
 
     <div class="container nav-container">
 
-        <a href="index.html"
-           class="logo">
-
-            <img src="img/logo.png"
-                 alt="Vicmar Services">
-
+        <a href="index.html" class="logo">
+            <span class="logo-v">V</span><span class="logo-m">M</span><span class="logo-s">s</span>
         </a>
 
-
-        <nav class="nav-menu">
+        <nav class="nav" id="mainNav">
 
             <a href="index.html">
                 Inicio
@@ -52,8 +45,7 @@
                 Servicios
             </a>
 
-            <a href="proyectos.html"
-               class="active">
+            <a href="proyectos.html" class="active">
                 Proyectos
             </a>
 
@@ -61,18 +53,23 @@
                 Contacto
             </a>
 
-            <a href="https://wa.me/593992705273"
-               target="_blank"
-               class="nav-whatsapp">
-
-                WhatsApp
-
-            </a>
-
         </nav>
 
+        <a
+            href="https://wa.me/593992705273"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="nav-whatsapp"
+        >
+            WhatsApp
+        </a>
 
-        <button class="menu-toggle">
+        <button
+            class="menu-toggle"
+            id="menuToggle"
+            type="button"
+            aria-label="Abrir menú"
+        >
             ☰
         </button>
 
@@ -83,22 +80,23 @@
 
 <main>
 
+<!-- HERO -->
 
 <section class="page-hero">
 
     <div class="container">
 
-        <span class="hero-tag">
-            NUESTRO TRABAJO
+        <span class="section-tag">
+            EXPERIENCIA
         </span>
 
         <h1>
-            Proyectos
+            Proyectos y trabajos realizados
         </h1>
 
         <p>
-            Algunos trabajos realizados por
-            Vicmar Services.
+            Soluciones técnicas ejecutadas con
+            responsabilidad y profesionalismo.
         </p>
 
     </div>
@@ -106,24 +104,26 @@
 </section>
 
 
-<section class="projects section">
+<!-- PROYECTOS -->
+
+<section class="section">
 
     <div class="container">
 
-
         <div class="section-header">
 
-            <div>
+            <span class="section-tag">
+                NUESTROS TRABAJOS
+            </span>
 
-                <span class="section-tag">
-                    EXPERIENCIA
-                </span>
+            <h2>
+                Experiencia que respalda nuestro trabajo
+            </h2>
 
-                <h2>
-                    Trabajos realizados
-                </h2>
-
-            </div>
+            <p>
+                Una muestra de los servicios técnicos
+                realizados por Vicmar Services.
+            </p>
 
         </div>
 
@@ -135,15 +135,18 @@
 
                 <div class="project-image">
 
-                    <img src="img/proyecto-1.jpg"
-                         alt="Proyecto Vicmar Services">
+                    <img
+                        src="img/proyectos/proyecto-1.jpg"
+                        alt="Mantenimiento integral realizado por Vicmar Services"
+                        loading="lazy"
+                    >
 
                 </div>
 
-                <div class="project-info">
+                <div class="project-content">
 
                     <span>
-                        MANTENIMIENTO
+                        Mantenimiento
                     </span>
 
                     <h3>
@@ -151,8 +154,8 @@
                     </h3>
 
                     <p>
-                        Trabajos de reparación,
-                        mantenimiento e instalaciones.
+                        Trabajos de mantenimiento técnico
+                        para instalaciones.
                     </p>
 
                 </div>
@@ -164,19 +167,22 @@
 
                 <div class="project-image">
 
-                    <img src="img/proyecto-2.jpg"
-                         alt="Proyecto eléctrico">
+                    <img
+                        src="img/proyectos/proyecto-2.jpg"
+                        alt="Instalación eléctrica realizada por Vicmar Services"
+                        loading="lazy"
+                    >
 
                 </div>
 
-                <div class="project-info">
+                <div class="project-content">
 
                     <span>
-                        ELECTRICIDAD
+                        Electricidad
                     </span>
 
                     <h3>
-                        Instalaciones eléctricas
+                        Instalación eléctrica
                     </h3>
 
                     <p>
@@ -193,24 +199,123 @@
 
                 <div class="project-image">
 
-                    <img src="img/proyecto-3.jpg"
-                         alt="Proyecto de pintura">
+                    <img
+                        src="img/proyectos/proyecto-3.jpg"
+                        alt="Trabajo de plomería realizado por Vicmar Services"
+                        loading="lazy"
+                    >
 
                 </div>
 
-                <div class="project-info">
+                <div class="project-content">
 
                     <span>
-                        PINTURA
+                        Plomería
                     </span>
 
                     <h3>
-                        Acabados profesionales
+                        Sistema hidrosanitario
                     </h3>
 
                     <p>
-                        Trabajos de pintura y
-                        recuperación de superficies.
+                        Reparación y mantenimiento
+                        de sistemas hidráulicos.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="project-card">
+
+                <div class="project-image">
+
+                    <img
+                        src="img/proyectos/proyecto-4.jpg"
+                        alt="Trabajo de pintura realizado por Vicmar Services"
+                        loading="lazy"
+                    >
+
+                </div>
+
+                <div class="project-content">
+
+                    <span>
+                        Pintura
+                    </span>
+
+                    <h3>
+                        Pintura y acabados
+                    </h3>
+
+                    <p>
+                        Recuperación y renovación
+                        de espacios.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="project-card">
+
+                <div class="project-image">
+
+                    <img
+                        src="img/proyectos/proyecto-5.jpg"
+                        alt="Impermeabilización realizada por Vicmar Services"
+                        loading="lazy"
+                    >
+
+                </div>
+
+                <div class="project-content">
+
+                    <span>
+                        Impermeabilización
+                    </span>
+
+                    <h3>
+                        Protección de superficies
+                    </h3>
+
+                    <p>
+                        Tratamiento y protección contra
+                        humedad y filtraciones.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="project-card">
+
+                <div class="project-image">
+
+                    <img
+                        src="img/proyectos/proyecto-6.jpg"
+                        alt="Mantenimiento corporativo realizado por Vicmar Services"
+                        loading="lazy"
+                    >
+
+                </div>
+
+                <div class="project-content">
+
+                    <span>
+                        Corporativo
+                    </span>
+
+                    <h3>
+                        Mantenimiento empresarial
+                    </h3>
+
+                    <p>
+                        Servicios técnicos para oficinas,
+                        edificios y negocios.
                     </p>
 
                 </div>
@@ -225,132 +330,51 @@
 </section>
 
 
+<!-- CTA -->
+
 <section class="cta">
 
     <div class="container cta-content">
 
         <div>
 
-            <span class="section-tag">
-                TU PROYECTO
+            <span>
+                ¿NECESITAS UN SERVICIO?
             </span>
 
             <h2>
-                Hagamos realidad tu proyecto.
+                Hablemos de tu proyecto.
             </h2>
-
-            <p>
-                Solicita una cotización.
-            </p>
 
         </div>
 
-        <a href="contacto.html"
-           class="btn btn-white">
-
-            Contactar
-
+        <a
+            href="contacto.html"
+            class="btn btn-white"
+        >
+            Solicitar cotización
         </a>
 
     </div>
 
 </section>
 
-
 </main>
 
 
-<footer class="footer">
+<!-- FOOTER -->
 
-    <div class="container footer-grid">
+<footer class="footer-bottom">
 
-        <div>
+    <div class="footer-bottom-container">
 
-            <img src="img/logo.png"
-                 alt="Vicmar Services"
-                 class="footer-logo">
-
-            <p>
-                Mantenimiento profesional
-                en Quito.
-            </p>
-
-        </div>
-
-
-        <div>
-
-            <h4>
-                Navegación
-            </h4>
-
-            <a href="index.html">
-                Inicio
-            </a>
-
-            <a href="nosotros.html">
-                Nosotros
-            </a>
-
-            <a href="servicios.html">
-                Servicios
-            </a>
-
-            <a href="proyectos.html">
-                Proyectos
-            </a>
-
-            <a href="contacto.html">
-                Contacto
-            </a>
-
-        </div>
-
-
-        <div>
-
-            <h4>
-                Contacto
-            </h4>
-
-            <p>
-                Quito, Ecuador
-            </p>
-
-            <a href="https://wa.me/593992705273"
-               target="_blank">
-
-                099 270 5273
-
-            </a>
-
-        </div>
-
-    </div>
-
-
-    <div class="footer-bottom">
-
-        <div class="container">
-
-            <p>
-                © 2026 Vicmar Services.
-            </p>
-
-        </div>
+        <p>
+            © 2026 Vicmar Services. Todos los derechos reservados.
+        </p>
 
     </div>
 
 </footer>
-
-
-<a href="https://wa.me/593992705273"
-   target="_blank"
-   class="whatsapp-float">
-
-    <span>☎</span>
-
-</a>
 
 
 <script src="js/main.js"></script>
