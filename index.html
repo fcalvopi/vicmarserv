@@ -42,10 +42,8 @@
     </script>
 
     <style>
-        /* REDISEÑO VISUAL MÁS LLAMATIVO Y CÁLIDO */
         :root {
             --primary: #0d47a1;
-            --primary-dark: #0a3680;
             --accent: #ffb300;
             --accent-hover: #ffa000;
             --dark: #1a252f;
@@ -62,7 +60,7 @@
             margin: 0;
         }
 
-        /* BARRA SUPERIOR LLAMATIVA */
+        /* BARRA SUPERIOR */
         .top-bar-fixit {
             background-color: var(--dark);
             color: #ffffff;
@@ -81,8 +79,31 @@
             font-weight: bold;
         }
 
-        .top-bar-fixit a:hover {
-            color: var(--accent);
+        /* HEADER ALINEADO A LA DERECHA */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 40px;
+            background-color: var(--card-bg);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+
+        header nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        header nav a {
+            text-decoration: none;
+            color: var(--text-main);
+            font-weight: 700;
+            font-size: 15px;
+            transition: color 0.25s ease;
+        }
+
+        header nav a:hover, header nav a.active {
+            color: var(--primary);
         }
 
         main section {
@@ -91,7 +112,6 @@
             max-width: 1100px;
         }
 
-        /* PORTADA CON EFECTO PROFESIONAL */
         .hero-premium {
             background-image: linear-gradient(135deg, rgba(13, 71, 161, 0.88) 20%, rgba(26, 37, 47, 0.8) 100%), 
                               url('img/portada-vicmar.png');
@@ -115,10 +135,8 @@
         .hero-premium p strong {
             font-size: 20px;
             color: #ffe082;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.4);
         }
 
-        /* BOTONES DE ACCIÓN RÁPIDA */
         .botones {
             margin-top: 35px;
             display: flex;
@@ -145,7 +163,6 @@
         .btn-cta-principal:hover {
             background-color: var(--accent-hover) !important;
             transform: translateY(-4px);
-            box-shadow: 0 8px 25px rgba(255, 179, 0, 0.5) !important;
         }
 
         .btn-cta-secundario {
@@ -166,7 +183,6 @@
             transform: translateY(-3px);
         }
 
-        /* DISEÑO DE PESTAÑAS TÁCTILES */
         .selector-servicios {
             display: flex;
             flex-wrap: wrap;
@@ -191,23 +207,12 @@
             transition: all 0.25s ease;
         }
 
-        .btn-servicio i {
-            color: var(--primary);
-        }
-
         .btn-servicio:hover, .btn-servicio.active {
             background-color: var(--primary);
             border-color: var(--primary);
             color: #ffffff;
-            transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(13, 71, 161, 0.25);
         }
 
-        .btn-servicio:hover i, .btn-servicio.active i {
-            color: var(--accent); 
-        }
-
-        /* CONTENEDOR EN RELIEVE PROFUNDO */
         .contenedor-bloques {
             background: var(--card-bg);
             border-radius: 20px;
@@ -220,21 +225,13 @@
             border-bottom: 1px solid #e2e8f0;
         }
 
-        .bloque-servicio {
-            display: none;
-        }
-
-        .bloque-servicio.active {
-            display: block;
-            animation: slideUp 0.4s ease forwards;
-        }
+        .bloque-servicio { display: none; }
+        .bloque-servicio.active { display: block; animation: slideUp 0.4s ease forwards; }
 
         .bloque-servicio h3 {
             margin-top: 0;
             font-size: 28px;
             color: var(--primary);
-            border-bottom: 2px solid #f4f7fc;
-            padding-bottom: 10px;
         }
 
         .btn-solicitar-bloque {
@@ -247,13 +244,6 @@
             border-radius: 8px;
             text-decoration: none;
             font-weight: bold;
-            box-shadow: 0 6px 15px rgba(37, 211, 102, 0.2);
-            transition: all 0.25s ease;
-        }
-
-        .btn-solicitar-bloque:hover {
-            background-color: #20ba59;
-            transform: translateY(-2px);
         }
 
         .grid-clean {
@@ -268,7 +258,6 @@
             padding: 30px;
             border-radius: 16px;
             border: 1px solid #e2e8f0;
-            box-shadow: 0 8px 24px rgba(0,0,0,0.02);
         }
 
         @keyframes slideUp {
@@ -280,25 +269,20 @@
 <body>
 
 <div class="top-bar-fixit">
-    <div>
-        <span><i class="fa-solid fa-clock" style="color: var(--accent);"></i> Emergencias: Lunes a Domingo - 24/7</span>
-    </div>
-    <div>
-        <i class="fa-solid fa-phone" style="color: var(--accent);"></i> Llamar Ahora: <a href="tel:+593992705273">099 270 5273</a>
-    </div>
+    <div><span><i class="fa-solid fa-clock" style="color: var(--accent);"></i> Emergencias: Lunes a Domingo - 24/7</span></div>
+    <div><i class="fa-solid fa-phone" style="color: var(--accent);"></i> Llamar Ahora: <a href="tel:+593992705273">099 270 5273</a></div>
 </div>
 
 <header>
     <div class="logo">
-        <a href="index.html">
-            <img src="img/rotulo1.png" alt="Vicmar Services" width="350" height="120">
-        </a>
+        <a href="index.html"><img src="img/rotulo1.png" alt="Vicmar Services" width="350" height="120"></a>
     </div>
+    <!-- MENU CORREGIDO A LA DERECHA Y REORGANIZADO -->
     <nav aria-label="Menú principal">
         <a href="index.html" class="active">Inicio</a>
+        <a href="nosotros.html">Nosotros</a>
         <a href="servicios.html">Servicios</a>
         <a href="proyectos.html">Proyectos</a>
-        <a href="nosotros.html">Nosotros</a>
         <a href="contacto.html">Contacto</a>
     </nav>
 </header>
@@ -308,3 +292,14 @@
         <div class="overlay">
             <h1>Soluciones Técnicas Profesionales para Hogares y Empresas en Quito</h1>
             <p><strong>⚡ Electricidad • 🚿 Plomería • 💧 Impermeabilización • 🏢 Mantenimiento Integral</strong></p>
+            <div class="botones">
+                <a href="https://wa.me" class="btn-cta-principal" target="_blank" rel="noopener">
+                    <i class="fa-brands fa-whatsapp"></i> Cotizar por WhatsApp
+                </a>
+                <a href="#seccion-interactiva" class="btn-cta-secundario">Explorar Servicios</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="confianza">
+
