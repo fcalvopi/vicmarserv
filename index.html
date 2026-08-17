@@ -1,1192 +1,1140 @@
-/* =========================================================
-   VICMAR SERVICES
-   NUEVO DISEÑO HOME
-========================================================= */
+<!DOCTYPE html>
+<html lang="es">
 
+<head>
 
-/* =========================================================
-   HERO
-========================================================= */
+    <meta charset="UTF-8">
 
-.home-hero {
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
-    position: relative;
+    <title>Vicmar Services | Mantenimiento Integral en Quito</title>
 
-    min-height: 650px;
+    <meta name="description"
+          content="Mantenimiento integral en Quito para casas, edificios y negocios. Electricidad, plomería, pintura, aluminio y vidrio, impermeabilización y mantenimiento.">
 
-    display: flex;
+    <meta name="keywords"
+          content="mantenimiento Quito, electricista Quito, plomería Quito, pintura Quito, impermeabilización Quito, mantenimiento edificios Quito">
 
-    align-items: center;
+    <meta name="author"
+          content="Vicmar Services">
 
-    background-image:
-        url("../img/hero-vicmar.jpg");
+    <meta name="robots"
+          content="index, follow">
 
-    background-size: cover;
+    <meta name="theme-color"
+          content="#0d47a1">
 
-    background-position: center;
+    <link rel="canonical"
+          href="https://vicmarserv.com/">
 
-    overflow: hidden;
-}
 
+    <!-- FAVICON -->
 
-.home-hero-overlay {
+    <link rel="icon"
+          type="image/png"
+          href="img/icono2.png">
 
-    position: absolute;
+    <link rel="shortcut icon"
+          href="img/icono2.png">
 
-    inset: 0;
+    <link rel="apple-touch-icon"
+          href="img/icono2.png">
 
-    background:
-        linear-gradient(
-            90deg,
-            rgba(3,20,45,.94) 0%,
-            rgba(4,35,75,.82) 48%,
-            rgba(4,35,75,.35) 100%
-        );
 
-}
+    <!-- FONT AWESOME -->
 
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer">
 
-.home-hero .container {
 
-    position: relative;
+    <!-- CSS -->
 
-    z-index: 2;
+    <link rel="stylesheet"
+          href="css/estilos.css">
 
-    width: 100%;
-}
 
+    <!-- OPEN GRAPH -->
 
-.home-hero-content {
+    <meta property="og:title"
+          content="Vicmar Services | Mantenimiento Integral">
 
-    max-width: 760px;
+    <meta property="og:description"
+          content="Mantenimiento profesional para casas, edificios y negocios en Quito.">
 
-    padding: 90px 0;
-}
+    <meta property="og:image"
+          content="https://vicmarserv.com/img/hero-vicmar.jpg">
 
+    <meta property="og:url"
+          content="https://vicmarserv.com/">
 
-.home-eyebrow {
+    <meta property="og:type"
+          content="website">
 
-    display: inline-block;
+    <meta property="og:locale"
+          content="es_EC">
 
-    margin-bottom: 18px;
+</head>
 
-    color: #9dcbff;
 
-    font-size: 12px;
+<body>
 
-    font-weight: 800;
 
-    letter-spacing: 2px;
+<!-- =====================================================
+     HEADER
+====================================================== -->
 
-}
+<header class="site-header">
 
+    <div class="header-container">
 
-.home-hero h1 {
 
-    margin: 0;
+        <div class="logo">
 
-    color: #ffffff;
+            <a href="index.html"
+               aria-label="Vicmar Services">
 
-    font-size: clamp(
-        48px,
-        6vw,
-        78px
-    );
+                <img
+                    src="img/rotulo1.png"
+                    alt="Vicmar Services"
+                    width="300"
+                    height="100">
 
-    line-height: 1;
+            </a>
 
-    letter-spacing: -3px;
+        </div>
 
-    font-weight: 800;
 
-}
+        <button
+            class="menu-toggle"
+            type="button"
+            aria-label="Abrir menú"
+            aria-expanded="false">
 
+            <i class="fa-solid fa-bars"></i>
 
-.home-hero h1 span {
+        </button>
 
-    display: block;
 
-    color: #8fc5ff;
+        <nav
+            class="main-nav"
+            aria-label="Menú principal">
 
-}
+            <a href="index.html"
+               class="active">
 
+                Inicio
 
-.home-hero-subtitle {
+            </a>
 
-    max-width: 650px;
+            <a href="servicios.html">
 
-    margin: 28px 0;
+                Servicios
 
-    color: rgba(
-        255,
-        255,
-        255,
-        .86
-    );
+            </a>
 
-    font-size: 17px;
+            <a href="proyectos.html">
 
-    line-height: 1.7;
+                Proyectos
 
-}
+            </a>
 
+            <a href="nosotros.html">
 
-.home-hero-buttons {
+                Nosotros
 
-    display: flex;
+            </a>
 
-    gap: 12px;
+            <a href="contacto.html">
 
-    flex-wrap: wrap;
+                Contacto
 
-}
+            </a>
 
+        </nav>
 
-/* =========================================================
-   BOTONES
-========================================================= */
+    </div>
 
-.btn-whatsapp {
+</header>
 
-    display: inline-flex;
 
-    align-items: center;
 
-    justify-content: center;
+<main>
 
-    gap: 9px;
 
-    background: #25d366;
+<!-- =====================================================
+     HERO
+====================================================== -->
 
-    color: #ffffff !important;
+<section class="home-hero">
 
-    border: 1px solid #25d366;
+    <div class="home-hero-overlay"></div>
 
-}
+    <div class="container">
 
+        <div class="home-hero-content">
 
-.btn-whatsapp:hover {
 
-    background: #1ebe5b;
+            <span class="home-eyebrow">
 
-    border-color: #1ebe5b;
+                VICMAR SERVICES · QUITO
 
-    transform: translateY(-2px);
+            </span>
 
-}
 
+            <h1>
 
-/* =========================================================
-   TITULOS DE SECCION
-========================================================= */
+                Mantenimiento
+                <span>sin complicaciones.</span>
 
-.home-section-title {
+            </h1>
 
-    max-width: 700px;
 
-    margin-bottom: 40px;
+            <p class="home-hero-subtitle">
 
-}
+                Electricidad · Plomería · Pintura ·
+                Aluminio y vidrio · Impermeabilización ·
+                Mantenimiento
 
+            </p>
 
-.home-section-title span,
-.home-eyebrow-blue {
 
-    display: block;
+            <div class="home-hero-buttons">
 
-    margin-bottom: 10px;
 
-    color: #0d47a1;
+                <a
+                    href="contacto.html"
+                    class="btn btn-primary">
 
-    font-size: 12px;
+                    <i class="fa-solid fa-file-signature"></i>
 
-    font-weight: 800;
+                    Cotizar ahora
 
-    letter-spacing: 2px;
+                </a>
 
-}
 
+                <a
+                    href="https://wa.me/593992705273?text=Hola%20Vicmar%20Services,%20necesito%20una%20cotizaci%C3%B3n."
+                    class="btn btn-whatsapp"
+                    target="_blank"
+                    rel="noopener noreferrer">
 
-.home-section-title h2 {
+                    <i class="fa-brands fa-whatsapp"></i>
 
-    margin: 0;
+                    WhatsApp
 
-    color: #102a43;
+                </a>
 
-    font-size: clamp(
-        32px,
-        4vw,
-        48px
-    );
 
-    line-height: 1.1;
+            </div>
 
-    letter-spacing: -1.5px;
 
-}
+        </div>
 
+    </div>
 
-.home-section-title h2 strong {
+</section>
 
-    color: #0d47a1;
 
-}
 
+<!-- =====================================================
+     SERVICIOS
+====================================================== -->
 
-/* =========================================================
-   SERVICIOS
-========================================================= */
+<section class="home-services">
 
-.home-services {
+    <div class="container">
 
-    padding: 90px 0;
 
-    background: #ffffff;
+        <div class="home-section-title">
 
-}
+            <span>
 
+                LO QUE HACEMOS
 
-.home-services-grid {
+            </span>
 
-    display: grid;
+            <h2>
 
-    grid-template-columns:
-        repeat(
-            3,
-            1fr
-        );
+                Todo lo que necesita,
+                <strong>en un solo lugar.</strong>
 
-    gap: 18px;
+            </h2>
 
-}
+        </div>
 
 
-.home-service-card {
 
-    position: relative;
+        <div class="home-services-grid">
 
-    min-height: 225px;
 
-    padding: 30px;
+            <!-- ELECTRICIDAD -->
 
-    background: #ffffff;
+            <a
+                href="contacto.html?servicio=electricidad"
+                class="home-service-card">
 
-    border: 1px solid #e5eaf0;
+                <div class="home-service-icon">
 
-    border-radius: 16px;
+                    <i class="fa-solid fa-bolt"></i>
 
-    text-decoration: none;
+                </div>
 
-    box-shadow:
-        0 8px 25px
-        rgba(
-            15,
-            42,
-            67,
-            .05
-        );
+                <h3>
 
-    transition:
-        transform .25s ease,
-        box-shadow .25s ease,
-        border-color .25s ease;
+                    Electricidad
 
-}
+                </h3>
 
+                <p>
 
-.home-service-card:hover {
+                    Instalaciones y reparaciones.
 
-    transform: translateY(-6px);
+                </p>
 
-    border-color: #b7d1ef;
+                <span>
 
-    box-shadow:
-        0 18px 40px
-        rgba(
-            13,
-            71,
-            161,
-            .12
-        );
+                    Cotizar
+                    <i class="fa-solid fa-arrow-right"></i>
 
-}
+                </span>
 
+            </a>
 
-.home-service-icon {
 
-    width: 52px;
 
-    height: 52px;
+            <!-- PLOMERÍA -->
 
-    display: flex;
+            <a
+                href="contacto.html?servicio=plomeria"
+                class="home-service-card">
 
-    align-items: center;
+                <div class="home-service-icon">
 
-    justify-content: center;
+                    <i class="fa-solid fa-faucet-drip"></i>
 
-    margin-bottom: 20px;
+                </div>
 
-    border-radius: 12px;
+                <h3>
 
-    background: #edf5ff;
+                    Plomería
 
-    color: #0d47a1;
+                </h3>
 
-    font-size: 22px;
+                <p>
 
-}
+                    Agua, tuberías y desagües.
 
+                </p>
 
-.home-service-card h3 {
+                <span>
 
-    margin: 0 0 8px;
+                    Cotizar
+                    <i class="fa-solid fa-arrow-right"></i>
 
-    color: #102a43;
+                </span>
 
-    font-size: 20px;
+            </a>
 
-}
 
 
-.home-service-card p {
+            <!-- PINTURA -->
 
-    margin: 0;
+            <a
+                href="contacto.html?servicio=pintura"
+                class="home-service-card">
 
-    color: #718096;
+                <div class="home-service-icon">
 
-    font-size: 14px;
+                    <i class="fa-solid fa-paint-roller"></i>
 
-}
+                </div>
 
+                <h3>
 
-.home-service-card > span {
+                    Pintura
 
-    position: absolute;
+                </h3>
 
-    bottom: 25px;
+                <p>
 
-    right: 25px;
+                    Interiores, exteriores y fachadas.
 
-    color: #0d47a1;
+                </p>
 
-    font-size: 12px;
+                <span>
 
-    font-weight: 800;
+                    Cotizar
+                    <i class="fa-solid fa-arrow-right"></i>
 
-}
+                </span>
 
+            </a>
 
-.home-service-featured {
 
-    background:
-        linear-gradient(
-            135deg,
-            #061f49,
-            #0d47a1
-        );
 
-    border-color: #0d47a1;
+            <!-- ALUMINIO -->
 
-}
+            <a
+                href="contacto.html?servicio=aluminio-y-vidrio"
+                class="home-service-card">
 
+                <div class="home-service-icon">
 
-.home-service-featured h3,
-.home-service-featured p,
-.home-service-featured > span {
+                    <i class="fa-regular fa-window-maximize"></i>
 
-    color: #ffffff;
+                </div>
 
-}
+                <h3>
 
+                    Aluminio y vidrio
 
-.home-service-featured .home-service-icon {
+                </h3>
 
-    background:
-        rgba(
-            255,
-            255,
-            255,
-            .12
-        );
+                <p>
 
-    color: #ffffff;
+                    Puertas, ventanas y mamparas.
 
-}
+                </p>
 
+                <span>
 
-.home-services-more {
+                    Cotizar
+                    <i class="fa-solid fa-arrow-right"></i>
 
-    margin-top: 35px;
+                </span>
 
-    text-align: center;
+            </a>
 
-}
 
 
-.btn-outline-blue {
+            <!-- IMPERMEABILIZACIÓN -->
 
-    display: inline-flex;
+            <a
+                href="contacto.html?servicio=impermeabilizacion"
+                class="home-service-card">
 
-    align-items: center;
+                <div class="home-service-icon">
 
-    gap: 10px;
+                    <i class="fa-solid fa-droplet"></i>
 
-    color: #0d47a1;
+                </div>
 
-    border: 1px solid #0d47a1;
+                <h3>
 
-    background: #ffffff;
+                    Impermeabilización
 
-}
+                </h3>
 
+                <p>
 
-.btn-outline-blue:hover {
+                    Protección contra filtraciones.
 
-    background: #0d47a1;
+                </p>
 
-    color: #ffffff;
+                <span>
 
-}
+                    Cotizar
+                    <i class="fa-solid fa-arrow-right"></i>
 
+                </span>
 
-/* =========================================================
-   TIPOS DE CLIENTES
-========================================================= */
+            </a>
 
-.home-types {
 
-    padding: 90px 0;
 
-    background: #f5f8fc;
+            <!-- MANTENIMIENTO -->
 
-}
+            <a
+                href="contacto.html?servicio=mantenimiento"
+                class="home-service-card home-service-featured">
 
+                <div class="home-service-icon">
 
-.home-types-grid {
+                    <i class="fa-solid fa-screwdriver-wrench"></i>
 
-    display: grid;
+                </div>
 
-    grid-template-columns:
-        repeat(
-            3,
-            1fr
-        );
+                <h3>
 
-    gap: 20px;
+                    Mantenimiento
 
-}
+                </h3>
 
+                <p>
 
-.home-type-card {
+                    Preventivo y correctivo.
 
-    padding: 40px 30px;
+                </p>
 
-    text-align: center;
+                <span>
 
-    background: #ffffff;
+                    Solicitar
+                    <i class="fa-solid fa-arrow-right"></i>
 
-    border-radius: 16px;
+                </span>
 
-    transition:
-        transform .25s ease;
+            </a>
 
-}
 
+        </div>
 
-.home-type-card:hover {
 
-    transform: translateY(-5px);
+        <div class="home-services-more">
 
-}
+            <a
+                href="servicios.html"
+                class="btn btn-outline-blue">
 
+                Ver todos los servicios
 
-.home-type-card > div {
+                <i class="fa-solid fa-arrow-right"></i>
 
-    width: 70px;
+            </a>
 
-    height: 70px;
+        </div>
 
-    margin:
-        0 auto 20px;
 
-    display: flex;
+    </div>
 
-    align-items: center;
+</section>
 
-    justify-content: center;
 
-    border-radius: 50%;
 
-    background: #eaf3ff;
+<!-- =====================================================
+     PARA QUIÉN
+====================================================== -->
 
-    color: #0d47a1;
+<section class="home-types">
 
-    font-size: 28px;
+    <div class="container">
 
-}
 
+        <div class="home-section-title">
 
-.home-type-card h3 {
+            <span>
 
-    margin: 0 0 10px;
+                TRABAJAMOS PARA
 
-    color: #102a43;
+            </span>
 
-    font-size: 22px;
+            <h2>
 
-}
+                Su espacio.
+                <strong>Nuestra solución.</strong>
 
+            </h2>
 
-.home-type-card p {
+        </div>
 
-    margin: 0;
 
-    color: #718096;
+        <div class="home-types-grid">
 
-}
 
+            <div class="home-type-card">
 
-/* =========================================================
-   POR QUÉ VICMAR
-========================================================= */
+                <div>
 
-.home-why {
+                    <i class="fa-solid fa-house"></i>
 
-    padding: 100px 0;
+                </div>
 
-    background: #ffffff;
+                <h3>
 
-}
+                    Casas
 
+                </h3>
 
-.home-why-grid {
+                <p>
 
-    display: grid;
+                    Reparaciones y mejoras para su hogar.
 
-    grid-template-columns:
-        1.1fr
-        .9fr;
+                </p>
 
-    gap: 80px;
+            </div>
 
-    align-items: center;
 
-}
 
+            <div class="home-type-card">
 
-.home-why-content h2 {
+                <div>
 
-    margin: 0 0 20px;
+                    <i class="fa-solid fa-building"></i>
 
-    color: #102a43;
+                </div>
 
-    font-size: clamp(
-        35px,
-        4vw,
-        55px
-    );
+                <h3>
 
-    line-height: 1.05;
+                    Edificios
 
-}
+                </h3>
 
+                <p>
 
-.home-why-content h2 span {
+                    Mantenimiento de áreas e instalaciones.
 
-    display: block;
+                </p>
 
-    color: #0d47a1;
+            </div>
 
-}
 
 
-.home-why-content p {
+            <div class="home-type-card">
 
-    max-width: 550px;
+                <div>
 
-    margin-bottom: 30px;
+                    <i class="fa-solid fa-store"></i>
 
-    color: #718096;
+                </div>
 
-    font-size: 17px;
+                <h3>
 
-    line-height: 1.7;
+                    Negocios
 
-}
+                </h3>
 
+                <p>
 
-.home-why-items {
+                    Adecuaciones y mantenimiento comercial.
 
-    display: grid;
+                </p>
 
-    grid-template-columns:
-        repeat(
-            2,
-            1fr
-        );
+            </div>
 
-    gap: 15px;
 
-}
+        </div>
 
 
-.home-why-item {
+    </div>
 
-    padding: 25px;
+</section>
 
-    background: #f5f8fc;
 
-    border-radius: 14px;
 
-}
+<!-- =====================================================
+     POR QUÉ VICMAR
+====================================================== -->
 
+<section class="home-why">
 
-.home-why-item div {
+    <div class="container">
 
-    width: 45px;
 
-    height: 45px;
+        <div class="home-why-grid">
 
-    display: flex;
 
-    align-items: center;
+            <div class="home-why-content">
 
-    justify-content: center;
 
-    margin-bottom: 15px;
+                <span class="home-eyebrow-blue">
 
-    background: #0d47a1;
+                    VICMAR SERVICES
 
-    border-radius: 10px;
+                </span>
 
-    color: #ffffff;
 
-}
+                <h2>
 
+                    Un solo proveedor.
+                    <span>Múltiples soluciones.</span>
 
-.home-why-item span {
+                </h2>
 
-    color: #102a43;
 
-    font-size: 16px;
+                <p>
 
-    font-weight: 800;
+                    Coordinamos diferentes especialidades
+                    para que usted no tenga que buscar
+                    proveedores diferentes para cada trabajo.
 
-}
+                </p>
 
 
-/* =========================================================
-   PROYECTOS
-========================================================= */
+                <a
+                    href="nosotros.html"
+                    class="btn btn-primary">
 
-.home-projects {
+                    Conocer Vicmar
 
-    padding: 90px 0;
+                    <i class="fa-solid fa-arrow-right"></i>
 
-    background: #f5f8fc;
+                </a>
 
-}
 
+            </div>
 
-.home-projects-header {
 
-    display: flex;
 
-    align-items: end;
+            <div class="home-why-items">
 
-    justify-content: space-between;
 
-    margin-bottom: 35px;
+                <div class="home-why-item">
 
-}
+                    <div>
 
+                        <i class="fa-solid fa-clipboard-check"></i>
 
-.home-projects-header h2 {
+                    </div>
 
-    margin: 0;
+                    <span>
 
-    color: #102a43;
+                        Evaluamos
 
-    font-size: 40px;
+                    </span>
 
-}
+                </div>
 
 
-.home-text-link {
 
-    color: #0d47a1;
+                <div class="home-why-item">
 
-    text-decoration: none;
+                    <div>
 
-    font-weight: 800;
+                        <i class="fa-solid fa-list-check"></i>
 
-    font-size: 14px;
+                    </div>
 
-}
+                    <span>
 
+                        Planificamos
 
-.home-projects-grid {
+                    </span>
 
-    display: grid;
+                </div>
 
-    grid-template-columns:
-        1fr
-        1fr
-        1fr;
 
-    gap: 18px;
 
-}
+                <div class="home-why-item">
 
+                    <div>
 
-.home-project-card {
+                        <i class="fa-solid fa-screwdriver-wrench"></i>
 
-    position: relative;
+                    </div>
 
-    min-height: 350px;
+                    <span>
 
-    display: flex;
+                        Ejecutamos
 
-    align-items: end;
+                    </span>
 
-    padding: 30px;
+                </div>
 
-    overflow: hidden;
 
-    border-radius: 16px;
 
-    text-decoration: none;
+                <div class="home-why-item">
 
-    background-size: cover;
+                    <div>
 
-    background-position: center;
+                        <i class="fa-solid fa-circle-check"></i>
 
-}
+                    </div>
 
+                    <span>
 
-.home-project-card::before {
+                        Entregamos
 
-    content: "";
+                    </span>
 
-    position: absolute;
+                </div>
 
-    inset: 0;
 
-    background:
-        linear-gradient(
-            transparent 25%,
-            rgba(
-                3,
-                20,
-                45,
-                .92
-            )
-        );
+            </div>
 
-}
 
+        </div>
 
-.home-project-card > div {
+    </div>
 
-    position: relative;
+</section>
 
-    z-index: 2;
 
-}
 
+<!-- =====================================================
+     PROYECTOS
+====================================================== -->
 
-.home-project-card span {
+<section class="home-projects">
 
-    color: #9dcbff;
+    <div class="container">
 
-    font-size: 11px;
 
-    font-weight: 800;
+        <div class="home-projects-header">
 
-    letter-spacing: 1.5px;
 
-}
+            <div>
 
+                <span class="home-eyebrow-blue">
 
-.home-project-card h3 {
+                    NUESTRO TRABAJO
 
-    margin: 8px 0 0;
+                </span>
 
-    color: #ffffff;
+                <h2>
 
-    font-size: 25px;
+                    Proyectos y trabajos
 
-    line-height: 1.1;
+                </h2>
 
-}
+            </div>
 
 
-/*
-   Estas imágenes son opcionales.
-   Si no existen, el fondo azul permanece.
-*/
+            <a
+                href="proyectos.html"
+                class="home-text-link">
 
-.home-project-electricidad {
+                Ver proyectos
 
-    background-image:
-        url("../img/proyecto-electricidad.jpg"),
-        linear-gradient(
-            135deg,
-            #061f49,
-            #0d47a1
-        );
+                <i class="fa-solid fa-arrow-right"></i>
 
-}
+            </a>
 
 
-.home-project-pintura {
+        </div>
 
-    background-image:
-        url("../img/proyecto-pintura.jpg"),
-        linear-gradient(
-            135deg,
-            #123d70,
-            #0d47a1
-        );
 
-}
 
+        <div class="home-projects-grid">
 
-.home-project-mantenimiento {
 
-    background-image:
-        url("../img/proyecto-mantenimiento.jpg"),
-        linear-gradient(
-            135deg,
-            #061f49,
-            #1767b1
-        );
+            <a
+                href="proyectos.html"
+                class="home-project-card home-project-electricidad">
 
-}
+                <div>
 
+                    <span>
 
-/* =========================================================
-   CTA
-========================================================= */
+                        ELECTRICIDAD
 
-.home-cta {
+                    </span>
 
-    padding: 90px 0;
+                    <h3>
 
-    background:
-        linear-gradient(
-            135deg,
-            #061f49,
-            #0d47a1
-        );
+                        Instalaciones
+                        y reparaciones
 
-    text-align: center;
+                    </h3>
 
-}
+                </div>
 
+            </a>
 
-.home-cta-content {
 
-    max-width: 700px;
 
-    margin: auto;
+            <a
+                href="proyectos.html"
+                class="home-project-card home-project-pintura">
 
-}
+                <div>
 
+                    <span>
 
-.home-cta-content > span {
+                        PINTURA
 
-    color: #9dcbff;
+                    </span>
 
-    font-size: 12px;
+                    <h3>
 
-    font-weight: 800;
+                        Renovación
+                        de espacios
 
-    letter-spacing: 2px;
+                    </h3>
 
-}
+                </div>
 
+            </a>
 
-.home-cta h2 {
 
-    margin: 15px 0;
 
-    color: #ffffff;
+            <a
+                href="proyectos.html"
+                class="home-project-card home-project-mantenimiento">
 
-    font-size: clamp(
-        45px,
-        6vw,
-        70px
-    );
+                <div>
 
-    line-height: 1;
+                    <span>
 
-}
+                        MANTENIMIENTO
 
+                    </span>
 
-.home-cta p {
+                    <h3>
 
-    margin-bottom: 30px;
+                        Soluciones
+                        integrales
 
-    color:
-        rgba(
-            255,
-            255,
-            255,
-            .78
-        );
+                    </h3>
 
-    font-size: 17px;
+                </div>
 
-}
+            </a>
 
 
-.home-cta-buttons {
+        </div>
 
-    display: flex;
 
-    justify-content: center;
+    </div>
 
-    flex-wrap: wrap;
+</section>
 
-    gap: 12px;
 
-}
 
+<!-- =====================================================
+     CTA FINAL
+====================================================== -->
 
-.btn-whatsapp-large {
+<section class="home-cta">
 
-    display: inline-flex;
+    <div class="container">
 
-    align-items: center;
 
-    gap: 10px;
+        <div class="home-cta-content">
 
-    background: #25d366;
 
-    color: #ffffff !important;
+            <span>
 
-    border: 1px solid #25d366;
+                ¿TIENE UN TRABAJO PENDIENTE?
 
-}
+            </span>
 
 
-.btn-white {
+            <h2>
 
-    display: inline-flex;
+                Hablemos.
 
-    align-items: center;
+            </h2>
 
-    gap: 10px;
 
-    background: #ffffff;
+            <p>
 
-    color: #0d47a1;
+                Cuéntenos qué necesita y coordinamos
+                su cotización.
 
-    border: 1px solid #ffffff;
+            </p>
 
-}
 
+            <div class="home-cta-buttons">
 
-/* =========================================================
-   RESPONSIVE
-========================================================= */
 
-@media (max-width: 900px) {
+                <a
+                    href="https://wa.me/593992705273?text=Hola%20Vicmar%20Services,%20necesito%20una%20cotizaci%C3%B3n."
+                    class="btn btn-whatsapp-large"
+                    target="_blank"
+                    rel="noopener noreferrer">
 
-    .home-services-grid {
+                    <i class="fa-brands fa-whatsapp"></i>
 
-        grid-template-columns:
-            repeat(
-                2,
-                1fr
-            );
+                    099 270 5273
 
-    }
+                </a>
 
 
-    .home-projects-grid {
+                <a
+                    href="contacto.html"
+                    class="btn btn-white">
 
-        grid-template-columns:
-            repeat(
-                2,
-                1fr
-            );
+                    Solicitar cotización
 
-    }
+                    <i class="fa-solid fa-arrow-right"></i>
 
+                </a>
 
-    .home-project-card:last-child {
 
-        grid-column:
-            1 / -1;
+            </div>
 
-    }
 
+        </div>
 
-    .home-why-grid {
+    </div>
 
-        grid-template-columns: 1fr;
+</section>
 
-        gap: 45px;
 
-    }
+</main>
 
-}
 
 
-@media (max-width: 650px) {
+<!-- =====================================================
+     FOOTER
+====================================================== -->
 
-    .home-hero {
+<footer class="site-footer">
 
-        min-height: 650px;
+    <div class="container">
 
-        background-position:
-            65% center;
 
-    }
+        <div class="footer-grid">
 
 
-    .home-hero-overlay {
+            <div class="footer-brand">
 
-        background:
-            linear-gradient(
-                180deg,
-                rgba(3,20,45,.92),
-                rgba(3,20,45,.88)
-            );
+                <img
+                    src="img/rotulo1.png"
+                    alt="Vicmar Services"
+                    width="240">
 
-    }
+                <p>
 
+                    Mantenimiento integral para casas,
+                    edificios y negocios en Quito.
 
-    .home-hero-content {
+                </p>
 
-        padding: 75px 0;
+            </div>
 
-    }
 
 
-    .home-hero h1 {
+            <div class="footer-column">
 
-        font-size: 46px;
+                <h3>
 
-        letter-spacing: -2px;
+                    Servicios
 
-    }
+                </h3>
 
+                <a href="servicios.html">
+                    Electricidad
+                </a>
 
-    .home-hero-subtitle {
+                <a href="servicios.html">
+                    Plomería
+                </a>
 
-        font-size: 15px;
+                <a href="servicios.html">
+                    Pintura
+                </a>
 
-    }
+                <a href="servicios.html">
+                    Aluminio y vidrio
+                </a>
 
+                <a href="servicios.html">
+                    Impermeabilización
+                </a>
 
-    .home-hero-buttons {
+                <a href="servicios.html">
+                    Mantenimiento
+                </a>
 
-        flex-direction: column;
+            </div>
 
-    }
 
 
-    .home-hero-buttons .btn {
+            <div class="footer-column">
 
-        width: 100%;
+                <h3>
 
-    }
+                    Empresa
 
+                </h3>
 
-    .home-services,
-    .home-types,
-    .home-why,
-    .home-projects,
-    .home-cta {
+                <a href="nosotros.html">
+                    Nosotros
+                </a>
 
-        padding: 65px 0;
+                <a href="proyectos.html">
+                    Proyectos
+                </a>
 
-    }
+                <a href="contacto.html">
+                    Contacto
+                </a>
 
+            </div>
 
-    .home-services-grid {
 
-        grid-template-columns: 1fr;
 
-    }
+            <div class="footer-column">
 
+                <h3>
 
-    .home-types-grid {
+                    Contacto
 
-        grid-template-columns: 1fr;
+                </h3>
 
-    }
+                <p>
 
+                    Quito, Ecuador
 
-    .home-projects-header {
+                </p>
 
-        display: block;
+                <a
+                    href="https://wa.me/593992705273"
+                    target="_blank"
+                    rel="noopener noreferrer">
 
-    }
+                    WhatsApp
 
+                </a>
 
-    .home-projects-header h2 {
+                <a href="contacto.html">
 
-        margin-bottom: 15px;
+                    Solicitar cotización
 
-    }
+                </a>
 
+            </div>
 
-    .home-projects-grid {
 
-        grid-template-columns: 1fr;
+        </div>
 
-    }
 
 
-    .home-project-card:last-child {
+        <div class="footer-bottom">
 
-        grid-column: auto;
+            <p>
 
-    }
+                ©
+                <span data-year>
+                    2026
+                </span>
 
+                Vicmar Services.
+                Todos los derechos reservados.
 
-    .home-project-card {
+            </p>
 
-        min-height: 280px;
 
-    }
+            <p>
 
+                Mantenimiento profesional en Quito.
 
-    .home-why-items {
+            </p>
 
-        grid-template-columns: 1fr 1fr;
+        </div>
 
-    }
 
+    </div>
 
-    .home-cta-buttons {
+</footer>
 
-        flex-direction: column;
 
-    }
 
+<!-- =====================================================
+     WHATSAPP FLOTANTE
+====================================================== -->
 
-    .home-cta-buttons .btn {
+<a
+    href="https://wa.me/593992705273?text=Hola%20Vicmar%20Services,%20necesito%20informaci%C3%B3n."
+    class="whatsapp-float"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Contactar por WhatsApp">
 
-        width: 100%;
+    <i class="fa-brands fa-whatsapp"></i>
 
-        justify-content: center;
+</a>
 
-    }
 
-}
 
+<!-- JAVASCRIPT -->
 
-@media (max-width: 420px) {
+<script src="js/main.js"></script>
 
-    .home-why-items {
 
-        grid-template-columns: 1fr;
+</body>
 
-    }
-
-}
+</html>
