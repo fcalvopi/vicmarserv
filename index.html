@@ -16,7 +16,7 @@
           content="Vicmar Services ofrece mantenimiento integral para casas, edificios y negocios en Quito: electricidad, plomería, pintura, aluminio y vidrio, impermeabilización, gypsum y mantenimiento preventivo y correctivo.">
 
     <meta name="keywords"
-          content="mantenimiento Quito, mantenimiento integral Quito, electricista Quito, plomería Quito, pintura Quito, impermeabilización Quito, aluminio y vidrio Quito, gypsum Quito, mantenimiento de edificios Quito">
+          content="mantenimiento Quito, mantenimiento integral Quito, electricista Quito, plomería Quito, pintura Quito, impermeabilización Quito, aluminio y vidrio Quito, gypsum Quito">
 
     <meta name="author"
           content="Vicmar Services">
@@ -57,7 +57,7 @@
 
 
     <!-- =====================================================
-         CSS MAESTRO
+         CSS PRINCIPAL
     ====================================================== -->
 
     <link rel="stylesheet"
@@ -75,7 +75,7 @@
           content="Mantenimiento profesional para casas, edificios y negocios en Quito.">
 
     <meta property="og:image"
-          content="https://vicmarserv.com/img/rotulo1.png">
+          content="https://vicmarserv.com/img/hero-vicmar.jpg">
 
     <meta property="og:url"
           content="https://vicmarserv.com/">
@@ -124,16 +124,16 @@
 
             <button
                 class="menu-toggle"
+                type="button"
                 aria-label="Abrir menú"
-                aria-expanded="false"
-                type="button">
+                aria-expanded="false">
 
                 <i class="fa-solid fa-bars"></i>
 
             </button>
 
 
-            <!-- NAVEGACION -->
+            <!-- NAVEGACIÓN -->
 
             <nav
                 class="main-nav"
@@ -187,72 +187,127 @@
 
 
         <!-- =================================================
-             HERO PRINCIPAL
+             HERO CON FOTO DE PORTADA
         ================================================== -->
 
-        <section class="servicios-hero">
+        <section class="hero-portada">
+
+            <div class="hero-portada-overlay"></div>
 
 
-            <div class="servicios-hero-content">
+            <div class="container hero-portada-container">
 
 
-                <span class="section-kicker">
-
-                    VICMAR SERVICES · QUITO
-
-                </span>
+                <div class="hero-portada-content">
 
 
-                <h1>
+                    <span class="hero-kicker">
 
-                    Mantenimiento integral
-                    <strong>
-                        para casas, edificios y negocios
-                    </strong>
+                        VICMAR SERVICES · QUITO
 
-                </h1>
+                    </span>
 
 
-                <p>
+                    <h1>
 
-                    Soluciones profesionales para mantener,
-                    reparar y mejorar sus espacios.
-                    Coordinamos diferentes especialidades
-                    bajo un mismo proveedor.
+                        Mantenimiento integral
 
-                </p>
+                        <span>
+                            para casas, edificios y negocios
+                        </span>
 
-
-                <div class="hero-buttons">
+                    </h1>
 
 
-                    <a
-                        href="contacto.html"
-                        class="btn btn-primary">
+                    <p>
 
-                        <i class="fa-solid fa-file-signature"></i>
+                        Soluciones profesionales de mantenimiento,
+                        reparación, instalación y adecuación para
+                        propiedades residenciales, comerciales y
+                        corporativas.
 
-                        Solicitar cotización
-
-                    </a>
+                    </p>
 
 
-                    <a
-                        href="servicios.html"
-                        class="btn btn-outline">
+                    <div class="hero-buttons">
 
-                        <i class="fa-solid fa-screwdriver-wrench"></i>
 
-                        Ver servicios
+                        <a
+                            href="contacto.html"
+                            class="btn btn-primary">
 
-                    </a>
+                            <i class="fa-solid fa-file-signature"></i>
+
+                            Solicitar cotización
+
+                        </a>
+
+
+                        <a
+                            href="servicios.html"
+                            class="btn btn-outline">
+
+                            <i class="fa-solid fa-screwdriver-wrench"></i>
+
+                            Ver servicios
+
+                        </a>
+
+
+                    </div>
+
+
+                    <!-- DATOS -->
+
+                    <div class="hero-datos">
+
+
+                        <div>
+
+                            <i class="fa-solid fa-bolt"></i>
+
+                            <span>
+
+                                Soluciones técnicas
+
+                            </span>
+
+                        </div>
+
+
+                        <div>
+
+                            <i class="fa-solid fa-building"></i>
+
+                            <span>
+
+                                Casas, edificios y negocios
+
+                            </span>
+
+                        </div>
+
+
+                        <div>
+
+                            <i class="fa-solid fa-location-dot"></i>
+
+                            <span>
+
+                                Quito, Ecuador
+
+                            </span>
+
+                        </div>
+
+
+                    </div>
 
 
                 </div>
 
 
             </div>
-
 
         </section>
 
@@ -263,7 +318,6 @@
         ================================================== -->
 
         <section class="section section-white">
-
 
             <div class="container">
 
@@ -298,13 +352,16 @@
                 </div>
 
 
-                <div class="grid-3"
-                     style="margin-top:45px;">
+
+                <div
+                    class="grid-3"
+                    style="margin-top:45px;">
 
 
-                    <!-- ITEM 1 -->
+                    <!-- 01 -->
 
-                    <div class="servicio-card">
+                    <article class="servicio-card">
+
 
                         <div class="servicio-icon">
 
@@ -314,6 +371,7 @@
 
 
                         <div class="servicio-body">
+
 
                             <h3>
 
@@ -330,15 +388,18 @@
 
                             </p>
 
+
                         </div>
 
-                    </div>
+
+                    </article>
 
 
 
-                    <!-- ITEM 2 -->
+                    <!-- 02 -->
 
-                    <div class="servicio-card">
+                    <article class="servicio-card">
+
 
                         <div class="servicio-icon">
 
@@ -348,6 +409,7 @@
 
 
                         <div class="servicio-body">
+
 
                             <h3>
 
@@ -364,15 +426,18 @@
 
                             </p>
 
+
                         </div>
 
-                    </div>
+
+                    </article>
 
 
 
-                    <!-- ITEM 3 -->
+                    <!-- 03 -->
 
-                    <div class="servicio-card">
+                    <article class="servicio-card">
+
 
                         <div class="servicio-icon">
 
@@ -382,6 +447,7 @@
 
 
                         <div class="servicio-body">
+
 
                             <h3>
 
@@ -398,16 +464,17 @@
 
                             </p>
 
+
                         </div>
 
-                    </div>
+
+                    </article>
 
 
                 </div>
 
 
             </div>
-
 
         </section>
 
@@ -418,7 +485,6 @@
         ================================================== -->
 
         <section class="section section-light">
-
 
             <div class="container">
 
@@ -453,11 +519,14 @@
 
 
 
-                <div class="servicios-grid"
-                     style="margin-top:45px;">
+                <div
+                    class="servicios-grid"
+                    style="margin-top:45px;">
 
 
-                    <!-- ELECTRICIDAD -->
+                    <!-- =================================================
+                         ELECTRICIDAD
+                    ================================================== -->
 
                     <article class="servicio-card">
 
@@ -542,7 +611,9 @@
 
 
 
-                    <!-- PLOMERIA -->
+                    <!-- =================================================
+                         PLOMERÍA
+                    ================================================== -->
 
                     <article class="servicio-card">
 
@@ -626,7 +697,9 @@
 
 
 
-                    <!-- PINTURA -->
+                    <!-- =================================================
+                         PINTURA
+                    ================================================== -->
 
                     <article class="servicio-card">
 
@@ -710,7 +783,9 @@
 
 
 
-                    <!-- ALUMINIO Y VIDRIO -->
+                    <!-- =================================================
+                         ALUMINIO Y VIDRIO
+                    ================================================== -->
 
                     <article class="servicio-card">
 
@@ -794,7 +869,9 @@
 
 
 
-                    <!-- IMPERMEABILIZACION -->
+                    <!-- =================================================
+                         IMPERMEABILIZACIÓN
+                    ================================================== -->
 
                     <article class="servicio-card">
 
@@ -879,7 +956,9 @@
 
 
 
-                    <!-- GYPSUM -->
+                    <!-- =================================================
+                         GYPSUM
+                    ================================================== -->
 
                     <article class="servicio-card">
 
@@ -963,7 +1042,9 @@
 
 
 
-                    <!-- MANTENIMIENTO -->
+                    <!-- =================================================
+                         MANTENIMIENTO
+                    ================================================== -->
 
                     <article
                         class="servicio-card servicio-card-destacado">
@@ -1050,12 +1131,13 @@
                 </div>
 
 
-                <!-- BOTON TODOS LOS SERVICIOS -->
+
+                <!-- VER TODOS -->
 
                 <div
                     style="
                         text-align:center;
-                        margin-top:40px;
+                        margin-top:45px;
                     ">
 
                     <a
@@ -1073,7 +1155,6 @@
 
             </div>
 
-
         </section>
 
 
@@ -1083,7 +1164,6 @@
         ================================================== -->
 
         <section class="section section-white">
-
 
             <div class="container">
 
@@ -1126,8 +1206,9 @@
 
                     <!-- CASAS -->
 
-                    <div class="card"
-                         style="padding:30px;">
+                    <article class="card"
+                             style="padding:30px;">
+
 
                         <div class="servicio-icon">
 
@@ -1150,14 +1231,16 @@
 
                         </p>
 
-                    </div>
+
+                    </article>
 
 
 
                     <!-- EDIFICIOS -->
 
-                    <div class="card"
-                         style="padding:30px;">
+                    <article class="card"
+                             style="padding:30px;">
+
 
                         <div class="servicio-icon">
 
@@ -1180,14 +1263,16 @@
 
                         </p>
 
-                    </div>
+
+                    </article>
 
 
 
                     <!-- NEGOCIOS -->
 
-                    <div class="card"
-                         style="padding:30px;">
+                    <article class="card"
+                             style="padding:30px;">
+
 
                         <div class="servicio-icon">
 
@@ -1210,7 +1295,8 @@
 
                         </p>
 
-                    </div>
+
+                    </article>
 
 
                 </div>
@@ -1218,23 +1304,23 @@
 
             </div>
 
-
         </section>
 
 
 
         <!-- =================================================
-             POR QUE VICMAR
+             POR QUÉ VICMAR
         ================================================== -->
 
         <section class="servicios-confianza">
-
 
             <div class="container">
 
 
                 <div class="confianza-grid">
 
+
+                    <!-- TEXTO -->
 
                     <div>
 
@@ -1284,12 +1370,15 @@
 
 
 
+                    <!-- ITEMS -->
+
                     <div class="confianza-items">
 
 
-                        <!-- ITEM -->
+                        <!-- ITEM 1 -->
 
                         <div class="confianza-item">
+
 
                             <i class="fa-solid fa-user-gear"></i>
 
@@ -1312,13 +1401,15 @@
 
                             </div>
 
+
                         </div>
 
 
 
-                        <!-- ITEM -->
+                        <!-- ITEM 2 -->
 
                         <div class="confianza-item">
+
 
                             <i class="fa-solid fa-clipboard-check"></i>
 
@@ -1341,13 +1432,15 @@
 
                             </div>
 
+
                         </div>
 
 
 
-                        <!-- ITEM -->
+                        <!-- ITEM 3 -->
 
                         <div class="confianza-item">
+
 
                             <i class="fa-solid fa-screwdriver-wrench"></i>
 
@@ -1370,8 +1463,8 @@
 
                             </div>
 
-                        </div>
 
+                        </div>
 
 
                     </div>
@@ -1382,7 +1475,6 @@
 
             </div>
 
-
         </section>
 
 
@@ -1392,7 +1484,6 @@
         ================================================== -->
 
         <section class="servicios-cta">
-
 
             <div class="container">
 
@@ -1438,7 +1529,7 @@
 
 
                         <a
-                            href="https://wa.me/XXXXXXXXXX?text=Hola%20Vicmar%20Services,%20necesito%20una%20cotizaci%C3%B3n."
+                            href="https://wa.me/593992705273?text=Hola%20Vicmar%20Services,%20necesito%20informaci%C3%B3n%20sobre%20un%20servicio."
                             class="btn btn-outline"
                             target="_blank"
                             rel="noopener noreferrer">
@@ -1458,7 +1549,6 @@
 
             </div>
 
-
         </section>
 
 
@@ -1471,7 +1561,6 @@
     ====================================================== -->
 
     <footer class="site-footer">
-
 
         <div class="container">
 
@@ -1572,6 +1661,13 @@
                     </h3>
 
 
+                    <a href="index.html">
+
+                        Inicio
+
+                    </a>
+
+
                     <a href="nosotros.html">
 
                         Nosotros
@@ -1624,7 +1720,7 @@
 
 
                     <a
-                        href="https://wa.me/XXXXXXXXXX"
+                        href="https://wa.me/593992705273"
                         target="_blank"
                         rel="noopener noreferrer">
 
@@ -1670,7 +1766,6 @@
 
         </div>
 
-
     </footer>
 
 
@@ -1680,7 +1775,7 @@
     ====================================================== -->
 
     <a
-        href="https://wa.me/593992705273?text=Hola%20Vicmar%20Services,%20necesito%20informaci%C3%B3n%20sobre%20un%20servicio."
+        href="https://wa.me/59399275273?text=Hola%20Vicmar%20Services,%20necesito%20informaci%C3%B3n%20sobre%20un%20servicio."
         class="whatsapp-float"
         target="_blank"
         rel="noopener noreferrer"
@@ -1693,7 +1788,7 @@
 
 
     <!-- =====================================================
-         JAVASCRIPT MAESTRO
+         JAVASCRIPT
     ====================================================== -->
 
     <script src="js/main.js"></script>
