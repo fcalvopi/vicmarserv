@@ -1,372 +1,76 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nosotros | Vicmar Services Quito</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="icon" type="image/png" href="img/icono2.png">
+    <link rel="stylesheet" href="https://cloudflare.com">
+    <style>
+        :root { --primary: #0d47a1; --accent: #ffb300; --light: #f4f7fc; }
+        body { background-color: var(--light); color: #2c3e50; font-family: 'Segoe UI', system-ui, sans-serif; margin:0; }
+        main section { padding: 50px 20px !important; margin: 0 auto !important; max-width: 1000px; }
+        
+        .selector-corp { display: flex; justify-content: center; gap: 10px; margin: 30px auto; flex-wrap: wrap; }
+        .btn-corp { background-color: #ffffff; border: 2px solid #cbd5e1; padding: 12px 24px; font-size: 15px; font-weight: bold; border-radius: 30px; cursor: pointer; display: flex; align-items: center; gap: 8px; transition: all 0.3s ease; }
+        .btn-corp.active, .btn-corp:hover { background-color: var(--primary); color: #ffffff; border-color: var(--primary); }
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
-
-    <title>Nosotros | Vicmar Services Quito</title>
-
-    <meta name="description"
-          content="Conoce Vicmar Services, empresa de mantenimiento profesional para casas, edificios y negocios en Quito.">
-
-    <link rel="icon" href="img/logo.png">
-
-    <link rel="stylesheet"
-          href="css/style.css">
-
+        .bloque-corp { display: none; background: #ffffff; border-radius: 16px; padding: 40px; box-shadow: 0 10px 30px rgba(0,0,0,0.03); border-left: 5px solid var(--primary); animation: slide 0.4s ease forwards; }
+        .bloque-corp.active { display: block; }
+        @keyframes slide { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+    </style>
 </head>
-
-
 <body>
 
-
-<header class="header">
-
-    <div class="container nav-container">
-
-        <a href="index.html" class="logo">
-            <img src="img/logo.png"
-                 alt="Vicmar Services">
-        </a>
-
-        <nav class="nav-menu">
-
-            <a href="index.html">
-                Inicio
-            </a>
-
-            <a href="nosotros.html"
-               class="active">
-                Nosotros
-            </a>
-
-            <a href="servicios.html">
-                Servicios
-            </a>
-
-            <a href="proyectos.html">
-                Proyectos
-            </a>
-
-            <a href="contacto.html">
-                Contacto
-            </a>
-
-            <a href="https://wa.me/593992705273"
-               target="_blank"
-               class="nav-whatsapp">
-                WhatsApp
-            </a>
-
-        </nav>
-
-        <button class="menu-toggle">
-            ☰
-        </button>
-
+<header>
+    <div class="logo">
+        <a href="index.html"><img src="img/rotulo1.png" alt="Vicmar Services" width="350" height="120"></a>
     </div>
-
+    <nav aria-label="Menú principal">
+        <a href="index.html">Inicio</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="proyectos.html">Proyectos</a>
+        <a href="nosotros.html" class="active">Nosotros</a>
+        <a href="contacto.html">Contacto</a>
+    </nav>
 </header>
 
-
 <main>
+    <section class="nosotros">
+        <h1 style="color: var(--primary); font-size: 34px; text-align: center;">Sobre Vicmar Services</h1>
+        <p style="font-size:16px; line-height:1.7; text-align: center; max-width:800px; margin: 20px auto;">Brindamos soluciones de infraestructura residencial y comercial garantizando puntualidad y honestidad técnica en el distrito metropolitano de Quito.</p>
 
-
-<section class="page-hero">
-
-    <div class="container">
-
-        <span class="hero-tag">
-            VICMAR SERVICES
-        </span>
-
-        <h1>
-            Nosotros
-        </h1>
-
-        <p>
-            Soluciones profesionales de mantenimiento
-            para hogares, edificios y negocios.
-        </p>
-
-    </div>
-
-</section>
-
-
-<section class="about section">
-
-    <div class="container about-grid">
-
-        <div class="about-image">
-
-            <img src="img/hero.jpg"
-                 alt="Trabajo profesional Vicmar Services">
-
+        <div class="selector-corp">
+            <button class="btn-corp active" onclick="verCorp('mision', this)"><i class="fa-solid fa-bullseye"></i> Misión</button>
+            <button class="btn-corp" onclick="verCorp('vision', this)"><i class="fa-solid fa-eye"></i> Visión</button>
+            <button class="btn-corp" onclick="verCorp('valores', this)"><i class="fa-solid fa-handshake"></i> Valores</button>
         </div>
 
-
-        <div class="about-content">
-
-            <span class="section-tag">
-                QUIÉNES SOMOS
-            </span>
-
-            <h2>
-                Mantenimiento que
-                <span>genera confianza.</span>
-            </h2>
-
-            <p>
-                Vicmar Services es una empresa dedicada
-                a brindar soluciones de mantenimiento,
-                reparación e instalación.
-            </p>
-
-            <p>
-                Atendemos requerimientos de hogares,
-                edificios, oficinas y negocios,
-                ofreciendo diferentes especialidades
-                bajo un mismo proveedor.
-            </p>
-
-            <p>
-                Nuestro objetivo es entregar soluciones
-                prácticas, profesionales y orientadas
-                a las necesidades reales de cada cliente.
-            </p>
-
+        <div id="mision" class="bloque-corp active">
+            <h2>🎯 Nuestra Misión</h2>
+            <p style="font-size:16px; line-height:1.7;">Proporcionar soluciones técnicas confiables y de alta calidad, contribuyendo al mantenimiento y mejoramiento de hogares, edificios y empresas mediante un servicio profesional y oportuno.</p>
         </div>
-
-    </div>
-
-</section>
-
-
-<section class="values section section-light">
-
-    <div class="container">
-
-        <div class="section-header">
-
-            <div>
-
-                <span class="section-tag">
-                    NUESTRO ENFOQUE
-                </span>
-
-                <h2>
-                    Cómo trabajamos
-                </h2>
-
-            </div>
-
+        <div id="vision" class="bloque-corp">
+            <h2>👁️ Nuestra Visión</h2>
+            <p style="font-size:16px; line-height:1.7;">Consolidarnos como una empresa referente en servicios de mantenimiento y soluciones técnicas en Quito, reconocida por la calidad, responsabilidad y confianza de nuestros clientes.</p>
         </div>
-
-
-        <div class="values-grid">
-
-
-            <article class="value-card">
-
-                <span>01</span>
-
-                <h3>
-                    Responsabilidad
-                </h3>
-
-                <p>
-                    Cumplimos nuestros compromisos
-                    y cuidamos cada espacio donde trabajamos.
-                </p>
-
-            </article>
-
-
-            <article class="value-card">
-
-                <span>02</span>
-
-                <h3>
-                    Calidad
-                </h3>
-
-                <p>
-                    Buscamos que cada solución tenga
-                    un resultado funcional y duradero.
-                </p>
-
-            </article>
-
-
-            <article class="value-card">
-
-                <span>03</span>
-
-                <h3>
-                    Servicio
-                </h3>
-
-                <p>
-                    Escuchamos al cliente para encontrar
-                    la solución más adecuada.
-                </p>
-
-            </article>
-
-
-            <article class="value-card">
-
-                <span>04</span>
-
-                <h3>
-                    Confianza
-                </h3>
-
-                <p>
-                    Construimos relaciones de largo plazo
-                    con nuestros clientes.
-                </p>
-
-            </article>
-
-
+        <div id="valores" class="bloque-corp">
+            <h2>🤝 Nuestros Valores</h2>
+            <p style="font-size:16px; line-height:1.7;">Responsabilidad, puntualidad, transparencia presupuestaria y un compromiso inquebrantable con la seguridad de la obra ejecutada.</p>
         </div>
-
-    </div>
-
-</section>
-
-
-<section class="cta">
-
-    <div class="container cta-content">
-
-        <div>
-
-            <span class="section-tag">
-                HABLEMOS
-            </span>
-
-            <h2>
-                ¿Necesitas un servicio?
-            </h2>
-
-            <p>
-                Estamos listos para ayudarte.
-            </p>
-
-        </div>
-
-        <a href="contacto.html"
-           class="btn btn-white">
-
-            Contactar
-
-        </a>
-
-    </div>
-
-</section>
-
-
+    </section>
 </main>
 
+<footer><p>© 2025 Vicmar Services - Todos los derechos reservados.</p></footer>
 
-<footer class="footer">
-
-    <div class="container footer-grid">
-
-        <div>
-
-            <img src="img/logo.png"
-                 alt="Vicmar Services"
-                 class="footer-logo">
-
-            <p>
-                Mantenimiento profesional
-                en Quito.
-            </p>
-
-        </div>
-
-
-        <div>
-
-            <h4>
-                Navegación
-            </h4>
-
-            <a href="index.html">
-                Inicio
-            </a>
-
-            <a href="nosotros.html">
-                Nosotros
-            </a>
-
-            <a href="servicios.html">
-                Servicios
-            </a>
-
-            <a href="proyectos.html">
-                Proyectos
-            </a>
-
-            <a href="contacto.html">
-                Contacto
-            </a>
-
-        </div>
-
-
-        <div>
-
-            <h4>
-                Contacto
-            </h4>
-
-            <p>
-                Quito, Ecuador
-            </p>
-
-            <a href="https://wa.me/593992705273"
-               target="_blank">
-                099 270 5273
-            </a>
-
-        </div>
-
-    </div>
-
-
-    <div class="footer-bottom">
-
-        <div class="container">
-
-            <p>
-                © 2026 Vicmar Services.
-            </p>
-
-        </div>
-
-    </div>
-
-</footer>
-
-
-<a href="https://wa.me/593992705273"
-   target="_blank"
-   class="whatsapp-float">
-    <span>☎</span>
-</a>
-
-
-<script src="js/main.js"></script>
-
+<script>
+    function verCorp(id, btn) {
+        document.querySelectorAll('.bloque-corp').forEach(b => b.classList.remove('active'));
+        document.querySelectorAll('.btn-corp').forEach(b => b.classList.remove('active'));
+        document.getElementById(id).classList.add('active');
+        btn.classList.add('active');
+    }
+</script>
 </body>
 </html>
