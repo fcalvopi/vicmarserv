@@ -1,44 +1,37 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
 
     <meta charset="UTF-8">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Contacto | Vicmar Services Quito</title>
 
-    <meta name="description"
-          content="Solicita una cotización de mantenimiento en Quito. Contacta a Vicmar Services por WhatsApp o formulario.">
+    <meta
+        name="description"
+        content="Contacta a Vicmar Services para solicitar servicios de mantenimiento profesional en Quito."
+    >
 
-    <link rel="icon"
-          href="img/logo.png">
+    <link rel="icon" href="img/logo.png">
 
-    <link rel="stylesheet"
-          href="css/style.css">
+    <link rel="stylesheet" href="css/style.css">
 
 </head>
 
-
 <body>
 
+<!-- HEADER -->
 
 <header class="header">
 
     <div class="container nav-container">
 
-        <a href="index.html"
-           class="logo">
-
-            <img src="img/logo.png"
-                 alt="Vicmar Services">
-
+        <a href="index.html" class="logo">
+            <span class="logo-v">V</span><span class="logo-m">M</span><span class="logo-s">s</span>
         </a>
 
-
-        <nav class="nav-menu">
+        <nav class="nav" id="mainNav">
 
             <a href="index.html">
                 Inicio
@@ -56,23 +49,27 @@
                 Proyectos
             </a>
 
-            <a href="contacto.html"
-               class="active">
+            <a href="contacto.html" class="active">
                 Contacto
-            </a>
-
-            <a href="https://wa.me/593992705273"
-               target="_blank"
-               class="nav-whatsapp">
-
-                WhatsApp
-
             </a>
 
         </nav>
 
+        <a
+            href="https://wa.me/593992705273"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="nav-whatsapp"
+        >
+            WhatsApp
+        </a>
 
-        <button class="menu-toggle">
+        <button
+            class="menu-toggle"
+            id="menuToggle"
+            type="button"
+            aria-label="Abrir menú"
+        >
             ☰
         </button>
 
@@ -83,22 +80,23 @@
 
 <main>
 
+<!-- HERO -->
 
 <section class="page-hero">
 
     <div class="container">
 
-        <span class="hero-tag">
-            HABLEMOS
+        <span class="section-tag">
+            CONTACTO
         </span>
 
         <h1>
-            Contacto
+            Hablemos de tu proyecto
         </h1>
 
         <p>
-            Cuéntanos qué necesitas y
-            te ayudaremos a encontrar una solución.
+            Cuéntanos qué necesitas y te ayudaremos
+            a encontrar la mejor solución.
         </p>
 
     </div>
@@ -106,10 +104,14 @@
 </section>
 
 
-<section class="contact section">
+<!-- CONTACTO -->
+
+<section class="section">
 
     <div class="container contact-grid">
 
+
+        <!-- INFORMACIÓN -->
 
         <div class="contact-info">
 
@@ -118,74 +120,97 @@
             </span>
 
             <h2>
-                Estamos listos
-                <span>para ayudarte.</span>
+                Solicita tu cotización
             </h2>
 
             <p>
-                Escríbenos para solicitar información,
-                coordinar una visita o pedir una cotización.
+                Puedes contactarnos directamente por
+                WhatsApp o enviar tu solicitud mediante
+                el formulario.
             </p>
 
 
             <div class="contact-item">
 
-                <strong>
-                    WhatsApp
-                </strong>
+                <span>📍</span>
 
-                <a href="https://wa.me/593992705273"
-                   target="_blank">
+                <div>
 
-                    099 270 5273
+                    <strong>
+                        Ubicación
+                    </strong>
 
-                </a>
+                    <p>
+                        Quito, Ecuador
+                    </p>
 
-            </div>
-
-
-            <div class="contact-item">
-
-                <strong>
-                    Ubicación
-                </strong>
-
-                <span>
-                    Quito, Ecuador
-                </span>
+                </div>
 
             </div>
 
 
             <div class="contact-item">
 
-                <strong>
-                    Atención
-                </strong>
+                <span>📱</span>
 
-                <span>
-                    Casas · Edificios · Negocios
-                </span>
+                <div>
+
+                    <strong>
+                        WhatsApp
+                    </strong>
+
+                    <a
+                        href="https://wa.me/593992705273"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        099 270 5273
+                    </a>
+
+                </div>
 
             </div>
 
 
-            <a href="https://wa.me/593992705273"
-               target="_blank"
-               class="btn btn-primary">
+            <div class="contact-item">
 
+                <span>✉️</span>
+
+                <div>
+
+                    <strong>
+                        Email
+                    </strong>
+
+                    <a href="mailto:info@vicmarserv.com">
+                        info@vicmarserv.com
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <a
+                href="https://wa.me/593992705273?text=Hola%20Vicmar%20Services,%20quiero%20solicitar%20un%20servicio."
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-primary"
+            >
                 Escribir por WhatsApp
-
             </a>
 
         </div>
 
 
-        <div class="contact-form-wrapper">
+        <!-- FORMULARIO -->
 
-            <form id="contactForm"
-                  class="contact-form">
+        <div class="contact-form-box">
 
+            <form
+                id="contactForm"
+                class="contact-form"
+            >
 
                 <div class="form-group">
 
@@ -198,88 +223,44 @@
                         id="nombre"
                         name="nombre"
                         placeholder="Tu nombre"
-                        required>
-
-                </div>
-
-
-                <div class="form-row">
-
-                    <div class="form-group">
-
-                        <label for="telefono">
-                            Teléfono
-                        </label>
-
-                        <input
-                            type="tel"
-                            id="telefono"
-                            name="telefono"
-                            placeholder="099..."
-                            required>
-
-                    </div>
-
-
-                    <div class="form-group">
-
-                        <label for="email">
-                            Correo
-                        </label>
-
-                        <input
-                            type="email"
-                            id="email"
-                            name="email"
-                            placeholder="correo@ejemplo.com">
-
-                    </div>
+                        autocomplete="name"
+                        required
+                    >
 
                 </div>
 
 
                 <div class="form-group">
 
-                    <label for="servicio">
-                        Servicio requerido
+                    <label for="telefono">
+                        Teléfono
                     </label>
 
-                    <select id="servicio"
-                            name="servicio">
+                    <input
+                        type="tel"
+                        id="telefono"
+                        name="telefono"
+                        placeholder="099 000 0000"
+                        autocomplete="tel"
+                        required
+                    >
 
-                        <option value="">
-                            Selecciona un servicio
-                        </option>
+                </div>
 
-                        <option value="Electricidad">
-                            Electricidad
-                        </option>
 
-                        <option value="Plomería">
-                            Plomería
-                        </option>
+                <div class="form-group">
 
-                        <option value="Pintura">
-                            Pintura
-                        </option>
+                    <label for="correo">
+                        Correo electrónico
+                    </label>
 
-                        <option value="Aluminio y vidrio">
-                            Aluminio y vidrio
-                        </option>
-
-                        <option value="Impermeabilización">
-                            Impermeabilización
-                        </option>
-
-                        <option value="Mantenimiento">
-                            Mantenimiento preventivo y correctivo
-                        </option>
-
-                        <option value="Otro">
-                            Otro
-                        </option>
-
-                    </select>
+                    <input
+                        type="email"
+                        id="correo"
+                        name="correo"
+                        placeholder="correo@ejemplo.com"
+                        autocomplete="email"
+                    >
 
                 </div>
 
@@ -287,31 +268,33 @@
                 <div class="form-group">
 
                     <label for="mensaje">
-                        Cuéntanos qué necesitas
+                        ¿Qué necesitas?
                     </label>
 
                     <textarea
                         id="mensaje"
                         name="mensaje"
-                        rows="6"
-                        placeholder="Describe brevemente tu requerimiento..."
-                        required></textarea>
+                        rows="5"
+                        placeholder="Describe brevemente el servicio que necesitas..."
+                        required
+                    ></textarea>
 
                 </div>
 
 
-                <button type="submit"
-                        class="btn btn-primary form-button">
-
+                <button
+                    type="submit"
+                    class="btn btn-primary form-button"
+                >
                     Enviar solicitud
-
                 </button>
 
 
-                <div id="formMessage"
-                     class="form-message">
-                </div>
-
+                <p
+                    id="formMessage"
+                    class="form-message"
+                    aria-live="polite"
+                ></p>
 
             </form>
 
@@ -321,101 +304,22 @@
 
 </section>
 
-
 </main>
 
 
-<footer class="footer">
+<!-- FOOTER -->
 
-    <div class="container footer-grid">
+<footer class="footer-bottom">
 
-        <div>
+    <div class="footer-bottom-container">
 
-            <img src="img/logo.png"
-                 alt="Vicmar Services"
-                 class="footer-logo">
-
-            <p>
-                Soluciones profesionales
-                de mantenimiento en Quito.
-            </p>
-
-        </div>
-
-
-        <div>
-
-            <h4>
-                Navegación
-            </h4>
-
-            <a href="index.html">
-                Inicio
-            </a>
-
-            <a href="nosotros.html">
-                Nosotros
-            </a>
-
-            <a href="servicios.html">
-                Servicios
-            </a>
-
-            <a href="proyectos.html">
-                Proyectos
-            </a>
-
-            <a href="contacto.html">
-                Contacto
-            </a>
-
-        </div>
-
-
-        <div>
-
-            <h4>
-                Contacto
-            </h4>
-
-            <p>
-                Quito, Ecuador
-            </p>
-
-            <a href="https://wa.me/593992705273"
-               target="_blank">
-
-                099 270 5273
-
-            </a>
-
-        </div>
-
-    </div>
-
-
-    <div class="footer-bottom">
-
-        <div class="container">
-
-            <p>
-                © 2026 Vicmar Services.
-            </p>
-
-        </div>
+        <p>
+            © 2026 Vicmar Services. Todos los derechos reservados.
+        </p>
 
     </div>
 
 </footer>
-
-
-<a href="https://wa.me/593992705273"
-   target="_blank"
-   class="whatsapp-float">
-
-    <span>☎</span>
-
-</a>
 
 
 <script src="js/main.js"></script>
