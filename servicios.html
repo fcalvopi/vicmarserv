@@ -1,124 +1,337 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nuestros Servicios Técnicos | Vicmar Services Quito</title>
-    <link rel="stylesheet" href="css/estilos.css">
-    <link rel="icon" type="image/png" href="img/icono2.png">
-    <link rel="stylesheet" href="https://cloudflare.com">
-    <style>
-        :root {
-            --primary: #0d47a1;
-            --accent: #ffb300;
-            --light-bg: #f4f7fc;
-            --card-bg: #ffffff;
-        }
-        body { background-color: var(--light-bg); color: #2c3e50; font-family: 'Segoe UI', system-ui, sans-serif; margin:0; }
-        
-        .encabezado-pagina { text-align: center; padding: 50px 20px 20px; }
-        .encabezado-pagina h1 { color: var(--primary); font-size: 34px; margin: 0 0 10px 0; }
 
-        .buscador-contenedor { max-width: 550px; margin: 0 auto 30px; position: relative; padding: 0 20px; }
-        .input-busqueda { width: 100%; padding: 15px 20px 15px 50px; font-size: 16px; border: 2px solid #cbd5e1; border-radius: 30px; outline: none; box-sizing: border-box; transition: all 0.3s ease; }
-        .input-busqueda:focus { border-color: var(--primary); box-shadow: 0 5px 15px rgba(13, 71, 161, 0.15); }
-        .buscador-contenedor i { position: absolute; left: 40px; top: 50%; transform: translateY(-50%); color: #94a3b8; font-size: 18px; }
+    <title>Servicios | Vicmar Services Quito</title>
 
-        .filtros-servicios { display: flex; justify-content: center; gap: 12px; margin-bottom: 40px; flex-wrap: wrap; }
-        .btn-filtro { background-color: #ffffff; border: 2px solid #cbd5e1; padding: 10px 22px; border-radius: 30px; font-size: 14px; font-weight: 700; cursor: pointer; color: #475569; transition: all 0.25s ease; }
-        .btn-filtro.active, .btn-filtro:hover { background-color: var(--primary); color: #ffffff; border-color: var(--primary); }
+    <meta
+        name="description"
+        content="Servicios de mantenimiento de Vicmar Services en Quito: electricidad, plomería, pintura, aluminio y vidrio, impermeabilización y mantenimiento preventivo y correctivo."
+    >
 
-        .grid-servicios-extendido { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; max-width: 1100px; margin: 0 auto; padding: 0 20px 60px; }
-        .tarjeta-servicio { background: var(--card-bg); border-radius: 20px; border: 1px solid #e2e8f0; padding: 30px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 10px 25px rgba(0,0,0,0.02); transition: all 0.3s ease; }
-        .tarjeta-servicio:hover { transform: translateY(-5px); box-shadow: 0 15px 35px rgba(13, 71, 161, 0.08); }
-        
-        .tarjeta-header { display: flex; align-items: center; gap: 15px; margin-bottom: 15px; }
-        .tarjeta-icon { width: 55px; height: 55px; background-color: #eff6ff; border-radius: 14px; display: flex; align-items: center; justify-content: center; color: var(--primary); font-size: 24px; }
-        .tarjeta-header h3 { margin: 0; font-size: 22px; color: #1e293b; }
-        
-        .btn-tarjeta-cta { display: flex; align-items: center; justify-content: center; gap: 8px; background-color: #f8fafc; border: 1px solid #e2e8f0; color: var(--primary); padding: 12px 0; border-radius: 10px; text-decoration: none; font-weight: bold; transition: all 0.2s ease; }
-        .tarjeta-servicio:hover .btn-tarjeta-cta { background-color: var(--primary); color: #ffffff; border-color: var(--primary); }
-    </style>
+    <link rel="icon" href="img/logo.png">
+
+    <link rel="stylesheet" href="css/style.css">
+
 </head>
+
 <body>
 
-<header>
-    <div class="logo">
-        <a href="index.html"><img src="img/rotulo1.png" alt="Vicmar Services" width="350" height="120"></a>
+<!-- HEADER -->
+
+<header class="header">
+
+    <div class="container nav-container">
+
+        <a href="index.html" class="logo">
+            <span class="logo-v">V</span><span class="logo-m">M</span><span class="logo-s">s</span>
+        </a>
+
+        <nav class="nav" id="mainNav">
+
+            <a href="index.html">
+                Inicio
+            </a>
+
+            <a href="nosotros.html">
+                Nosotros
+            </a>
+
+            <a href="servicios.html" class="active">
+                Servicios
+            </a>
+
+            <a href="proyectos.html">
+                Proyectos
+            </a>
+
+            <a href="contacto.html">
+                Contacto
+            </a>
+
+        </nav>
+
+        <a
+            href="https://wa.me/593992705273"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="nav-whatsapp"
+        >
+            WhatsApp
+        </a>
+
+        <button
+            class="menu-toggle"
+            id="menuToggle"
+            type="button"
+            aria-label="Abrir menú"
+        >
+            ☰
+        </button>
+
     </div>
-    <nav aria-label="Menú principal">
-        <a href="index.html">Inicio</a>
-        <a href="servicios.html" class="active">Servicios</a>
-        <a href="proyectos.html">Proyectos</a>
-        <a href="nosotros.html">Nosotros</a>
-        <a href="contacto.html">Contacto</a>
-    </nav>
+
 </header>
 
+
 <main>
-    <div class="encabezado-pagina">
-        <h1>Catálogo de Soluciones Técnicas</h1>
-        <p>Explora nuestro portafolio de mantenimiento residencial, comercial e industrial.</p>
+
+<!-- HERO -->
+
+<section class="page-hero">
+
+    <div class="container">
+
+        <span class="section-tag">
+            VICMAR SERVICES
+        </span>
+
+        <h1>
+            Nuestros servicios
+        </h1>
+
+        <p>
+            Soluciones profesionales de mantenimiento
+            para hogares, empresas y edificios.
+        </p>
+
     </div>
 
-    <div class="buscador-contenedor">
-        <i class="fa-solid fa-magnifying-glass"></i>
-        <input type="text" id="inputBuscar" class="input-busqueda" placeholder="¿Qué servicio buscas? (Fuga, cableado...)" onkeyup="filtrarPorTexto()">
-    </div>
+</section>
 
-    <div class="filtros-servicios">
-        <button class="btn-filtro active" onclick="filtrarCategoria('todos', this)">Todos</button>
-        <button class="btn-filtro" onclick="filtrarCategoria('tecnico', this)">Sistemas Técnicos</button>
-        <button class="btn-filtro" onclick="filtrarCategoria('estructural', this)">Estructura e Infraestructura</button>
-    </div>
 
-    <section class="grid-servicios-extendido" id="contenedorServicios">
-        <!-- Servicio 1 -->
-        <div class="tarjeta-servicio" data-categoria="tecnico" data-palabras="electricidad electricista cables tableros corto">
-            <div>
-                <div class="tarjeta-header">
-                    <div class="tarjeta-icon"><i class="fa-solid fa-bolt"></i></div>
-                    <h3>⚡ Electricidad</h3>
+<!-- SERVICIOS -->
+
+<section class="section">
+
+    <div class="container">
+
+        <div class="services-list">
+
+
+            <article class="service-large">
+
+                <div class="service-large-icon">
+                    ⚡
                 </div>
-                <p>Diagnósticos de fallas, balanceo de acometidas de carga, instalación de breakers y cableados estructurados bajo norma técnica.</p>
-            </div>
-            <a href="https://wa.me" class="btn-tarjeta-cta" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> Solicitar Asistencia</a>
+
+                <div>
+
+                    <span class="service-number">
+                        01
+                    </span>
+
+                    <h2>
+                        Electricidad
+                    </h2>
+
+                    <p>
+                        Instalaciones eléctricas, reparación
+                        de circuitos, mantenimiento de tableros,
+                        luminarias, tomacorrientes y soluciones
+                        eléctricas para hogares y empresas.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="service-large">
+
+                <div class="service-large-icon">
+                    🚿
+                </div>
+
+                <div>
+
+                    <span class="service-number">
+                        02
+                    </span>
+
+                    <h2>
+                        Plomería
+                    </h2>
+
+                    <p>
+                        Reparación de fugas, cambio de grifería,
+                        instalaciones sanitarias, mantenimiento
+                        de tuberías y sistemas hidráulicos.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="service-large">
+
+                <div class="service-large-icon">
+                    🎨
+                </div>
+
+                <div>
+
+                    <span class="service-number">
+                        03
+                    </span>
+
+                    <h2>
+                        Pintura
+                    </h2>
+
+                    <p>
+                        Pintura interior y exterior, preparación
+                        de superficies, resanes y acabados
+                        profesionales.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="service-large">
+
+                <div class="service-large-icon">
+                    🪟
+                </div>
+
+                <div>
+
+                    <span class="service-number">
+                        04
+                    </span>
+
+                    <h2>
+                        Aluminio y vidrio
+                    </h2>
+
+                    <p>
+                        Fabricación e instalación de ventanas,
+                        puertas, mamparas, divisiones y
+                        cerramientos.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="service-large">
+
+                <div class="service-large-icon">
+                    💧
+                </div>
+
+                <div>
+
+                    <span class="service-number">
+                        05
+                    </span>
+
+                    <h2>
+                        Impermeabilización
+                    </h2>
+
+                    <p>
+                        Protección y recuperación de terrazas,
+                        cubiertas, losas y superficies expuestas
+                        a humedad.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="service-large">
+
+                <div class="service-large-icon">
+                    🔧
+                </div>
+
+                <div>
+
+                    <span class="service-number">
+                        06
+                    </span>
+
+                    <h2>
+                        Mantenimiento preventivo y correctivo
+                    </h2>
+
+                    <p>
+                        Mantenimiento integral para viviendas,
+                        oficinas, edificios, locales comerciales
+                        y propiedades.
+                    </p>
+
+                </div>
+
+            </article>
+
         </div>
 
-        <!-- Servicio 2 -->
-        <div class="tarjeta-servicio" data-categoria="tecnico" data-palabras="plomeria plomero agua tuberias fugas cisterna">
-            <div>
-                <div class="tarjeta-header">
-                    <div class="tarjeta-icon"><i class="fa-solid fa-faucet"></i></div>
-                    <h3>🚿 Plomería</h3>
-                </div>
-                <p>Localización digital de fugas ocultas, impermeabilización y lavado de cisternas y mantenimiento de redes sanitarias completas.</p>
-            </div>
-            <a href="https://wa.me" class="btn-tarjeta-cta" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> Solicitar Asistencia</a>
+    </div>
+
+</section>
+
+
+<!-- CTA -->
+
+<section class="cta">
+
+    <div class="container cta-content">
+
+        <div>
+
+            <span>
+                ¿TIENES UN PROYECTO?
+            </span>
+
+            <h2>
+                Solicita una cotización.
+            </h2>
+
         </div>
-    </section>
+
+        <a
+            href="https://wa.me/593992705273?text=Hola%20Vicmar%20Services,%20quiero%20una%20cotización."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-white"
+        >
+            Cotizar por WhatsApp
+        </a>
+
+    </div>
+
+</section>
+
 </main>
 
-<footer><p>© 2025 Vicmar Services - Todos los derechos reservados.</p></footer>
 
-<script>
-    let catActual = 'todos';
-    function filtrarCategoria(cat, btn) {
-        catActual = cat;
-        document.querySelectorAll('.btn-filtro').forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        ejecutarFiltro();
-    }
-    function filtrarPorTexto() { ejecutarFiltro(); }
-    function ejecutarFiltro() {
-        const txt = document.getElementById('inputBuscar').value.toLowerCase().trim();
-        document.querySelectorAll('.tarjeta-servicio').forEach(t => {
-            const c = t.getAttribute('data-categoria');
-            const p = t.getAttribute('data-palabras').toLowerCase();
-            const tit = t.querySelector('h3').textContent.toLowerCase();
-            t.style.display = ((catActual === 'todos' || c === catActual) && (txt === '' || tit.includes(txt) || p.includes(txt))) ? 'flex' : 'none';
-        });
-    }
-</script>
+<!-- FOOTER -->
+
+<footer class="footer-bottom">
+
+    <div class="footer-bottom-container">
+
+        <p>
+            © 2026 Vicmar Services. Todos los derechos reservados.
+        </p>
+
+    </div>
+
+</footer>
+
+
+<script src="js/main.js"></script>
+
 </body>
 </html>
