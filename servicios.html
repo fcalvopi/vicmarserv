@@ -3,286 +3,124 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Nuestros Servicios Técnicos | Vicmar Services Quito</title>
-     
-    <meta name="description" content="Explora nuestro catálogo completo de servicios: electricidad, plomería, pintura, impermeabilización y mantenimiento integral en Quito.">
-    <meta name="keywords" content="servicios electricista quito, plomero quito, mantenimiento de edificios quito, impermeabilizacion quito">
-    <meta name="author" content="Vicmar Services">
-    <meta name="robots" content="index, follow">
-    <meta name="theme-color" content="#0d47a1"> 
-
-    <!-- Favicon -->
-    <link rel="canonical" href="https://vicmarserv.com">
-     
     <link rel="stylesheet" href="css/estilos.css">
-     
     <link rel="icon" type="image/png" href="img/icono2.png">
-    <link rel="shortcut icon" href="img/icono2.png">
-    <link rel="apple-touch-icon" href="img/icono2.png">
-
-    <!-- Iconos Globales FontAwesome -->
     <link rel="stylesheet" href="https://cloudflare.com">
-
-    <!-- Open Graph -->
-    <meta property="og:title" content="Catálogo de Servicios Técnicos | Vicmar Services">
-    <meta property="og:description" content="Soluciones integrales de mantenimiento residencial y comercial con técnicos calificados en Quito.">
-    <meta property="og:image" content="https://vicmarserv.com">
-    <meta property="og:url" content="https://vicmarserv.com">
-    <meta property="og:type" content="website">
-    <meta property="og:locale" content="es_EC">
-
     <style>
-        /* ESTILOS DE UNIFICACIÓN PARA EL RE-DISEÑO VISUAL CÁLIDO */
-        :root {
-            --primary: #0d47a1;
-            --accent: #ffb300;
-            --dark: #1a252f;
-            --light-bg: #f4f7fc;
-            --card-bg: #ffffff;
-            --text-main: #2c3e50;
-            --text-muted: #64748b;
-        }
-
-        body {
-            background-color: var(--light-bg);
-            color: var(--text-main);
-            font-family: 'Segoe UI', system-ui, sans-serif;
-            margin: 0;
-        }
-
-        .encabezado-pagina {
-            text-align: center;
-            padding: 50px 20px 20px;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .encabezado-pagina h1 {
-            color: var(--primary);
-            font-size: 36px;
-            margin-bottom: 12px;
-            font-weight: 800;
-        }
-
-        /* BARRA DE BÚSQUEDA INTERACTIVA STYLE FIXIT */
-        .buscador-contenedor {
-            max-width: 550px;
-            margin: 0 auto 30px;
-            position: relative;
-            padding: 0 20px;
-        }
-
-        .input-busqueda {
-            width: 100%;
-            padding: 15px 20px 15px 50px;
-            font-size: 16px;
-            border: 2px solid #cbd5e1;
-            border-radius: 30px;
-            outline: none;
-            box-sizing: border-box;
-            background-color: var(--card-bg);
-            box-shadow: 0 4px 10px rgba(0,0,0,0.02);
-            transition: all 0.3s ease;
-        }
-
-        .input-busqueda:focus {
-            border-color: var(--primary);
-            box-shadow: 0 6px 15px rgba(13, 71, 161, 0.15);
-        }
-
-        .buscador-contenedor i {
-            position: absolute;
-            left: 40px;
-            top: 50%;
-            transform: translateY(-50%);
-            color: #94a3b8;
-            font-size: 18px;
-        }
-
-        /* BOTONES DE FILTRO RÁPIDO */
-        .filtros-servicios {
-            display: flex;
-            justify-content: center;
-            gap: 12px;
-            margin-bottom: 40px;
-            flex-wrap: wrap;
-            padding: 0 15px;
-        }
-
-        .btn-filtro {
-            background-color: var(--card-bg);
-            border: 2px solid #cbd5e1;
-            padding: 10px 24px;
-            border-radius: 30px;
-            font-size: 14px;
-            font-weight: 700;
-            cursor: pointer;
-            color: #475569;
-            transition: all 0.25s ease;
-        }
-
-        .btn-filtro.active, .btn-filtro:hover {
-            background-color: var(--primary);
-            color: #ffffff;
-            border-color: var(--primary);
-            box-shadow: 0 4px 12px rgba(13, 71, 161, 0.2);
-        }
-
-        /* REJILLA DE TARJETAS EXTENDIDA */
-        .grid-servicios-extendido {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 30px;
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 0 20px 60px;
-        }
-
-        .tarjeta-servicio {
-            background: var(--card-bg);
-            border-radius: 20px;
-            border: 1px solid #e2e8f0;
-            padding: 35px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.02);
-            transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
-        }
-
-        .tarjeta-servicio:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 35px rgba(13, 71, 161, 0.08);
-            border-color: #cbd5e1;
-        }
+        :root { --primary: #0d47a1; --accent: #ffb300; --light-bg: #f4f7fc; --card-bg: #ffffff; --text-main: #2c3e50; }
+        body { background-color: var(--light-bg); color: var(--text-main); font-family: 'Segoe UI', system-ui, sans-serif; margin:0; }
         
-        .tarjeta-header {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            margin-bottom: 18px;
-        }
+        header { display: flex; justify-content: space-between; align-items: center; padding: 10px 40px; background-color: var(--card-bg); box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+        header nav { display: flex; gap: 20px; }
+        header nav a { text-decoration: none; color: var(--text-main); font-weight: 700; font-size: 15px; }
+        header nav a.active { color: var(--primary); }
 
-        .tarjeta-icon {
-            width: 55px;
-            height: 55px;
-            background-color: #eff6ff;
-            border-radius: 14px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--primary);
-            font-size: 24px;
-            transition: all 0.25s ease;
-        }
+        .encabezado-pagina { text-align: center; padding: 50px 20px 20px; }
+        .encabezado-pagina h1 { color: var(--primary); font-size: 36px; margin: 0 0 12px 0; font-weight: 800; }
 
-        .tarjeta-servicio:hover .tarjeta-icon {
-            background-color: var(--primary);
-            color: var(--accent);
-        }
+        .buscador-contenedor { max-width: 550px; margin: 0 auto 30px; position: relative; padding: 0 20px; }
+        .input-busqueda { width: 100%; padding: 15px 20px 15px 50px; font-size: 16px; border: 2px solid #cbd5e1; border-radius: 30px; outline: none; box-sizing: border-box; }
+        .buscador-contenedor i { position: absolute; left: 40px; top: 50%; transform: translateY(-50%); color: #94a3b8; font-size: 18px; }
 
-        .tarjeta-header h3 {
-            margin: 0;
-            font-size: 22px;
-            color: #1e293b;
-            font-weight: 700;
-        }
+        .filtros-servicios { display: flex; justify-content: center; gap: 12px; margin-bottom: 40px; flex-wrap: wrap; }
+        .btn-filtro { background-color: var(--card-bg); border: 2px solid #cbd5e1; padding: 10px 24px; border-radius: 30px; font-size: 14px; font-weight: 700; cursor: pointer; color: #475569; }
+        .btn-filtro.active { background-color: var(--primary); color: #ffffff; border-color: var(--primary); }
+
+        .grid-servicios-extendido { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; max-width: 1100px; margin: 0 auto; padding: 0 20px 60px; }
+        .tarjeta-servicio { background: var(--card-bg); border-radius: 20px; border: 1px solid #e2e8f0; padding: 35px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 10px 25px rgba(0,0,0,0.02); transition: all 0.3s; }
+        .tarjeta-servicio:hover { transform: translateY(-5px); box-shadow: 0 15px 35px rgba(13, 71, 161, 0.08); }
         
-        .tarjeta-servicio p {
-            font-size: 15px;
-            line-height: 1.6;
-            color: var(--text-muted);
-            margin: 0 0 25px 0;
-        }
-
-        .btn-tarjeta-cta {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            background-color: #f8fafc;
-            border: 1px solid #e2e8f0;
-            color: var(--primary);
-            padding: 12px 0;
-            border-radius: 10px;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 15px;
-            transition: all 0.2s ease;
-        }
-
-        .tarjeta-servicio:hover .btn-tarjeta-cta {
-            background-color: var(--primary);
-            color: #ffffff;
-            border-color: var(--primary);
-        }
-
-        .no-resultados {
-            text-align: center;
-            grid-column: 1 / -1;
-            color: var(--text-muted);
-            padding: 40px;
-            font-size: 16px;
-            display: none;
-        }
+        .tarjeta-header { display: flex; align-items: center; gap: 15px; margin-bottom: 18px; }
+        .tarjeta-icon { width: 55px; height: 55px; background-color: #eff6ff; border-radius: 14px; display: flex; align-items: center; justify-content: center; color: var(--primary); font-size: 24px; }
+        .btn-tarjeta-cta { display: flex; align-items: center; justify-content: center; gap: 8px; background-color: #f8fafc; border: 1px solid #e2e8f0; color: var(--primary); padding: 12px 0; border-radius: 10px; text-decoration: none; font-weight: bold; }
+        .no-resultados { text-align: center; grid-column: 1 / -1; color: #64748b; padding: 40px; display: none; }
     </style>
 </head>
 <body>
 
 <header>
     <div class="logo">
-        <a href="index.html">
-            <img src="img/rotulo1.png" alt="Vicmar Services - Servicios Técnicos en Quito" width="350" height="120">
-        </a>
+        <a href="index.html"><img src="img/rotulo1.png" alt="Vicmar Services" width="350" height="120"></a>
     </div>
-
+    <!-- MENU CORREGIDO A LA DERECHA Y REORGANIZADO -->
     <nav aria-label="Menú principal">
         <a href="index.html">Inicio</a>
+        <a href="nosotros.html">Nosotros</a>
         <a href="servicios.html" class="active">Servicios</a>
         <a href="proyectos.html">Proyectos</a>
-        <a href="nosotros.html">Nosotros</a>
         <a href="contacto.html">Contacto</a>
     </nav>
 </header>
 
 <main>
-
     <div class="encabezado-pagina">
         <h1>Catálogo de Servicios Profesionales</h1>
-        <p>Soluciones técnicas garantizadas con cobertura completa en Quito y Valles para residencias y comercios.</p>
+        <p>Soluciones técnicas garantizadas con cobertura en Quito y Valles para residencias y comercios.</p>
     </div>
 
-    <!-- Buscador Integrado -->
     <div class="buscador-contenedor">
         <i class="fa-solid fa-magnifying-glass"></i>
         <input type="text" id="inputBuscar" class="input-busqueda" placeholder="¿Qué servicio estás buscando? (ej. Fuga, cableado...)" onkeyup="filtrarPorTexto()">
     </div>
 
-    <!-- Botones de Filtro Rápido -->
     <div class="filtros-servicios">
         <button class="btn-filtro active" onclick="filtrarCategoria('todos', this)">Todos</button>
         <button class="btn-filtro" onclick="filtrarCategoria('tecnico', this)">Sistemas Técnicos</button>
         <button class="btn-filtro" onclick="filtrarCategoria('estructural', this)">Estructura y Acabados</button>
     </div>
 
-    <!-- Rejilla de Tarjetas de Servicios -->
     <section class="grid-servicios-extendido" id="contenedorServicios">
-        
-        <div class="tarjeta-servicio" data-categoria="tecnico" data-palabras="electricidad electricista cables tableros corto circuito luz luminarias enchufe breker">
-            <div class="tarjeta-content">
+        <div class="tarjeta-servicio" data-categoria="tecnico" data-palabras="electricidad electricista cables tableros corto">
+            <div>
                 <div class="tarjeta-header">
                     <div class="tarjeta-icon"><i class="fa-solid fa-bolt"></i></div>
                     <h3>⚡ Electricidad</h3>
                 </div>
-                <p>Instalaciones eléctricas residenciales y comerciales, balanceo de cargas, ordenamiento de tableros principales y reparación urgente de cortocircuitos.</p>
+                <p>Instalaciones eléctricas residenciales y comerciales, balanceo de cargas y reparación de cortocircuitos.</p>
             </div>
             <a href="https://wa.me" class="btn-tarjeta-cta" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> Cotizar Servicio</a>
         </div>
 
-        <div class="tarjeta-servicio" data-categoria="tecnico" data-palabras="plomeria plomero agua tuberias fugas desague cisterna sanitario tubo llaves">
-            <div class="tarjeta-content">
+        <div class="tarjeta-servicio" data-categoria="tecnico" data-palabras="plomeria plomero agua tuberias fugas cisterna">
+            <div>
                 <div class="tarjeta-header">
                     <div class="tarjeta-icon"><i class="fa-solid fa-faucet"></i></div>
                     <h3>🚿 Plomería</h3>
                 </div>
+                <p>Detección experta de fugas de agua no visibles, reparación de tuberías y mantenimiento de redes sanitarias.</p>
+            </div>
+            <a href="https://wa.me" class="btn-tarjeta-cta" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> Cotizar Servicio</a>
+        </div>
+        
+        <div id="sinResultados" class="no-resultados">No encontramos servicios que coincidan con tu búsqueda.</div>
+    </section>
+</main>
+
+<footer><p>© 2025 Vicmar Services - Todos los derechos reservados.</p></footer>
+
+<script>
+    let categoriaActual = 'todos';
+    function filtrarCategoria(categoria, boton) {
+        categoriaActual = categoria;
+        document.querySelectorAll('.btn-filtro').forEach(btn => btn.classList.remove('active'));
+        boton.classList.add('active');
+        ejecutarFiltroCombinado();
+    }
+    function filtrarPorTexto() { ejecutarFiltroCombinado(); }
+    function ejecutarFiltroCombinado() {
+        const textoBusqueda = document.getElementById('inputBuscar').value.toLowerCase().trim();
+        let visibles = 0;
+        document.querySelectorAll('.tarjeta-servicio').forEach(tarjeta => {
+            const cat = tarjeta.getAttribute('data-categoria');
+            const pal = tarjeta.getAttribute('data-palabras').toLowerCase();
+            const tit = tarjeta.querySelector('h3').textContent.toLowerCase();
+            const okCat = (categoriaActual === 'todos' || cat === categoriaActual);
+            const okTxt = (textoBusqueda === '' || tit.includes(textoBusqueda) || pal.includes(textoBusqueda));
+            if (okCat && okTxt) { tarjeta.style.display = 'flex'; visibles++; } else { tarjeta.style.display = 'none'; }
+        });
+        document.getElementById('sinResultados').style.display = visibles === 0 ? 'block' : 'none';
+    }
+</script>
+</body>
+</html>
