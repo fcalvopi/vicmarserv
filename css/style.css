@@ -411,13 +411,29 @@ textarea {
 }
 
 
+/* =========================================================
+   PORTADA - IMAGEN MUY CLARA
+========================================================= */
+
 .hero-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    z-index: 1;
 
     background:
         linear-gradient(
             90deg,
-            rgba(16, 24, 32, 0.50),
-            rgba(16, 24, 32, 0.20)
+            rgba(10, 18, 25, 0.28) 0%,
+            rgba(10, 18, 25, 0.12) 35%,
+            rgba(10, 18, 25, 0.03) 65%,
+            rgba(10, 18, 25, 0) 100%
         );
 }
 
@@ -435,9 +451,11 @@ textarea {
 
     color: #ffffff;
 
+    text-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.35);
+
     animation:
         fadeUp 0.8s ease both;
-
 }
 
 
@@ -1424,17 +1442,16 @@ textarea {
     }
 
 
-    .hero-overlay {
+   .hero-overlay {
 
-        background:
-
-            linear-gradient(
-                90deg,
-                rgba(16,24,32,0.90),
-                rgba(16,24,32,0.60)
-            );
-
-    }
+       background:
+           linear-gradient(
+               90deg,
+               rgba(10, 18, 25, 0.35) 0%,
+               rgba(10, 18, 25, 0.12) 55%,
+               rgba(10, 18, 25, 0) 100%
+           );
+   }
 
 
     .hero-content {
