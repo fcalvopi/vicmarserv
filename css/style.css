@@ -138,26 +138,16 @@ button {
 
 .brand-logo {
     display: flex;
-
     align-items: center;
-
     flex-shrink: 0;
-
     height: 76px;
 }
-
 .brand-logo-img {
     display: block;
-
     width: auto;
+    height: 28px;
 
-    /*
-       LOGO REDUCIDO
-    */
-
-    height: 36px;
-
-    max-width: 165px;
+    max-width: 130px;
 
     object-fit: contain;
 }
@@ -1502,21 +1492,9 @@ button {
 
 @media (max-width: 1000px) {
 
-    .container {
-        width:
-            min(
-                calc(100% - 40px),
-                900px
-            );
-    }
-
-
-    /* LOGO */
-
-    .brand-logo-img {
-        height: 34px;
-
-        max-width: 155px;
+     .brand-logo-img {
+        height: 27px;
+        max-width: 125px;
     }
 
 
@@ -1568,10 +1546,16 @@ button {
 
 @media (max-width: 760px) {
 
-    .container {
-        width:
-            calc(100% - 34px);
+    .brand-logo {
+        height: 70px;
     }
+
+    .brand-logo-img {
+        height: 25px;
+        max-width: 115px;
+    }
+
+}
 
 
     /* =====================================================
