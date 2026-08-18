@@ -167,9 +167,9 @@ textarea {
 
     width: auto;
 
-    height: 52px;
+    height: 38px;
 
-    max-width: 220px;
+    max-width: 170px;
 
     object-fit: contain;
 
@@ -2031,7 +2031,7 @@ textarea {
    TABLET
 ========================================================= */
 
-@media (max-width: 1000px) {
+@media (max-width: 760px) {
 
     .container {
 
@@ -2047,11 +2047,9 @@ textarea {
 
     .brand-logo-img {
 
-        height:
-            48px;
+        height: 34px;
 
-        max-width:
-            190px;
+        max-width: 150px;
     }
 
 
@@ -2113,7 +2111,7 @@ textarea {
    MÓVIL
 ========================================================= */
 
-@media (max-width: 760px) {
+@media (max-width: 420px) {
 
     .container {
 
@@ -2145,10 +2143,10 @@ textarea {
     .brand-logo-img {
 
         height:
-            42px;
+            31px;
 
         max-width:
-            170px;
+            140px;
     }
 
 
