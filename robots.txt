@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://vicmarserv.com/sitemap.xml
+Sitemap: https://www.vicmarserv.com/sitemap.xml
