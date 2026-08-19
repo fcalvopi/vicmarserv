@@ -3,45 +3,601 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Nosotros | Vicmar Services Quito</title>
-<meta name="description" content="Conoce Vicmar Services, nuestra misión, visión, valores y compromiso con el mantenimiento profesional en Quito.">
+
+<meta name="description" content="Conoce Vicmar Services, equipo especializado en mantenimiento integral para casas, edificios, oficinas y negocios en Quito.">
 <meta name="robots" content="index, follow">
+
 <link rel="canonical" href="https://www.vicmarserv.com/nosotros.html">
+
 <link rel="icon" href="img/icono2.png" type="image/png">
+
 <link rel="stylesheet" href="css/style.css">
+
 <style>
-.about-hero{position:relative;min-height:610px;display:flex;align-items:center;overflow:hidden;color:#fff;background:#101820 url("img/nosotros.png") center center/cover no-repeat}
-.about-hero-overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,18,25,.76) 0%,rgba(10,18,25,.48) 38%,rgba(10,18,25,.08) 72%,rgba(10,18,25,.18) 100%);z-index:1}
-.about-hero-content{position:relative;z-index:2;max-width:620px;padding-top:70px;text-shadow:0 2px 8px rgba(0,0,0,.4)}
-.about-hero .section-tag{color:#fff}.about-hero h1{margin:0 0 18px;font-size:clamp(42px,5vw,62px);line-height:1.05;letter-spacing:-1.5px}.about-hero p{max-width:540px;color:#fff;font-size:17px;line-height:1.7}
-@media(max-width:760px){.about-hero{min-height:560px;background-position:center center}.about-hero-overlay{background:linear-gradient(90deg,rgba(10,18,25,.78) 0%,rgba(10,18,25,.42) 65%,rgba(10,18,25,.12) 100%)}.about-hero-content{padding-top:55px}.about-hero h1{font-size:38px}.about-hero p{font-size:14.5px}}
-@media(max-width:420px){.about-hero{min-height:520px}.about-hero h1{font-size:34px}}
+
+/* =========================================================
+   PORTADA NOSOTROS
+   VICMAR SERVICES — DISEÑO PRO FINAL
+========================================================= */
+
+.about-hero{
+    position:relative;
+    min-height:660px;
+    display:flex;
+    align-items:center;
+    overflow:hidden;
+    color:#fff;
+    background:
+        #101820
+        url("img/nosotros.png")
+        center center / cover
+        no-repeat;
+}
+
+/* Capa de contraste sobre la fotografía */
+.about-hero-overlay{
+    position:absolute;
+    inset:0;
+    z-index:1;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(10,18,25,.78) 0%,
+            rgba(10,18,25,.52) 35%,
+            rgba(10,18,25,.20) 65%,
+            rgba(10,18,25,.08) 100%
+        );
+}
+
+/* Contenido de portada */
+.about-hero-content{
+    position:relative;
+    z-index:2;
+
+    max-width:700px;
+    padding-top:55px;
+
+    color:#fff;
+
+    text-shadow:
+        0 2px 8px rgba(0,0,0,.45);
+}
+
+/* Etiqueta superior */
+.about-hero .section-tag{
+    display:inline-block;
+    margin-bottom:17px;
+    padding-left:12px;
+
+    border-left:3px solid #0066cc;
+
+    color:#fff;
+
+    font-size:11px;
+    font-weight:800;
+    letter-spacing:1.7px;
+}
+
+/* Título */
+.about-hero h1{
+    max-width:700px;
+
+    margin:0 0 20px;
+
+    color:#fff;
+
+    font-size:clamp(42px,5vw,64px);
+    line-height:1.06;
+    letter-spacing:-1.8px;
+    font-weight:400;
+}
+
+.about-hero h1 strong{
+    font-weight:800;
+}
+
+/* Descripción */
+.about-hero p{
+    max-width:600px;
+
+    margin:0;
+
+    color:#fff;
+
+    font-size:17px;
+    line-height:1.65;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media(max-width:1000px){
+
+    .about-hero{
+        min-height:620px;
+        background-position:center center;
+    }
+
+}
+
+
+/* =========================================================
+   MÓVIL
+========================================================= */
+
+@media(max-width:760px){
+
+    .about-hero{
+        min-height:615px;
+
+        background-position:center center;
+    }
+
+    .about-hero-overlay{
+        background:
+            linear-gradient(
+                90deg,
+                rgba(10,18,25,.80) 0%,
+                rgba(10,18,25,.55) 45%,
+                rgba(10,18,25,.20) 100%
+            );
+    }
+
+    .about-hero-content{
+        padding-top:45px;
+        max-width:100%;
+    }
+
+    .about-hero .section-tag{
+        font-size:10px;
+        letter-spacing:1.4px;
+    }
+
+    .about-hero h1{
+        font-size:38px;
+        line-height:1.08;
+        letter-spacing:-1.2px;
+        margin-bottom:17px;
+    }
+
+    .about-hero p{
+        max-width:100%;
+        font-size:14.5px;
+        line-height:1.6;
+    }
+
+}
+
+
+/* =========================================================
+   TELÉFONOS PEQUEÑOS
+========================================================= */
+
+@media(max-width:420px){
+
+    .about-hero{
+        min-height:595px;
+    }
+
+    .about-hero h1{
+        font-size:34px;
+    }
+
+    .about-hero p{
+        font-size:14px;
+    }
+
+}
+
 </style>
+
 </head>
+
+
 <body>
-<a href="#contenido" class="skip-link">Ir al contenido principal</a>
+
+<!-- ACCESIBILIDAD -->
+<a href="#contenido" class="skip-link">
+    Ir al contenido principal
+</a>
+
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
+
 <header class="header">
-<div class="container nav-container">
-<a href="index.html" class="brand-logo" aria-label="Vicmar Services - Inicio"><img src="img/rotulo1.png" alt="Vicmar Services" class="brand-logo-img" width="220" height="70"></a>
-<nav class="nav" id="mainNav" aria-label="Navegación principal">
-<a href="index.html">Inicio</a><a href="nosotros.html" class="active" aria-current="page">Nosotros</a><a href="servicios.html">Servicios</a><a href="proyectos.html">Proyectos</a><a href="contacto.html">Contacto</a>
-</nav>
-<a href="https://wa.me/593992705273?text=Hola%20Vicmar%20Services,%20quiero%20información." target="_blank" rel="noopener noreferrer" class="nav-whatsapp">WhatsApp</a>
-<button class="menu-toggle" id="menuToggle" type="button" aria-label="Abrir menú" aria-controls="mainNav" aria-expanded="false"><span aria-hidden="true">☰</span></button>
-</div></header>
+
+    <div class="container nav-container">
+
+        <!-- LOGO -->
+        <a
+            href="index.html"
+            class="brand-logo"
+            aria-label="Vicmar Services - Inicio"
+        >
+            <img
+                src="img/rotulo1.png"
+                alt="Vicmar Services"
+                class="brand-logo-img"
+                width="220"
+                height="70"
+            >
+        </a>
+
+
+        <!-- MENÚ -->
+        <nav
+            class="nav"
+            id="mainNav"
+            aria-label="Navegación principal"
+        >
+
+            <a href="index.html">
+                Inicio
+            </a>
+
+            <a
+                href="nosotros.html"
+                class="active"
+                aria-current="page"
+            >
+                Nosotros
+            </a>
+
+            <a href="servicios.html">
+                Servicios
+            </a>
+
+            <a href="proyectos.html">
+                Proyectos
+            </a>
+
+            <a href="contacto.html">
+                Contacto
+            </a>
+
+        </nav>
+
+
+        <!-- WHATSAPP -->
+        <a
+            href="https://wa.me/593992705273?text=Hola%20Vicmar%20Services,%20quiero%20información."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="nav-whatsapp"
+            aria-label="Contactar por WhatsApp"
+        >
+            WhatsApp
+        </a>
+
+
+        <!-- MENÚ MÓVIL -->
+        <button
+            class="menu-toggle"
+            id="menuToggle"
+            type="button"
+            aria-label="Abrir menú"
+            aria-controls="mainNav"
+            aria-expanded="false"
+        >
+            <span aria-hidden="true">☰</span>
+        </button>
+
+    </div>
+
+</header>
+
+
+<!-- =========================================================
+     CONTENIDO
+========================================================= -->
+
 <main id="contenido">
-<section class="about-hero" aria-label="Equipo de Vicmar Services">
-<div class="about-hero-overlay"></div>
-<div class="container about-hero-content">
-<span class="section-tag">VICMAR SERVICES</span>
-<h1>Un equipo preparado para resolver.</h1>
-<p>Profesionales comprometidos con soluciones técnicas integrales, calidad y atención responsable.</p>
-</div>
-</section>
-<section class="section"><div class="container"><div class="two-columns about-section"><div><span class="section-tag">QUIÉNES SOMOS</span><h2>Mantenimiento profesional con una visión práctica.</h2><p>En Vicmar Services integramos diferentes especialidades para facilitar el mantenimiento de nuestros clientes. Nuestro objetivo es atender cada requerimiento con orden, diagnóstico y una solución adecuada.</p><p>Trabajamos para hogares, oficinas, locales comerciales, edificios y empresas en Quito y sus alrededores.</p></div><div class="about-box"><div><strong>01</strong><span>Atención profesional</span></div><div><strong>02</strong><span>Soluciones integrales</span></div><div><strong>03</strong><span>Trabajo responsable</span></div><div><strong>04</strong><span>Enfoque en resultados</span></div></div></div></div></section>
-<section class="section section-light"><div class="container"><div class="section-header"><span class="section-tag">NUESTRA CULTURA</span><h2>Principios que orientan nuestro trabajo.</h2><p>Buscamos construir relaciones de confianza mediante transparencia, responsabilidad y calidad en cada servicio.</p></div><div class="values-grid"><article class="value-card"><span>01</span><h3>Responsabilidad</h3><p>Cumplimos los compromisos y cuidamos cada espacio donde intervenimos.</p></article><article class="value-card"><span>02</span><h3>Calidad</h3><p>Priorizamos soluciones funcionales, materiales adecuados y buenos acabados.</p></article><article class="value-card"><span>03</span><h3>Confianza</h3><p>Explicamos el trabajo, transparentamos el alcance y buscamos relaciones duraderas.</p></article></div></div></section>
-<section class="corporate-section"><div class="container corporate-content"><span class="section-tag">NUESTRO COMPROMISO</span><h2>Ser el proveedor que puedas volver a llamar.</h2><p>Más que resolver una reparación puntual, buscamos que cada atención sea una experiencia profesional y confiable.</p><div class="hero-buttons"><a href="contacto.html" class="btn btn-primary">Solicitar atención</a><a href="servicios.html" class="btn btn-outline">Conocer servicios</a></div></div></section>
+
+
+    <!-- =====================================================
+         PORTADA
+    ====================================================== -->
+
+    <section
+        class="about-hero"
+        aria-label="Equipo de Vicmar Services"
+    >
+
+        <div
+            class="about-hero-overlay"
+            aria-hidden="true"
+        ></div>
+
+
+        <div class="container about-hero-content">
+
+            <span class="section-tag">
+                VICMAR SERVICES
+            </span>
+
+
+            <h1>
+                Un equipo preparado
+                <strong>para resolver.</strong>
+            </h1>
+
+
+            <p>
+                Profesionales comprometidos con soluciones
+                técnicas integrales, calidad y atención responsable.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         QUIÉNES SOMOS
+    ====================================================== -->
+
+    <section class="section">
+
+        <div class="container">
+
+            <div class="two-columns about-section">
+
+
+                <!-- TEXTO -->
+
+                <div>
+
+                    <span class="section-tag">
+                        QUIÉNES SOMOS
+                    </span>
+
+
+                    <h2>
+                        Mantenimiento profesional
+                        con una visión práctica.
+                    </h2>
+
+
+                    <p>
+                        En Vicmar Services integramos diferentes
+                        especialidades para facilitar el mantenimiento
+                        de nuestros clientes.
+                    </p>
+
+
+                    <p>
+                        Nuestro objetivo es atender cada requerimiento
+                        con orden, diagnóstico y una solución adecuada.
+                    </p>
+
+
+                    <p>
+                        Trabajamos para hogares, oficinas, locales
+                        comerciales, edificios y empresas en Quito
+                        y sus alrededores.
+                    </p>
+
+                </div>
+
+
+                <!-- PRINCIPIOS -->
+
+                <div class="about-box">
+
+                    <div>
+                        <strong>01</strong>
+                        <span>Atención profesional</span>
+                    </div>
+
+                    <div>
+                        <strong>02</strong>
+                        <span>Soluciones integrales</span>
+                    </div>
+
+                    <div>
+                        <strong>03</strong>
+                        <span>Trabajo responsable</span>
+                    </div>
+
+                    <div>
+                        <strong>04</strong>
+                        <span>Enfoque en resultados</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         CULTURA
+    ====================================================== -->
+
+    <section class="section section-light">
+
+        <div class="container">
+
+
+            <div class="section-header">
+
+                <span class="section-tag">
+                    NUESTRA CULTURA
+                </span>
+
+
+                <h2>
+                    Principios que orientan
+                    nuestro trabajo.
+                </h2>
+
+
+                <p>
+                    Buscamos construir relaciones de confianza
+                    mediante transparencia, responsabilidad y
+                    calidad en cada servicio.
+                </p>
+
+            </div>
+
+
+
+            <div class="values-grid">
+
+
+                <!-- RESPONSABILIDAD -->
+
+                <article class="value-card">
+
+                    <span>01</span>
+
+                    <h3>
+                        Responsabilidad
+                    </h3>
+
+                    <p>
+                        Cumplimos los compromisos y cuidamos
+                        cada espacio donde intervenimos.
+                    </p>
+
+                </article>
+
+
+                <!-- CALIDAD -->
+
+                <article class="value-card">
+
+                    <span>02</span>
+
+                    <h3>
+                        Calidad
+                    </h3>
+
+                    <p>
+                        Priorizamos soluciones funcionales,
+                        materiales adecuados y buenos acabados.
+                    </p>
+
+                </article>
+
+
+                <!-- CONFIANZA -->
+
+                <article class="value-card">
+
+                    <span>03</span>
+
+                    <h3>
+                        Confianza
+                    </h3>
+
+                    <p>
+                        Explicamos el trabajo, transparentamos
+                        el alcance y buscamos relaciones duraderas.
+                    </p>
+
+                </article>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         COMPROMISO
+    ====================================================== -->
+
+    <section class="corporate-section">
+
+        <div class="container corporate-content">
+
+            <span class="section-tag">
+                NUESTRO COMPROMISO
+            </span>
+
+
+            <h2>
+                Ser el proveedor
+                que puedas volver a llamar.
+            </h2>
+
+
+            <p>
+                Más que resolver una reparación puntual,
+                buscamos que cada atención sea una experiencia
+                profesional y confiable.
+            </p>
+
+
+            <div class="hero-buttons">
+
+                <a
+                    href="contacto.html"
+                    class="btn btn-primary"
+                >
+                    Solicitar atención
+                </a>
+
+
+                <a
+                    href="servicios.html"
+                    class="btn btn-outline"
+                >
+                    Conocer servicios
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
 </main>
-<footer class="footer-bottom"><div class="footer-bottom-container"><p>© 2026 Vicmar Services. Todos los derechos reservados.</p><p>Servicios de mantenimiento profesional en Quito.</p></div></footer>
+
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer class="footer-bottom">
+
+    <div class="footer-bottom-container">
+
+        <p>
+            © 2026 Vicmar Services.
+            Todos los derechos reservados.
+        </p>
+
+        <p>
+            Servicios de mantenimiento profesional en Quito.
+        </p>
+
+    </div>
+
+</footer>
+
+
+
+<!-- JAVASCRIPT -->
 <script src="js/main.js"></script>
-</body></html>
+
+</body>
+</html>
