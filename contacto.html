@@ -1,1 +1,197 @@
-<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>Contacto | Vicmar Services Quito</title><meta name="description" content="Contacta a Vicmar Services para solicitar servicios de mantenimiento y cotizaciones en Quito."><link rel="canonical" href="https://www.vicmarserv.com/contacto.html"><link rel="icon" href="img/icono2.png"><link rel="stylesheet" href="css/style.css"></head><body><a href="#contenido" class="skip-link">Ir al contenido principal</a><header class="header"><div class="container nav-container"><a href="index.html" class="brand-logo"><img src="img/rotulo1.png" alt="Vicmar Services" class="brand-logo-img"></a><nav class="nav" id="mainNav"><a href="index.html">Inicio</a><a href="nosotros.html">Nosotros</a><a href="servicios.html">Servicios</a><a href="proyectos.html">Proyectos</a><a href="contacto.html" class="active">Contacto</a></nav><a href="https://wa.me/593992705273?text=Hola%20Vicmar%20Services,%20quiero%20solicitar%20un%20servicio." target="_blank" rel="noopener" class="nav-whatsapp">WhatsApp</a><button class="menu-toggle" id="menuToggle" type="button" aria-label="Abrir menú" aria-controls="mainNav" aria-expanded="false">☰</button></div></header><main id="contenido"><section class="page-hero"><div class="container"><span class="section-tag">CONTACTO</span><h1>Cuéntanos qué necesitas.</h1><p>Solicita información, una visita técnica o una cotización para tu hogar, oficina, edificio o negocio.</p></div></section><section class="section"><div class="container contact-grid"><div class="contact-info"><span class="section-tag">ATENCIÓN DIRECTA</span><h2>Hablemos de tu requerimiento.</h2><p>La forma más rápida de coordinar un servicio es por WhatsApp. También puedes llamarnos directamente.</p><div class="contact-item"><span>💬</span><div><strong>WhatsApp</strong><a href="https://wa.me/593992705273?text=Hola%20Vicmar%20Services,%20quiero%20solicitar%20un%20servicio." target="_blank" rel="noopener">099 270 5273</a></div></div><div class="contact-item"><span>☎</span><div><strong>Teléfono</strong><a href="tel:+593992705273">+593 99 270 5273</a></div></div><div class="contact-item"><span>📍</span><div><strong>Zona de atención</strong><p>Quito y sus alrededores.</p></div></div></div><div class="contact-form-box"><h2>Solicitar cotización</h2><form class="contact-form" id="contactForm"><div class="form-group"><label for="nombre">Nombre completo</label><input id="nombre" name="nombre" type="text" required placeholder="Tu nombre"></div><div class="form-group"><label for="telefono">Celular</label><input id="telefono" name="telefono" type="tel" required placeholder="0992705273"></div><div class="form-group"><label for="mensaje">¿Qué necesitas?</label><textarea id="mensaje" name="mensaje" required placeholder="Describe brevemente el trabajo o problema."></textarea></div><button type="submit" class="btn btn-primary form-button">Enviar solicitud</button><div id="formMessage" class="form-message" aria-live="polite"></div></form></div></div></section></main><footer class="footer-bottom"><div class="footer-bottom-container"><p>© 2026 Vicmar Services. Todos los derechos reservados.</p><p>Servicios de mantenimiento profesional en Quito.</p></div></footer><script src="js/main.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contacto | Vicmar Services Quito</title>
+<meta name="description" content="Contacta a Vicmar Services para solicitar servicios de mantenimiento y cotizaciones en Quito.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.vicmarserv.com/contacto.html">
+<link rel="icon" href="img/icono2.png" type="image/png">
+<link rel="stylesheet" href="css/style.css">
+
+<style>
+/* =========================================================
+   PORTADA CONTACTO — VICMAR SERVICES
+========================================================= */
+.contact-hero{
+    position:relative;
+    min-height:560px;
+    display:flex;
+    align-items:center;
+    overflow:hidden;
+    color:#fff;
+    background:#101820 url("img/contacto-portada.png") center center/cover no-repeat;
+}
+
+.contact-hero-overlay{
+    position:absolute;
+    inset:0;
+    z-index:1;
+    background:linear-gradient(90deg,rgba(10,18,25,.82) 0%,rgba(10,18,25,.58) 38%,rgba(10,18,25,.20) 68%,rgba(10,18,25,.08) 100%);
+}
+
+.contact-hero-content{
+    position:relative;
+    z-index:2;
+    max-width:620px;
+    padding-top:55px;
+    text-shadow:0 2px 8px rgba(0,0,0,.45);
+}
+
+.contact-hero .section-tag{
+    display:inline-block;
+    margin-bottom:16px;
+    padding-left:12px;
+    border-left:3px solid #0066cc;
+    color:#fff;
+    font-size:11px;
+    font-weight:800;
+    letter-spacing:1.7px;
+}
+
+.contact-hero h1{
+    margin:0 0 18px;
+    color:#fff;
+    font-size:clamp(42px,5vw,62px);
+    line-height:1.06;
+    letter-spacing:-1.7px;
+}
+
+.contact-hero p{
+    max-width:570px;
+    margin:0;
+    color:#fff;
+    font-size:17px;
+    line-height:1.65;
+}
+
+@media(max-width:760px){
+    .contact-hero{
+        min-height:525px;
+        background-position:center center;
+    }
+    .contact-hero-overlay{
+        background:linear-gradient(90deg,rgba(10,18,25,.84) 0%,rgba(10,18,25,.57) 52%,rgba(10,18,25,.18) 100%);
+    }
+    .contact-hero-content{padding-top:45px;max-width:100%;}
+    .contact-hero .section-tag{font-size:10px;letter-spacing:1.4px;}
+    .contact-hero h1{font-size:38px;line-height:1.08;letter-spacing:-1.2px;}
+    .contact-hero p{font-size:14.5px;line-height:1.6;}
+}
+
+@media(max-width:420px){
+    .contact-hero{min-height:500px;}
+    .contact-hero h1{font-size:34px;}
+    .contact-hero p{font-size:14px;}
+}
+</style>
+</head>
+
+<body>
+<a href="#contenido" class="skip-link">Ir al contenido principal</a>
+
+<header class="header">
+    <div class="container nav-container">
+        <a href="index.html" class="brand-logo" aria-label="Vicmar Services - Inicio">
+            <img src="img/rotulo1.png" alt="Vicmar Services" class="brand-logo-img" width="220" height="70">
+        </a>
+
+        <nav class="nav" id="mainNav" aria-label="Navegación principal">
+            <a href="index.html">Inicio</a>
+            <a href="nosotros.html">Nosotros</a>
+            <a href="servicios.html">Servicios</a>
+            <a href="proyectos.html">Proyectos</a>
+            <a href="contacto.html" class="active" aria-current="page">Contacto</a>
+        </nav>
+
+        <a href="https://wa.me/593992705273?text=Hola%20Vicmar%20Services,%20quiero%20solicitar%20un%20servicio." target="_blank" rel="noopener noreferrer" class="nav-whatsapp" aria-label="Contactar por WhatsApp">WhatsApp</a>
+
+        <button class="menu-toggle" id="menuToggle" type="button" aria-label="Abrir menú" aria-controls="mainNav" aria-expanded="false">
+            <span aria-hidden="true">☰</span>
+        </button>
+    </div>
+</header>
+
+<main id="contenido">
+
+    <!-- PORTADA CONTACTO -->
+    <section class="contact-hero" aria-label="Contacto Vicmar Services">
+        <div class="contact-hero-overlay" aria-hidden="true"></div>
+        <div class="container contact-hero-content">
+            <span class="section-tag">CONTACTO</span>
+            <h1>Estamos para ayudarte.</h1>
+            <p>Solicita información, una visita técnica o una cotización para tu hogar, oficina, edificio o negocio.</p>
+        </div>
+    </section>
+
+    <!-- INFORMACIÓN Y FORMULARIO -->
+    <section class="section">
+        <div class="container contact-grid">
+            <div class="contact-info">
+                <span class="section-tag">ATENCIÓN DIRECTA</span>
+                <h2>Hablemos de tu requerimiento.</h2>
+                <p>La forma más rápida de coordinar un servicio es por WhatsApp. También puedes llamarnos directamente.</p>
+
+                <div class="contact-item">
+                    <span aria-hidden="true">💬</span>
+                    <div>
+                        <strong>WhatsApp</strong>
+                        <a href="https://wa.me/593992705273?text=Hola%20Vicmar%20Services,%20quiero%20solicitar%20un%20servicio." target="_blank" rel="noopener noreferrer">099 270 5273</a>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <span aria-hidden="true">☎</span>
+                    <div>
+                        <strong>Teléfono</strong>
+                        <a href="tel:+593992705273">+593 99 270 5273</a>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <span aria-hidden="true">📍</span>
+                    <div>
+                        <strong>Zona de atención</strong>
+                        <p>Quito y sus alrededores.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form-box">
+                <h2>Solicitar cotización</h2>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="nombre">Nombre completo</label>
+                        <input id="nombre" name="nombre" type="text" required placeholder="Tu nombre">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="telefono">Celular</label>
+                        <input id="telefono" name="telefono" type="tel" required placeholder="0992705273">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mensaje">¿Qué necesitas?</label>
+                        <textarea id="mensaje" name="mensaje" required placeholder="Describe brevemente el trabajo o problema."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary form-button">Enviar solicitud</button>
+                    <div id="formMessage" class="form-message" aria-live="polite"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer class="footer-bottom">
+    <div class="footer-bottom-container">
+        <p>© 2026 Vicmar Services. Todos los derechos reservados.</p>
+        <p>Servicios de mantenimiento profesional en Quito.</p>
+    </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
